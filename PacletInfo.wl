@@ -7,8 +7,8 @@ PacletObject[
     "Creator" -> "Anton Antonov",
     "License" -> "MIT",
     "PublisherID" -> "AntonAntonov",
-    "Version" -> "1.0.0",
-    "WolframVersion" -> "13.2+",
+    "Version" -> "1.0.1",
+    "WolframVersion" -> "12.2+",
     "Extensions" -> {
       {
         "Kernel",
