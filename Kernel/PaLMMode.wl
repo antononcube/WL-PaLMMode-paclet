@@ -123,8 +123,8 @@ FullFunctionName[func_] :=
       MemberQ[{PaLMGenerateText, "PaLMGenerateText", AntonAntonov`PaLMLink`PaLMGenerateText}, func],
       AntonAntonov`PaLMLink`PaLMGenerateText,
 
-      MemberQ[{PaLMChatComplete, "PaLMChatComplete", AntonAntonov`PaLMLink`PaLMGenerateMessage}, func],
-      AntonAntonov`PaLMLink`PaLMChatComplete,
+      MemberQ[{PaLMGenerateMessage, "PaLMGenerateMessage", AntonAntonov`PaLMLink`PaLMGenerateMessage}, func],
+      AntonAntonov`PaLMLink`PaLMGenerateMessage,
 
 
       True,

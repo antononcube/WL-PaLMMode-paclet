@@ -24,9 +24,9 @@ PacletObject[
           "AntonAntonov`PaLMMode`CellPrintR",
           "AntonAntonov`PaLMMode`CellPrintWL",
           "AntonAntonov`PaLMMode`DeleteCells",
-          "AntonAntonov`PaLMMode`OpenAIInputExecute",
-          "AntonAntonov`PaLMMode`OpenAIInputExecuteToChat",
-          "AntonAntonov`PaLMMode`OpenAIInputExecuteToText",
+          "AntonAntonov`PaLMMode`PaLMInputExecute",
+          "AntonAntonov`PaLMMode`PaLMInputExecuteToChat",
+          "AntonAntonov`PaLMMode`PaLMInputExecuteToText",
           "AntonAntonov`PaLMMode`PaLMMode",
           "AntonAntonov`PaLMMode`PaLMModeNotebookStyle"
         }
