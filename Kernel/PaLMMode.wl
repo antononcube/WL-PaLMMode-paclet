@@ -293,5 +293,35 @@ PA==
       ImageSizeRaw->{22., 22.},
       PlotRange->{{0, 192.}, {0, 192.}}];
 
+rbPaLMEdges =
+    GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJztmk1u21AMhI2suuwVeotuu+w2RQ+QoE7QjQs4BYJeyyfozdIU+bFl6z1x
+SD6SAmaABFI0b+ajIudH8qfbX9d3V5vN5uHD86frm8cv+/3Nn28fn3e+7x5+
+3u+2P77ufm/vt/vPt/9tf18/niiKoiiKoiiKoiiKoiiKoiiK8tHhcFhBZKNm
+ooqJ0iZ7o38i3qUudA801OGFznHmQqzSNcyrU1zql5QyQBK+pFjQ7BKSN0Am
+vr1dsH7sr2EbQDq+DaEAvgWiBL4eowi+FqQMvg6lEL7qx2glfAVNLXyYpxo+
+SFQPH/srsiA+AlUSH/gnqia+/LwWxZef2KL44jNbFV86QFl86X2csvhdtmX+
+VPA3CQaojK/nz8U+apl/1pLKPJXmG5BLfKG18/cv8hr4SwQAP5Trz94qazk6
+yySxg+BnqmT8kuAY+uUJZr4oTI6hv2ha5JdHx9CfNy3w68/MMPqzpi4/Gh5D
+P23q8CvSg/AbA0z3VelB+PMDTHaV6UH4swOc7qnTY+hnEU92LPFB+JeQx21b
+fBD+Beb7pjU+CP/8vuHbpj0+mv/krHvgS/mt+FPW1w2X9CD8yRXkmh6EfzqA
+b3oQ/vG+iXd6ML97eBD+bNGo3BH4yncQaHLH8KveQaDJHcXv/tKdjY3iHxRL
+URRlU8H3b0DmAg8zFoGK8QvPZ/C9cn/8mgMA+BUHgPDLDdCnmKOFlybiH+Z8
+6No0/pYNXp6D375S0PXF8KsMIC3HjoUNIK4GD0YNIC5Gj8bwy3vhwxEDAK34
+8YABgE6FYTg/UqlxjB4AKVRZxvJDfTrP0AGgNqVpID9WpnWNGwCrUtvC+aVu
+j9QwfDF/2ABgjcUZyA/YvZI9+RG7W3QEPsQfMQDaYHUH8IN+13hYaP5oPyo0
+HuYJ5kf9+Aof7kY66lcs8aBuhaN+zRo7czMb9asWWYnb0ahft8rG20lG/cpl
+FtpeMOrXrtOzdnNRv3qhlrSfC9oV18MY/PNHiUIKzfU8kB+06/jRKnkq5lbz
+g1XiUMxt4Ae7RsjGny/y54r8uSJ/rsifK/Lnivy5In+uyJ8r8ueK/Lkif67I
+nyvyJ2vl+KvnH/o0N0Qrxx/3LDFMK8d/epkgm4GiKIqiKIqqpH/YwW3w
+    "], {{0, 192.}, {192., 0}}, {0, 255},
+        ColorFunction->GrayLevel],
+        BoxForm`ImageTag["Byte", ColorSpace -> "Grayscale", Interleaving -> None],
+        Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{22., 22.},
+      PlotRange->{{0, 192.}, {0, 192.}}];
+
 End[];
 EndPackage[];
