@@ -7,7 +7,7 @@ PacletObject[
     "Creator" -> "Anton Antonov",
     "License" -> "MIT",
     "PublisherID" -> "AntonAntonov",
-    "Version" -> "1.0.2",
+    "Version" -> "1.0.4",
     "WolframVersion" -> "12.2+",
     "Extensions" -> {
       {
