@@ -7,7 +7,7 @@ PacletObject[
     "Creator" -> "Anton Antonov",
     "License" -> "MIT",
     "PublisherID" -> "AntonAntonov",
-    "Version" -> "1.0.1",
+    "Version" -> "1.0.2",
     "WolframVersion" -> "12.2+",
     "Extensions" -> {
       {
@@ -15,19 +15,11 @@ PacletObject[
         "Root" -> "Kernel",
         "Context" -> {"AntonAntonov`PaLMMode`"},
         "Symbols" -> {
-          "AntonAntonov`PaLMMode`CellPrintAndRunJulia",
-          "AntonAntonov`PaLMMode`CellPrintAndRunPython",
-          "AntonAntonov`PaLMMode`CellPrintAndRunR",
-          "AntonAntonov`PaLMMode`CellPrintAndRunWL",
-          "AntonAntonov`PaLMMode`CellPrintJulia",
-          "AntonAntonov`PaLMMode`CellPrintPython",
-          "AntonAntonov`PaLMMode`CellPrintR",
-          "AntonAntonov`PaLMMode`CellPrintWL",
-          "AntonAntonov`PaLMMode`DeleteCells",
           "AntonAntonov`PaLMMode`PaLMInputExecute",
           "AntonAntonov`PaLMMode`PaLMInputExecuteToChat",
           "AntonAntonov`PaLMMode`PaLMInputExecuteToText",
           "AntonAntonov`PaLMMode`PaLMMode",
+          "AntonAntonov`PaLMMode`PaLMModeCellIcon",
           "AntonAntonov`PaLMMode`PaLMModeNotebookStyle"
         }
       },

@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     23900,        631]
-NotebookOptionsPosition[     16903,        487]
-NotebookOutlinePosition[     17686,        513]
-CellTagsIndexPosition[     17607,        508]
+NotebookDataLength[     62938,       1535]
+NotebookOptionsPosition[     52973,       1324]
+NotebookOutlinePosition[     53798,       1351]
+CellTagsIndexPosition[     53718,       1346]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -24,13 +24,31 @@ Cell["PaLMInputExecuteToText", "ObjectName",
  CellID->675474157,ExpressionUUID->"950d7f38-a4ba-443f-9950-6efb34c437ba"],
 
 Cell[TextData[{
- Cell["   ", "ModInfo",ExpressionUUID->"341b8f44-81b7-4df9-9df0-6e948431bf40"],
- "Execution function for the cell style \"PaLMInputExecuteToText\"."
+ Cell["      ", "ModInfo",ExpressionUUID->
+  "1a170cb2-f702-43ab-9a6f-70aed734ca44"],
+ Cell[BoxData[
+  RowBox[{"PaLMInputExecuteToText", "[", 
+   StyleBox["str", "TI"], "]"}]], "InlineFormula",ExpressionUUID->
+  "3162c662-0083-4d4c-9171-9eb8697d5c99"],
+ "\[LineSeparator]text generation with PaLM API using the prompt ",
+ Cell[BoxData[
+  StyleBox["str", "TI"]], "InlineFormula",ExpressionUUID->
+  "b7ad0e36-6cb4-4bea-b7ea-8a488eb8d3f9"],
+ "."
 }], "Usage",
+ CellChangeTimes->{{3.8941954108036957`*^9, 3.894195470057235*^9}},
  CellID->1095598657,ExpressionUUID->"2bd029ca-9cb9-4d71-9b39-cea3c5d67b46"],
 
-Cell["The following options can be given: ", "Notes",
+Cell["\<\
+PaLMInputExecuteToText is the execution function for the cell style \
+\"PaLMInputExecuteToText\".\
+\>", "Notes",
+ CellChangeTimes->{{3.8941954717933702`*^9, 3.8941954791736317`*^9}, {
+  3.894197642489607*^9, 3.8941976521514683`*^9}},
  CellID->1201838821,ExpressionUUID->"5c1f7f5f-3708-48d5-98f9-38cb74f421da"],
+
+Cell["The following options can be given: ", "Notes",
+ CellID->1077295821,ExpressionUUID->"9c619030-7168-46a6-9d95-0bfa3f459ce6"],
 
 Cell[BoxData[GridBox[{
    {Cell["   ", "ModInfo",ExpressionUUID->
@@ -39,7 +57,7 @@ Cell[BoxData[GridBox[{
      BaseStyle->"Link",
      ButtonData->
       "paclet:AntonAntonovPaLMLink/ref/AntonAntonov`PaLMLink`$PaLMAPIKey"], 
-    Cell["XXXX", "TableText",ExpressionUUID->
+    Cell["PaLM API key", "TableText",ExpressionUUID->
      "45992bff-a4ff-47fd-9724-eae60d918c45"]},
    {Cell["   ", "ModInfo",ExpressionUUID->
      "930baed9-b513-4e73-903b-0b6c9f456f89"], "\"\<User\>\"", 
@@ -47,49 +65,49 @@ Cell[BoxData[GridBox[{
      BaseStyle->"Link",
      ButtonData->
       "paclet:AntonAntonovPaLMLink/ref/AntonAntonov`PaLMLink`$PaLMAPIUser"], 
-    Cell["XXXX", "TableText",ExpressionUUID->
+    Cell["User (currently not used by PaLM API)", "TableText",ExpressionUUID->
      "fce6c88b-c1fc-4cbc-a1fc-c22f9c907eb0"]},
    {Cell["   ", "ModInfo",ExpressionUUID->
      "68ddb9ee-bf01-4788-8555-74da008e2e32"], "\"\<Model\>\"", 
     ButtonBox["Automatic",
      BaseStyle->"Link"], Cell[
-    "XXXX", "TableText",ExpressionUUID->
+    "PaLM model", "TableText",ExpressionUUID->
      "ed50ef09-63bd-4e9a-a7b6-1fc64ac20624"]},
    {Cell["   ", "ModInfo",ExpressionUUID->
      "e7889190-a3d6-4d58-a352-1bcd91549aa8"], "\"\<Temperature\>\"", 
     ButtonBox["Automatic",
      BaseStyle->"Link"], Cell[
-    "XXXX", "TableText",ExpressionUUID->
+    "Temperature (between 0 and 1)", "TableText",ExpressionUUID->
      "557f62ce-eeb4-48e2-b250-dc425a9c4249"]},
    {Cell["   ", "ModInfo",ExpressionUUID->
      "61f68d99-3dc4-4af8-8d95-774ea59678d5"], "\"\<TopProbability\>\"", 
     ButtonBox["Automatic",
      BaseStyle->"Link"], Cell[
-    "XXXX", "TableText",ExpressionUUID->
+    "Top probability of the ouput tokens", "TableText",ExpressionUUID->
      "a09e7748-e18f-40df-b102-804d087209a2"]},
    {Cell["   ", "ModInfo",ExpressionUUID->
      "09333f66-9c63-4c4c-aa99-30dfc8f87824"], "\"\<TopTokensCount\>\"", 
     ButtonBox["Automatic",
      BaseStyle->"Link"], Cell[
-    "XXXX", "TableText",ExpressionUUID->
+    "Top tokens count to use in the output", "TableText",ExpressionUUID->
      "2e35d7ff-eb14-418d-b260-fc348fe44593"]},
    {Cell["   ", "ModInfo",ExpressionUUID->
      "31c0e34c-ff06-4db7-b097-acd01ab2fcbb"], "\"\<MaxOutputTokens\>\"", 
     ButtonBox["Automatic",
      BaseStyle->"Link"], Cell[
-    "XXXX", "TableText",ExpressionUUID->
+    "Max output tokens", "TableText",ExpressionUUID->
      "d4877a5e-f699-45fd-9ab6-a9c19537a412"]},
    {Cell["   ", "ModInfo",ExpressionUUID->
      "b4a1a724-f2e8-40aa-a50c-f8bd0dacc36f"], "\"\<SafetySettings\>\"", 
     ButtonBox["Automatic",
      BaseStyle->"Link"], Cell[
-    "XXXX", "TableText",ExpressionUUID->
+    "Safety settings spec", "TableText",ExpressionUUID->
      "c8cd7b43-d538-437b-8949-75db320c2eaa"]},
    {Cell["   ", "ModInfo",ExpressionUUID->
      "1921d2c0-df97-41a3-aa60-f7915fd2e0a6"], "\"\<StopSequences\>\"", 
     ButtonBox["Automatic",
      BaseStyle->"Link"], Cell[
-    "XXXX", "TableText",ExpressionUUID->
+    "Sequence to stop the generation with", "TableText",ExpressionUUID->
      "0edae7b4-aa64-40b6-b356-2e3621fd7d2a"]},
    {Cell["   ", "ModInfo",ExpressionUUID->
      "ce9de687-b4a6-403f-bd3a-e70baa829905"], 
@@ -101,6 +119,7 @@ Epilog is an option for graphics functions that gives a list of graphics \
 primitives to be rendered after the main part of the graphics is rendered. \
 \>", "TableText",ExpressionUUID->"11cc9fe1-3cb2-4da2-82be-eecb989a8979"]}
   }]], "3ColumnTableMod",
+ CellChangeTimes->{{3.894195187829906*^9, 3.894195351329582*^9}},
  CellID->73880865,ExpressionUUID->"6cbbe836-adf0-4c33-8891-11c71587338a"]
 }, Open  ]],
 
@@ -164,20 +183,30 @@ Cell[TextData[{
 
 Cell[TextData[{
  Cell[BoxData[
-  TagBox[
-   FrameBox["\<\"XXXX\"\>"],
-   "FunctionPlaceholder"]], "InlineSeeAlsoFunction",
-  TaggingRules->{"PageType" -> "Function"},ExpressionUUID->
-  "35c80771-e195-48c1-beff-89cfc5a4ebb4"],
+  ButtonBox["PaLMMode",
+   BaseStyle->"Link",
+   ButtonData->"paclet:AntonAntonov/PaLMMode/ref/PaLMMode"]], "InlineFormula",
+  ExpressionUUID->"27cfe3c8-44bc-4b2f-8511-d24c3279b81d"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["PaLMInputExecuteToChat",
+   BaseStyle->"Link",
+   ButtonData->"paclet:AntonAntonov/PaLMMode/ref/PaLMInputExecuteToChat"]], 
+  "InlineSeeAlsoFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"4701f170-a641-4455-9ee4-abd7cd47b0e4",ExpressionUUID->
+  "5558117a-75f0-4f3f-befe-ecbb9ee991fa"],
  Cell[BoxData[
   RowBox[{
   Cell[TextData[StyleBox[
    " \[FilledVerySmallSquare] ", "InlineSeparator"]],ExpressionUUID->
-    "9f74fe2a-3780-4aed-8419-c80eaab3f01d"], 
+    "d4d72e10-0a65-4633-8f50-cf14aac069ca"], 
    DynamicModuleBox[{$CellContext`nbobj$$ = NotebookObject[
-     FrontEndObject[
-      LinkObject["hmt58_shm", 537, 6]], 17], $CellContext`cellobj$$ = 
-    CellObject[7121]}, 
+    "06adf171-7053-482a-a7b0-cfc693eea24f", 
+     "90ea2c0d-dd09-4f12-b485-26f8c04f60da"], $CellContext`cellobj$$ = 
+    CellObject[
+    "d1d0cb80-98da-4e22-b219-390938b48b38", 
+     "12ec933e-3c79-41d4-85ae-01f0aecccbef"]}, 
     TemplateBox[{
       GraphicsBox[{{
          Thickness[0.06], 
@@ -200,9 +229,11 @@ Cell[TextData[{
     Initialization:>($CellContext`nbobj$$ = 
       EvaluationNotebook[]; $CellContext`cellobj$$ = EvaluationCell[])]}]], 
   "InlineListingAddButton",ExpressionUUID->
-  "ea6a24c5-12ab-4c4c-b8ae-68b67be9932e"]
+  "d1d0cb80-98da-4e22-b219-390938b48b38"]
 }], "SeeAlso",
- CellID->183857862,ExpressionUUID->"10244d9e-ba02-4268-b57e-fbc15e20b54d"]
+ CellChangeTimes->{{3.894185701406478*^9, 3.894185743535852*^9}, {
+  3.8941858369794292`*^9, 3.894185838722947*^9}},
+ CellID->54428209,ExpressionUUID->"255d8e91-0628-458b-b5b8-882bc28567f9"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -211,8 +242,11 @@ Cell["Related Guides", "MoreAboutSection",
  CellChangeTimes->{{3.843042374232973*^9, 3.843042375545676*^9}},
  CellID->2017602248,ExpressionUUID->"2d3cf8f8-a6da-4b42-b51a-d53464d900e0"],
 
-Cell["XXXX", "MoreAbout",
- CellID->1074196006,ExpressionUUID->"ce904acd-5ca3-49db-b746-4f59489b2f8f"]
+Cell[TextData[ButtonBox["PaLMMode",
+ BaseStyle->"Link",
+ ButtonData->"paclet:AntonAntonov/PaLMMode/guide/PaLMMode"]], "MoreAbout",
+ CellChangeTimes->{{3.89418574552781*^9, 3.8941857525645647`*^9}},
+ CellID->482011239,ExpressionUUID->"694c24cf-d963-4420-a61f-26272d2f68de"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -239,6 +273,8 @@ Cell[BoxData[
  CellID->1420481692,ExpressionUUID->"676e2c35-afe7-4a35-8d8d-39a52168ca5c"]
 }, Open  ]],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[
  InterpretationBox[GridBox[{
     {
@@ -252,6 +288,27 @@ Cell[BoxData[
    }],
   $Line = 0; Null]], "PrimaryExamplesSection",
  CellID->460093745,ExpressionUUID->"e997d328-6e22-4294-91e5-a34456f095f3"],
+
+Cell["Generate text with PaLM API:", "ExampleText",
+ CellChangeTimes->{{3.894195569794682*^9, 3.894195584361561*^9}},
+ CellID->937365785,ExpressionUUID->"276b8228-fe22-4f9a-9cd0-2ade554edf51"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PaLMInputExecuteToText", "[", 
+  "\"\<What is the distance to the sun?\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.894195375187314*^9, 3.894195394234383*^9}},
+ CellLabel->"In[4]:=",
+ CellID->2100407355,ExpressionUUID->"c391f3fa-7c89-43d3-8712-16355d38a8dd"],
+
+Cell[BoxData["\<\"The distance from the earth to the sun is about 150 million \
+kilometers.\"\>"], "Output",
+ CellChangeTimes->{3.894195650747767*^9},
+ CellLabel->"Out[4]=",
+ CellID->1700824952,ExpressionUUID->"fbd288e7-3192-4a6c-9a27-3ab0ca7c0bde"]
+}, Open  ]]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -307,12 +364,23 @@ Cell[BoxData[
   $Line = 0; Null]], "ExampleSubsection",
  CellID->624045582,ExpressionUUID->"aa787877-9af5-47c8-866f-0078eaf85859"],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[
  InterpretationBox[Cell[
   "\"Model\"", "ExampleSubsection",ExpressionUUID->
    "f6ac6d8f-1036-4936-a537-909116abcb0b"],
   $Line = 0; Null]], "ExampleSubsection",
  CellID->23964726,ExpressionUUID->"ad2b96ee-0b3a-4daf-a873-c5fb4268e0d8"],
+
+Cell["\<\
+Currently only the model \"text-bison-001\" is  available via PaLM API.\
+\>", "ExampleText",
+ CellChangeTimes->{{3.8941973521694098`*^9, 3.8941973886628637`*^9}},
+ CellID->707178665,ExpressionUUID->"aa717d5b-9978-4319-aec7-cd2daf9368d7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
  InterpretationBox[Cell[
@@ -321,12 +389,247 @@ Cell[BoxData[
   $Line = 0; Null]], "ExampleSubsection",
  CellID->1195707893,ExpressionUUID->"67eb2b14-a1e1-43f7-9408-ab968b396680"],
 
+Cell["Here are text generations for different temperatures:", "ExampleText",
+ CellChangeTimes->{{3.8941956995255613`*^9, 3.894195731602709*^9}, {
+  3.8941965398289747`*^9, 3.894196550793755*^9}},
+ CellID->325523476,ExpressionUUID->"30a2c9df-47f2-44da-a548-477ad1b8b88f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ResourceFunction", "[", "\"\<GridTableForm\>\"", "]"}], "[", 
+  RowBox[{
+   RowBox[{"Map", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#", ",", 
+        RowBox[{"PaLMInputExecuteToText", "[", 
+         RowBox[{"\"\<What is the distance to the sun?\>\"", ",", 
+          RowBox[{"\"\<Temperature\>\"", "->", "#"}]}], "]"}]}], "}"}], "&"}],
+      ",", 
+     RowBox[{"Range", "[", 
+      RowBox[{"0", ",", "1", ",", "0.25"}], "]"}]}], "]"}], ",", 
+   RowBox[{"TableHeadings", "->", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Temperature\>\"", ",", "\"\<Generated text\>\""}], 
+     "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.894195375187314*^9, 3.894195394234383*^9}, {
+  3.894195659613186*^9, 3.894195795965849*^9}, {3.8941964816868877`*^9, 
+  3.894196513614976*^9}, {3.8941966922120132`*^9, 3.894196721436598*^9}},
+ CellLabel->"In[15]:=",
+ CellID->1832473401,ExpressionUUID->"c1c62ba3-869c-4913-9796-cc0f8c646c34"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     StyleBox["\<\"#\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Times",
+      FontColor->RGBColor[0, 0, 1]], 
+     StyleBox["\<\"Temperature\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Times",
+      FontColor->RGBColor[0, 0, 1]], 
+     StyleBox["\<\"Generated text\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Times",
+      FontColor->RGBColor[0, 0, 1]]},
+    {"1", 
+     "0.`", "\<\"The distance to the sun is 149.6 million kilometers.\"\>"},
+    {"2", 
+     "0.25`", "\<\"The distance to the sun is 149.6 million \
+kilometers.\"\>"},
+    {"3", 
+     "0.5`", "\<\"The distance to the sun is about 93 million miles. This is \
+the distance between the center of the Earth and the center of the sun. The \
+sun is a star, and it is the center of our solar system. The Earth and all \
+the other planets in our solar system orbit the sun.\"\>"},
+    {"4", 
+     "0.75`", "\<\"The distance to the Sun is about 1 AU, or 149,597,871 \
+kilometres (92,955,807 miles). This is the distance that light travels in one \
+year, and is the standard unit of distance in astronomy.\"\>"},
+    {"5", "1.`", "\<\"The distance to the sun is 149.6 million km.\"\>"}
+   },
+   AutoDelete->False,
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {
+       GrayLevel[1], 
+       GrayLevel[0.96], 
+       GrayLevel[1], 
+       GrayLevel[0.96], 
+       GrayLevel[1], 
+       GrayLevel[0.96]}},
+   GridBoxDividers->{
+    "ColumnsIndexed" -> {
+      1 -> GrayLevel[0], 2 -> GrayLevel[0], 3 -> GrayLevel[0.8], 4 -> 
+       GrayLevel[0.8], 4 -> GrayLevel[0]}, 
+     "Rows" -> {True, True, {False}, True}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{{3.89419570421416*^9, 3.8941957242987223`*^9}, 
+   3.894195766280944*^9, 3.894195805631336*^9, 3.8941965219921618`*^9, 
+   3.8941966977951517`*^9, 3.894196727903871*^9},
+ CellLabel->"Out[15]=",
+ CellID->1775070508,ExpressionUUID->"31976e11-40f6-431e-8f99-1d2153301f9e"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
 Cell[BoxData[
  InterpretationBox[Cell[
   "\"TopProbability\"", "ExampleSubsection",ExpressionUUID->
    "94e14cd8-fb15-4fb6-b68a-2248f742068d"],
   $Line = 0; Null]], "ExampleSubsection",
  CellID->110589025,ExpressionUUID->"5d94cdd8-eb7a-4281-a0ce-c2259ac5c907"],
+
+Cell["Here are text generations for different top probabilities:", \
+"ExampleText",
+ CellChangeTimes->{{3.8941956995255613`*^9, 3.894195731602709*^9}, {
+  3.8941965398289747`*^9, 3.894196550793755*^9}, {3.894196595198085*^9, 
+  3.8941966194457893`*^9}},
+ CellID->1243455497,ExpressionUUID->"1fcad885-84cb-4f42-a476-31abcc0a0f60"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ResourceFunction", "[", "\"\<GridTableForm\>\"", "]"}], "[", 
+  RowBox[{
+   RowBox[{"Map", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#", ",", 
+        RowBox[{"PaLMInputExecuteToText", "[", 
+         RowBox[{"\"\<What cats think about?\>\"", ",", 
+          RowBox[{"\"\<TopProbability\>\"", "->", "#"}]}], "]"}]}], "}"}], 
+      "&"}], ",", 
+     RowBox[{"Range", "[", 
+      RowBox[{"0", ",", "1", ",", "0.3"}], "]"}]}], "]"}], ",", 
+   RowBox[{"TableHeadings", "->", 
+    RowBox[{"{", 
+     RowBox[{"\"\<TopProbability\>\"", ",", "\"\<Generated text\>\""}], 
+     "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.894195375187314*^9, 3.894195394234383*^9}, {
+   3.894195659613186*^9, 3.894195795965849*^9}, {3.8941964816868877`*^9, 
+   3.894196513614976*^9}, {3.894196571812008*^9, 3.894196584120142*^9}, {
+   3.894196622777309*^9, 3.8941966697103233`*^9}, 3.894196738687751*^9, {
+   3.8941968255351543`*^9, 3.894196825984125*^9}},
+ CellLabel->"In[17]:=",
+ CellID->1593169122,ExpressionUUID->"3e5ccb24-d2e6-4ce9-a28d-1887734e2606"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     StyleBox["\<\"#\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Times",
+      FontColor->RGBColor[0, 0, 1]], 
+     StyleBox["\<\"TopProbability\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Times",
+      FontColor->RGBColor[0, 0, 1]], 
+     StyleBox["\<\"Generated text\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Times",
+      FontColor->RGBColor[0, 0, 1]]},
+    {"1", 
+     "0.`", "\<\"Cats are predators and their thoughts are often focused on \
+hunting, eating, and sleeping. They also spend a lot of time grooming \
+themselves and exploring their environment. Cats are very curious creatures \
+and they enjoy playing with toys and exploring new places. They are also very \
+social animals and they enjoy interacting with other cats and with \
+humans.\"\>"},
+    {"2", 
+     "0.3`", "\<\"Cats are predators and their thoughts are often focused on \
+hunting, eating, and sleeping. They also think about their territory and how \
+to defend it from other cats. Cats are also very curious and they enjoy \
+exploring their surroundings. They are also very social animals and they \
+enjoy interacting with other cats and with humans.\"\>"},
+    {"3", 
+     "0.6`", "\<\"Cats are predators and their thoughts are often focused on \
+hunting, eating, and sleeping. They also spend a lot of time grooming \
+themselves and exploring their environment. Cats are very curious creatures \
+and they enjoy playing with toys and exploring new places. They are also very \
+social animals and they enjoy interacting with other cats and with \
+humans.\"\>"},
+    {"4", 
+     "0.8999999999999999`", "\<\"Cats are often thought of as independent and \
+aloof creatures, but there is a wealth of evidence to suggest that they are \
+actually quite thoughtful and complex beings. For example, studies have shown \
+that cats are capable of understanding human language and can even anticipate \
+our behavior. They are also highly social animals and enjoy interacting with \
+other cats and with humans. And while they may not be as expressive as dogs, \
+cats are capable of a wide range of emotions, including love, happiness, \
+sadness, and anger.\\n\\nSo, what do cats think about? It's hard to say for \
+sure, but based on their behavior, it seems that they think about a lot of \
+things. They think about their food, their environment, their owners, and \
+other cats. They also think about their own thoughts and feelings. And, of \
+course, they think about sleep.\\n\\nCats are very curious creatures, and \
+they love to explore their surroundings. They are also very intelligent \
+animals, and they are capable of learning a great deal. They are able to \
+remember things that they have learned, and they are able to use their \
+knowledge to solve problems. For example, cats have been known to open doors \
+and drawers, and they can even figure out how to work light \
+switches.\\n\\nCats are also very social animals. They enjoy interacting with \
+other cats, and they also enjoy interacting with humans. They are able to \
+form strong bonds with their owners, and they often view their owners as \
+members of their own family. Cats are also very playful animals, and they \
+enjoy playing with toys and with other cats.\\n\\nSo, what do cats think \
+about? It's hard to say for sure, but based on their behavior, it seems that \
+they think about a lot of things. They think about their food, their \
+environment, their owners, and other cats. They also think about their own \
+thoughts and feelings. And, of course, they think about sleep.\"\>"}
+   },
+   AutoDelete->False,
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {
+       GrayLevel[1], 
+       GrayLevel[0.96], 
+       GrayLevel[1], 
+       GrayLevel[0.96], 
+       GrayLevel[1]}},
+   GridBoxDividers->{
+    "ColumnsIndexed" -> {
+      1 -> GrayLevel[0], 2 -> GrayLevel[0], 3 -> GrayLevel[0.8], 4 -> 
+       GrayLevel[0.8], 4 -> GrayLevel[0]}, 
+     "Rows" -> {True, True, {False}, True}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{
+  3.894196597354203*^9, {3.894196642207478*^9, 3.8941966798742447`*^9}, 
+   3.894196749969234*^9, 3.894196841569687*^9},
+ CellLabel->"Out[17]=",
+ CellID->1086786633,ExpressionUUID->"ad8cb3df-4854-4f2d-b5bc-da7966c1d8e5"]
+}, Open  ]]
+}, Open  ]],
 
 Cell[BoxData[
  InterpretationBox[Cell[
@@ -335,12 +638,396 @@ Cell[BoxData[
   $Line = 0; Null]], "ExampleSubsection",
  CellID->1096388520,ExpressionUUID->"b320418e-9b02-4a51-b62e-c88236c72449"],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[
  InterpretationBox[Cell[
   "\"MaxOutputTokens\"", "ExampleSubsection",ExpressionUUID->
    "21f36cc7-d25b-4b91-9cd8-89e6866c9904"],
   $Line = 0; Null]], "ExampleSubsection",
  CellID->1592164380,ExpressionUUID->"74f3cb8e-07cd-4a48-a1f0-887c335e3a25"],
+
+Cell["\<\
+Here are text generations for different max number of output tokens \
+specifications:\
+\>", "ExampleText",
+ CellChangeTimes->{{3.8941956995255613`*^9, 3.894195731602709*^9}, {
+  3.8941965398289747`*^9, 3.894196550793755*^9}, {3.894196595198085*^9, 
+  3.8941966194457893`*^9}, {3.8941970103499317`*^9, 3.894197043829031*^9}},
+ CellID->1454840163,ExpressionUUID->"9fd60c54-fc67-4bd9-be44-6cf94d2cefe0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ResourceFunction", "[", "\"\<GridTableForm\>\"", "]"}], "[", 
+  RowBox[{
+   RowBox[{"Map", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#", ",", 
+        RowBox[{"PaLMInputExecuteToText", "[", 
+         RowBox[{"\"\<What is the distance to the sun?\>\"", ",", 
+          RowBox[{"\"\<MaxOutputTokens\>\"", "->", "#"}]}], "]"}]}], "}"}], 
+      "&"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"Automatic", ",", "12", ",", "120"}], "}"}]}], "]"}], ",", 
+   RowBox[{"TableHeadings", "->", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Max output tokens\>\"", ",", "\"\<Generated text\>\""}], 
+     "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.89419693849441*^9, 3.894196983879156*^9}},
+ CellLabel->"In[21]:=",
+ CellID->849855794,ExpressionUUID->"ae6f2b44-0851-4e28-9414-d51d1ef2344d"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     StyleBox["\<\"#\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Times",
+      FontColor->RGBColor[0, 0, 1]], 
+     StyleBox["\<\"Max output tokens\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Times",
+      FontColor->RGBColor[0, 0, 1]], 
+     StyleBox["\<\"Generated text\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Times",
+      FontColor->RGBColor[0, 0, 1]]},
+    {"1", 
+     "Automatic", "\<\"The distance to the sun is 93 million miles. This is \
+the average distance between the Earth and the sun, which varies slightly due \
+to the Earth's elliptical orbit.\"\>"},
+    {"2", 
+     "12", "\<\"The Sun is the star at the center of the Solar System\"\>"},
+    {"3", "120", 
+     InterpretationBox[
+      RowBox[{
+       TagBox["Failure",
+        "SummaryHead"], "[", 
+       DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = 
+        "Ready"}, 
+        TemplateBox[{
+          PaneSelectorBox[{False -> GridBox[{{
+                PaneBox[
+                 ButtonBox[
+                  DynamicBox[
+                   FEPrivate`FrontEndResource[
+                   "FEBitmaps", "SummaryBoxOpener"]], 
+                  ButtonFunction :> (Typeset`open$$ = True), Appearance -> 
+                  None, BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                  "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                 Dynamic[{
+                   Automatic, 
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
+                FrameBox[
+                 StyleBox["\"\[WarningSign]\"", 
+                  Directive["Message", 35], StripOnInput -> False], 
+                 ContentPadding -> False, FrameStyle -> None, 
+                 FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                GridBox[{{
+                   RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"MessageTemplate\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    TagBox[
+                    StyleBox[
+                    
+                    RowBox[{
+                    "AntonAntonov`PaLMLink`PaLMGenerateText", "::", 
+                    "openAIResponseFailureMessage"}], "MessageName"], 
+                    HoldForm], "SummaryItem"]}]}, {
+                   RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"MessageParameters\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    TagBox[
+                    
+                    RowBox[{
+                    "{", "\"The service is currently unavailable.\"", "}"}], 
+                    HoldForm], "SummaryItem"]}]}, {
+                   RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    TagBox["\"PaLMResponseFailure\"", HoldForm], 
+                    "SummaryItem"]}]}}, 
+                 GridBoxAlignment -> {
+                  "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+                 False, GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                 GridBoxSpacings -> {
+                  "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                 BaseStyle -> {
+                  ShowStringCharacters -> False, NumberMarks -> False, 
+                   PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+              GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+              AutoDelete -> False, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              BaselinePosition -> {1, 1}], True -> GridBox[{{
+                PaneBox[
+                 ButtonBox[
+                  DynamicBox[
+                   FEPrivate`FrontEndResource[
+                   "FEBitmaps", "SummaryBoxCloser"]], 
+                  ButtonFunction :> (Typeset`open$$ = False), Appearance -> 
+                  None, BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                  "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                 Dynamic[{
+                   Automatic, 
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
+                FrameBox[
+                 StyleBox["\"\[WarningSign]\"", 
+                  Directive["Message", 35], StripOnInput -> False], 
+                 ContentPadding -> False, FrameStyle -> None, 
+                 FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                GridBox[{{
+                   RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"MessageTemplate\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    TagBox[
+                    StyleBox[
+                    
+                    RowBox[{
+                    "AntonAntonov`PaLMLink`PaLMGenerateText", "::", 
+                    "openAIResponseFailureMessage"}], "MessageName"], 
+                    HoldForm], "SummaryItem"]}]}, {
+                   RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"MessageParameters\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    TagBox[
+                    
+                    RowBox[{
+                    "{", "\"The service is currently unavailable.\"", "}"}], 
+                    HoldForm], "SummaryItem"]}]}, {
+                   RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    TagBox["\"PaLMResponseFailure\"", HoldForm], 
+                    "SummaryItem"]}]}, {
+                   RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"HTTPResponse\"", "\": \""}, "RowDefault"],
+                     "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    TagBox[
+                    InterpretationBox[
+                    RowBox[{
+                    TagBox["HTTPResponse", "SummaryHead"], "[", 
+                    
+                    DynamicModuleBox[{
+                    Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+                    TemplateBox[{
+                    PaneSelectorBox[{False -> GridBox[{{
+                    GraphicsBox[{
+                    RGBColor[1, 0, 0], 
+                    DiskBox[{0, 0}], 
+                    InsetBox[
+                    FormBox[
+                    StyleBox["\"503\"", 
+                    Directive[10, 
+                    GrayLevel[1], Bold], StripOnInput -> False], 
+                    TraditionalForm], 
+                    Scaled[{0.53, 0.48}]]}, ImageSize -> 
+                    Dynamic[{Automatic, (3 CurrentValue["FontCapHeight"])/
+                    AbsoluteCurrentValue[Magnification]}], Background -> 
+                    None], 
+                    GridBox[{{
+                    RowBox[{
+                    TagBox["\"Status: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"Service Unavailable\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Content type: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    "\"application/json; charset=UTF-8\"", "SummaryItem"]}]}},
+                     GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                    AutoDelete -> False, 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                    BaseStyle -> {ShowStringCharacters -> False, NumberMarks -> 
+                    False, PrintPrecision -> 3, ShowSyntaxStyles -> False}]}},
+                     GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Top}}}, AutoDelete -> 
+                    False, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    BaselinePosition -> {1, 1}], True -> GridBox[{{
+                    GraphicsBox[{
+                    RGBColor[1, 0, 0], 
+                    DiskBox[{0, 0}], 
+                    InsetBox[
+                    FormBox[
+                    StyleBox["\"503\"", 
+                    Directive[10, 
+                    GrayLevel[1], Bold], StripOnInput -> False], 
+                    TraditionalForm], 
+                    Scaled[{0.53, 0.48}]]}, ImageSize -> 
+                    Dynamic[{Automatic, (3 CurrentValue["FontCapHeight"])/
+                    AbsoluteCurrentValue[Magnification]}], Background -> 
+                    None], 
+                    GridBox[{{
+                    RowBox[{
+                    TagBox["\"Status: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"Service Unavailable\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Content type: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    "\"application/json; charset=UTF-8\"", "SummaryItem"]}]}},
+                     GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                    AutoDelete -> False, 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                    BaseStyle -> {ShowStringCharacters -> False, NumberMarks -> 
+                    False, PrintPrecision -> 3, ShowSyntaxStyles -> False}]}},
+                     GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Top}}}, AutoDelete -> 
+                    False, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    BaselinePosition -> {1, 1}]}, 
+                    Dynamic[Typeset`open$$], ImageSize -> Automatic]}, 
+                    "SummaryPanel"], DynamicModuleValues :> {}], "]"}], 
+                    HTTPResponse[
+                    
+                    ByteArray[{123, 10, 32, 32, 34, 101, 114, 114, 111, 114, 
+                    34, 58, 32, 123, 10, 32, 32, 32, 32, 34, 99, 111, 100, 
+                    101, 34, 58, 32, 53, 48, 51, 44, 10, 32, 32, 32, 32, 34, 
+                    109, 101, 115, 115, 97, 103, 101, 34, 58, 32, 34, 84, 104,
+                     101, 32, 115, 101, 114, 118, 105, 99, 101, 32, 105, 115, 
+                    32, 99, 117, 114, 114, 101, 110, 116, 108, 121, 32, 117, 
+                    110, 97, 118, 97, 105, 108, 97, 98, 108, 101, 46, 34, 44, 
+                    10, 32, 32, 32, 32, 34, 115, 116, 97, 116, 117, 115, 34, 
+                    58, 32, 34, 85, 78, 65, 86, 65, 73, 76, 65, 66, 76, 69, 
+                    34, 10, 32, 32, 125, 10, 125, 10}], <|
+                    "Headers" -> {{"Vary", "Origin"}, {"Vary", "X-Origin"}, {
+                    "Vary", "Referer"}, {
+                    "Content-Type", "application/json; charset=UTF-8"}, {
+                    "Content-Encoding", "gzip"}, {
+                    "Date", "Sat, 27 May 2023 17:23:06 GMT"}, {
+                    "Server", "scaffolding on HTTPServer2"}, {
+                    "Cache-Control", "private"}, {"X-XSS-Protection", "0"}, {
+                    "X-Frame-Options", "SAMEORIGIN"}, {
+                    "X-Content-Type-Options", "nosniff"}, {
+                    "Alt-Svc", 
+                    "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"}, {
+                    "Transfer-Encoding", "chunked"}}, "StatusCode" -> 503, 
+                    "Cookies" -> {}|>, CharacterEncoding -> Automatic], 
+                    Selectable -> False, Editable -> False, 
+                    SelectWithContents -> True], HoldForm], 
+                    "SummaryItem"]}]}}, 
+                 GridBoxAlignment -> {
+                  "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+                 False, GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                 GridBoxSpacings -> {
+                  "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                 BaseStyle -> {
+                  ShowStringCharacters -> False, NumberMarks -> False, 
+                   PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+              GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+              AutoDelete -> False, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              BaselinePosition -> {1, 1}]}, 
+           Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+         "SummaryPanel"],
+        DynamicModuleValues:>{}], "]"}],
+      Failure[
+      "PaLMResponseFailure", <|
+       "MessageTemplate" :> 
+        MessageName[
+         AntonAntonov`PaLMLink`PaLMGenerateText, 
+          "openAIResponseFailureMessage"], 
+        "MessageParameters" -> {"The service is currently unavailable."}, 
+        "HTTPResponse" -> HTTPResponse[
+          
+          ByteArray[{123, 10, 32, 32, 34, 101, 114, 114, 111, 114, 34, 58, 32,
+            123, 10, 32, 32, 32, 32, 34, 99, 111, 100, 101, 34, 58, 32, 53, 
+           48, 51, 44, 10, 32, 32, 32, 32, 34, 109, 101, 115, 115, 97, 103, 
+           101, 34, 58, 32, 34, 84, 104, 101, 32, 115, 101, 114, 118, 105, 99,
+            101, 32, 105, 115, 32, 99, 117, 114, 114, 101, 110, 116, 108, 121,
+            32, 117, 110, 97, 118, 97, 105, 108, 97, 98, 108, 101, 46, 34, 44,
+            10, 32, 32, 32, 32, 34, 115, 116, 97, 116, 117, 115, 34, 58, 32, 
+           34, 85, 78, 65, 86, 65, 73, 76, 65, 66, 76, 69, 34, 10, 32, 32, 
+           125, 10, 125, 10}], <|
+          "Headers" -> {{"Vary", "Origin"}, {"Vary", "X-Origin"}, {
+             "Vary", "Referer"}, {
+             "Content-Type", "application/json; charset=UTF-8"}, {
+             "Content-Encoding", "gzip"}, {
+             "Date", "Sat, 27 May 2023 17:23:06 GMT"}, {
+             "Server", "scaffolding on HTTPServer2"}, {
+             "Cache-Control", "private"}, {"X-XSS-Protection", "0"}, {
+             "X-Frame-Options", "SAMEORIGIN"}, {
+             "X-Content-Type-Options", "nosniff"}, {
+             "Alt-Svc", 
+              "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"}, {
+             "Transfer-Encoding", "chunked"}}, "StatusCode" -> 503, 
+           "Cookies" -> {}|>, CharacterEncoding -> Automatic]|>],
+      Editable->False,
+      SelectWithContents->True,
+      Selectable->False]}
+   },
+   AutoDelete->False,
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {
+       GrayLevel[1], 
+       GrayLevel[0.96], 
+       GrayLevel[1], 
+       GrayLevel[0.96]}},
+   GridBoxDividers->{
+    "ColumnsIndexed" -> {
+      1 -> GrayLevel[0], 2 -> GrayLevel[0], 3 -> GrayLevel[0.8], 4 -> 
+       GrayLevel[0.8], 4 -> GrayLevel[0]}, 
+     "Rows" -> {True, True, {False}, True}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{{3.8941969661905107`*^9, 3.894196986152478*^9}},
+ CellLabel->"Out[21]=",
+ CellID->1443338390,ExpressionUUID->"cc1a57bd-6a9b-4ae2-bc34-58cf977bfc08"]
+}, Open  ]]
+}, Open  ]],
 
 Cell[BoxData[
  InterpretationBox[Cell[
@@ -349,6 +1036,8 @@ Cell[BoxData[
   $Line = 0; Null]], "ExampleSubsection",
  CellID->1860493040,ExpressionUUID->"f818dbd5-a79a-4685-97ca-1508e94288ba"],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[
  InterpretationBox[Cell[
   "\"StopSequences\"", "ExampleSubsection",ExpressionUUID->
@@ -356,12 +1045,158 @@ Cell[BoxData[
   $Line = 0; Null]], "ExampleSubsection",
  CellID->1944622960,ExpressionUUID->"8381db8c-e79b-4bad-8386-8484f232d4ff"],
 
+Cell["\<\
+Here are text generations for different stop sequences specifications:\
+\>", "ExampleText",
+ CellChangeTimes->{{3.8941956995255613`*^9, 3.894195731602709*^9}, {
+  3.8941965398289747`*^9, 3.894196550793755*^9}, {3.894196595198085*^9, 
+  3.8941966194457893`*^9}, {3.8941970103499317`*^9, 3.894197060323985*^9}},
+ CellID->439534244,ExpressionUUID->"e071c8df-e007-4090-a403-ad0ab6dbe43d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ResourceFunction", "[", "\"\<GridTableForm\>\"", "]"}], "[", 
+  RowBox[{
+   RowBox[{"Map", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#", ",", 
+        RowBox[{"PaLMInputExecuteToText", "[", 
+         RowBox[{"\"\<What is the distance to the sun?\>\"", ",", 
+          RowBox[{"\"\<StopSequences\>\"", "->", "#"}]}], "]"}]}], "}"}], 
+      "&"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"None", ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<.\>\"", ",", " ", "\"\<!\>\""}], "}"}]}], "}"}]}], "]"}],
+    ",", 
+   RowBox[{"TableHeadings", "->", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Stop sequences\>\"", ",", "\"\<Generated text\>\""}], 
+     "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.894196780803638*^9, 3.894196876134272*^9}},
+ CellLabel->"In[22]:=",
+ CellID->504909217,ExpressionUUID->"2ebaf090-7374-426c-ac2c-001e40d8b5ef"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     StyleBox["\<\"#\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Times",
+      FontColor->RGBColor[0, 0, 1]], 
+     StyleBox["\<\"Stop sequences\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Times",
+      FontColor->RGBColor[0, 0, 1]], 
+     StyleBox["\<\"Generated text\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Times",
+      FontColor->RGBColor[0, 0, 1]]},
+    {"1", 
+     "None", "\<\"The distance to the sun is 92.96 million miles (149.6 \
+million kilometers).\"\>"},
+    {"2", 
+     RowBox[{"{", 
+      RowBox[{"\<\".\"\>", ",", "\<\"!\"\>"}], 
+      "}"}], "\<\"The distance to the sun is about 149\"\>"}
+   },
+   AutoDelete->False,
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {
+       GrayLevel[1], 
+       GrayLevel[0.96], 
+       GrayLevel[1]}},
+   GridBoxDividers->{
+    "ColumnsIndexed" -> {
+      1 -> GrayLevel[0], 2 -> GrayLevel[0], 3 -> GrayLevel[0.8], 4 -> 
+       GrayLevel[0.8], 4 -> GrayLevel[0]}, 
+     "Rows" -> {True, True, {False}, True}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{3.894196881244288*^9, 3.894196922762854*^9, 
+  3.894197069001356*^9},
+ CellLabel->"Out[22]=",
+ CellID->1927165711,ExpressionUUID->"d7369e93-463c-40e7-a083-7bd5910fd1c1"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
 Cell[BoxData[
  InterpretationBox[Cell[
   "Epilog", "ExampleSubsection",ExpressionUUID->
    "87625a8f-6f7a-4777-bccc-545fda5bf5dd"],
   $Line = 0; Null]], "ExampleSubsection",
- CellID->724465027,ExpressionUUID->"af005017-17b0-4cca-a351-ac216ba5f355"]
+ CellID->724465027,ExpressionUUID->"af005017-17b0-4cca-a351-ac216ba5f355"],
+
+Cell["\<\
+The option \"Epilog\" can be used to modify the output. Here is an example in \
+the which the PaLM API output a Python external evaluation cell is created:\
+\>", "ExampleText",
+ CellChangeTimes->{{3.894197078826532*^9, 3.8941971460935097`*^9}},
+ CellID->122402278,ExpressionUUID->"ab49860a-9456-445b-8176-5c4ec90ba731"],
+
+Cell[BoxData[
+ RowBox[{"PaLMInputExecuteToText", "[", 
+  RowBox[{
+  "\"\<Generate Python code for iteration over a dictionary.\>\"", ",", 
+   RowBox[{"Epilog", "->", 
+    RowBox[{"PacletSymbol", "[", 
+     RowBox[{
+     "\"\<AntonAntonov/NotebookModifiers\>\"", ",", 
+      "\"\<CellPrintPython\>\""}], "]"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8941971525541553`*^9, 3.8941972908809977`*^9}},
+ CellLabel->"In[26]:=",
+ CellID->2147388547,ExpressionUUID->"975a829f-85a8-4923-a720-246052bdb770"],
+
+Cell["\<\
+There are several ways to iterate over a dictionary in Python. Here are three \
+examples:
+
+1. **Using a for loop:**
+
+```python
+for key, value in dictionary.items():
+    print(key, value)
+```
+
+2. **Using the `iter()` function:**
+
+```python
+for key, value in iter(dictionary.items()):
+    print(key, value)
+```
+
+3. **Using the `enumerate()` function:**
+
+```python
+for index, (key, value) in enumerate(dictionary.items()):
+    print(index, key, value)
+```\
+\>", "ExternalLanguage",
+ CellEvaluationLanguage->"Python",
+ CellID->852674647,ExpressionUUID->"d5645c3b-0f8d-48b2-a96a-8ca84ea85d2d"],
+
+Cell["Note that the answer is given as Markdown text.", "ExampleText",
+ CellChangeTimes->{{3.894197300374812*^9, 3.894197336918108*^9}},
+ CellID->744415698,ExpressionUUID->"b22eb93c-5d32-4e6a-8bfc-ba5bf80a03f5"]
+}, Open  ]]
 }, Open  ]],
 
 Cell[BoxData[
@@ -407,7 +1242,7 @@ Cell["Metadata", "MetadataSection",
 
 Cell[TextData[{
  "New in: ",
- Cell["XX", "HistoryData",
+ Cell["1.0.0", "HistoryData",
   CellTags->"New",ExpressionUUID->"7e45a012-8a15-4086-9440-1b3ccf8dd446"],
  " | Modified in: ",
  Cell[" ", "HistoryData",
@@ -417,6 +1252,8 @@ Cell[TextData[{
   CellTags->"Obsolete",ExpressionUUID->
   "4870d880-74ff-4652-a2a1-69a88cd2c503"]
 }], "History",
+ CellChangeTimes->{{3.864923683926749*^9, 3.864923685610183*^9}, {
+  3.894196525448097*^9, 3.894196528865203*^9}},
  CellID->124681714,ExpressionUUID->"0dcd2c7b-fb2d-456e-a29d-4e7792efa3cb"],
 
 Cell[CellGroupData[{
@@ -485,10 +1322,11 @@ Cell[BoxData[""], "Template",
 }, Closed]]
 }, Open  ]]
 },
-WindowSize->{700, 770},
-WindowMargins->{{5, Automatic}, {Automatic, 0}},
+WindowSize->{1387, 1218},
+WindowMargins->{{Automatic, 1015}, {Automatic, -1381}},
 TaggingRules-><|"Paclet" -> "AntonAntonov/PaLMMode"|>,
 CellContext->"Global`",
+Magnification:>1.25 Inherited,
 FrontEndVersion->"13.2 for Mac OS X ARM (64-bit) (January 30, 2023)",
 StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStylesExt.nb", 
   CharacterEncoding -> "UTF-8"],
@@ -500,142 +1338,206 @@ ExpressionUUID->"06adf171-7053-482a-a7b0-cfc693eea24f"
 (*CellTagsOutline
 CellTagsIndex->{
  "ExtendedExamples"->{
-  Cell[8996, 257, 488, 13, 58, "ExtendedExamplesSection",ExpressionUUID->"b3fda43f-8916-47f7-a3ae-4216bb801fc1",
+  Cell[11523, 314, 488, 13, 72, "ExtendedExamplesSection",ExpressionUUID->"b3fda43f-8916-47f7-a3ae-4216bb801fc1",
    CellTags->"ExtendedExamples",
    CellID->1854443015]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"ExtendedExamples", 17413, 501}
+ {"ExtendedExamples", 53523, 1339}
  }
 *)
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 119, 1, 74, "ObjectName",ExpressionUUID->"950d7f38-a4ba-443f-9950-6efb34c437ba",
+Cell[580, 22, 119, 1, 92, "ObjectName",ExpressionUUID->"950d7f38-a4ba-443f-9950-6efb34c437ba",
  CellID->675474157],
-Cell[702, 25, 253, 4, 61, "Usage",ExpressionUUID->"2bd029ca-9cb9-4d71-9b39-cea3c5d67b46",
+Cell[702, 25, 615, 14, 99, "Usage",ExpressionUUID->"2bd029ca-9cb9-4d71-9b39-cea3c5d67b46",
  CellID->1095598657],
-Cell[958, 31, 129, 1, 27, "Notes",ExpressionUUID->"5c1f7f5f-3708-48d5-98f9-38cb74f421da",
+Cell[1320, 41, 319, 6, 33, "Notes",ExpressionUUID->"5c1f7f5f-3708-48d5-98f9-38cb74f421da",
  CellID->1201838821],
-Cell[1090, 34, 3113, 69, 275, "3ColumnTableMod",ExpressionUUID->"6cbbe836-adf0-4c33-8891-11c71587338a",
+Cell[1642, 49, 129, 1, 33, "Notes",ExpressionUUID->"9c619030-7168-46a6-9d95-0bfa3f459ce6",
+ CellID->1077295821],
+Cell[1774, 52, 3376, 70, 347, "3ColumnTableMod",ExpressionUUID->"6cbbe836-adf0-4c33-8891-11c71587338a",
  CellID->73880865]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4240, 108, 435, 12, 41, "TechNotesSection",ExpressionUUID->"fd33ae70-1554-47ee-82db-d8a07ead4ea4",
+Cell[5187, 127, 435, 12, 51, "TechNotesSection",ExpressionUUID->"fd33ae70-1554-47ee-82db-d8a07ead4ea4",
  CellID->470150089],
-Cell[4678, 122, 101, 1, 19, "Tutorials",ExpressionUUID->"3811fa3a-c744-45a7-8e74-ab9a2a771d87",
+Cell[5625, 141, 101, 1, 24, "Tutorials",ExpressionUUID->"3811fa3a-c744-45a7-8e74-ab9a2a771d87",
  CellID->1220208510]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4816, 128, 473, 13, 40, "RelatedLinksSection",ExpressionUUID->"dd6bbf21-ba93-400e-a968-df875e4f56f6",
+Cell[5763, 147, 473, 13, 50, "RelatedLinksSection",ExpressionUUID->"dd6bbf21-ba93-400e-a968-df875e4f56f6",
  CellID->1723082367],
-Cell[5292, 143, 104, 1, 19, "RelatedLinks",ExpressionUUID->"71ed22fc-6d62-4734-8252-9f6d2e31d97a",
+Cell[6239, 162, 104, 1, 24, "RelatedLinks",ExpressionUUID->"71ed22fc-6d62-4734-8252-9f6d2e31d97a",
  CellID->1028362374]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5433, 149, 458, 13, 40, "SeeAlsoSection",ExpressionUUID->"ad85f7a9-90b5-4256-b398-27dfc585d184",
+Cell[6380, 168, 458, 13, 50, "SeeAlsoSection",ExpressionUUID->"ad85f7a9-90b5-4256-b398-27dfc585d184",
  CellID->738028762],
-Cell[5894, 164, 1543, 40, 26, "SeeAlso",ExpressionUUID->"10244d9e-ba02-4268-b57e-fbc15e20b54d",
- CellID->183857862]
+Cell[6841, 183, 2152, 52, 30, "SeeAlso",ExpressionUUID->"255d8e91-0628-458b-b5b8-882bc28567f9",
+ CellID->54428209]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7474, 209, 184, 2, 40, "MoreAboutSection",ExpressionUUID->"2d3cf8f8-a6da-4b42-b51a-d53464d900e0",
+Cell[9030, 240, 184, 2, 50, "MoreAboutSection",ExpressionUUID->"2d3cf8f8-a6da-4b42-b51a-d53464d900e0",
  CellID->2017602248],
-Cell[7661, 213, 101, 1, 19, "MoreAbout",ExpressionUUID->"ce904acd-5ca3-49db-b746-4f59489b2f8f",
- CellID->1074196006]
+Cell[9217, 244, 272, 4, 24, "MoreAbout",ExpressionUUID->"694c24cf-d963-4420-a61f-26272d2f68de",
+ CellID->482011239]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7799, 219, 530, 14, 70, "ExamplesInitializationSection",ExpressionUUID->"eea8a1d6-0eec-4ba2-b3e2-43f670b1bf66",
+Cell[9526, 253, 530, 14, 87, "ExamplesInitializationSection",ExpressionUUID->"eea8a1d6-0eec-4ba2-b3e2-43f670b1bf66",
  CellID->117252513],
-Cell[8332, 235, 182, 3, 47, "ExampleInitialization",ExpressionUUID->"676e2c35-afe7-4a35-8d8d-39a52168ca5c",
+Cell[10059, 269, 182, 3, 57, "ExampleInitialization",ExpressionUUID->"676e2c35-afe7-4a35-8d8d-39a52168ca5c",
  CellID->1420481692]
 }, Open  ]],
-Cell[8529, 241, 442, 12, 73, "PrimaryExamplesSection",ExpressionUUID->"e997d328-6e22-4294-91e5-a34456f095f3",
- CellID->460093745],
 Cell[CellGroupData[{
-Cell[8996, 257, 488, 13, 58, "ExtendedExamplesSection",ExpressionUUID->"b3fda43f-8916-47f7-a3ae-4216bb801fc1",
+Cell[10278, 277, 442, 12, 90, "PrimaryExamplesSection",ExpressionUUID->"e997d328-6e22-4294-91e5-a34456f095f3",
+ CellID->460093745],
+Cell[10723, 291, 192, 2, 30, "ExampleText",ExpressionUUID->"276b8228-fe22-4f9a-9cd0-2ade554edf51",
+ CellID->937365785],
+Cell[CellGroupData[{
+Cell[10940, 297, 282, 5, 33, "Input",ExpressionUUID->"c391f3fa-7c89-43d3-8712-16355d38a8dd",
+ CellID->2100407355],
+Cell[11225, 304, 249, 4, 32, "Output",ExpressionUUID->"fbd288e7-3192-4a6c-9a27-3ab0ca7c0bde",
+ CellID->1700824952]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11523, 314, 488, 13, 72, "ExtendedExamplesSection",ExpressionUUID->"b3fda43f-8916-47f7-a3ae-4216bb801fc1",
  CellTags->"ExtendedExamples",
  CellID->1854443015],
-Cell[9487, 272, 242, 5, 35, "ExampleSection",ExpressionUUID->"0d946312-af11-4ff2-9b4d-be204d81502d",
+Cell[12014, 329, 242, 5, 43, "ExampleSection",ExpressionUUID->"0d946312-af11-4ff2-9b4d-be204d81502d",
  CellID->1193584194],
-Cell[9732, 279, 264, 5, 23, "ExampleSection",ExpressionUUID->"b6dd0b7b-a059-478e-9ea8-55572cbcad75",
+Cell[12259, 336, 264, 5, 27, "ExampleSection",ExpressionUUID->"b6dd0b7b-a059-478e-9ea8-55572cbcad75",
  CellID->924801931],
 Cell[CellGroupData[{
-Cell[10021, 288, 244, 5, 23, "ExampleSection",ExpressionUUID->"1d9d418c-ba30-45cb-b1ff-03e4b0d1bc84",
+Cell[12548, 345, 244, 5, 27, "ExampleSection",ExpressionUUID->"1d9d418c-ba30-45cb-b1ff-03e4b0d1bc84",
  CellID->1348389887],
-Cell[10268, 295, 253, 5, 26, "ExampleSubsection",ExpressionUUID->"29b70529-ade9-4c7c-ae4a-ec159677a7f6",
+Cell[12795, 352, 253, 5, 32, "ExampleSubsection",ExpressionUUID->"29b70529-ade9-4c7c-ae4a-ec159677a7f6",
  CellID->2141387665],
-Cell[10524, 302, 250, 5, 22, "ExampleSubsection",ExpressionUUID->"aa787877-9af5-47c8-866f-0078eaf85859",
+Cell[13051, 359, 250, 5, 26, "ExampleSubsection",ExpressionUUID->"aa787877-9af5-47c8-866f-0078eaf85859",
  CellID->624045582],
-Cell[10777, 309, 250, 5, 22, "ExampleSubsection",ExpressionUUID->"ad2b96ee-0b3a-4daf-a873-c5fb4268e0d8",
+Cell[CellGroupData[{
+Cell[13326, 368, 250, 5, 26, "ExampleSubsection",ExpressionUUID->"ad2b96ee-0b3a-4daf-a873-c5fb4268e0d8",
  CellID->23964726],
-Cell[11030, 316, 258, 5, 22, "ExampleSubsection",ExpressionUUID->"67eb2b14-a1e1-43f7-9408-ab968b396680",
- CellID->1195707893],
-Cell[11291, 323, 260, 5, 22, "ExampleSubsection",ExpressionUUID->"5d94cdd8-eb7a-4281-a0ce-c2259ac5c907",
- CellID->110589025],
-Cell[11554, 330, 261, 5, 22, "ExampleSubsection",ExpressionUUID->"b320418e-9b02-4a51-b62e-c88236c72449",
- CellID->1096388520],
-Cell[11818, 337, 262, 5, 22, "ExampleSubsection",ExpressionUUID->"74f3cb8e-07cd-4a48-a1f0-887c335e3a25",
- CellID->1592164380],
-Cell[12083, 344, 261, 5, 22, "ExampleSubsection",ExpressionUUID->"f818dbd5-a79a-4685-97ca-1508e94288ba",
- CellID->1860493040],
-Cell[12347, 351, 260, 5, 22, "ExampleSubsection",ExpressionUUID->"8381db8c-e79b-4bad-8386-8484f232d4ff",
- CellID->1944622960],
-Cell[12610, 358, 248, 5, 22, "ExampleSubsection",ExpressionUUID->"af005017-17b0-4cca-a351-ac216ba5f355",
- CellID->724465027]
+Cell[13579, 375, 247, 4, 30, "ExampleText",ExpressionUUID->"aa717d5b-9978-4319-aec7-cd2daf9368d7",
+ CellID->707178665]
 }, Open  ]],
-Cell[12873, 366, 249, 5, 35, "ExampleSection",ExpressionUUID->"f95a23f1-9864-4a0d-9f1e-3043638fad4e",
+Cell[CellGroupData[{
+Cell[13863, 384, 258, 5, 32, "ExampleSubsection",ExpressionUUID->"67eb2b14-a1e1-43f7-9408-ab968b396680",
+ CellID->1195707893],
+Cell[14124, 391, 270, 3, 30, "ExampleText",ExpressionUUID->"30a2c9df-47f2-44da-a548-477ad1b8b88f",
+ CellID->325523476],
+Cell[CellGroupData[{
+Cell[14419, 398, 974, 23, 130, "Input",ExpressionUUID->"c1c62ba3-869c-4913-9796-cc0f8c646c34",
+ CellID->1832473401],
+Cell[15396, 423, 2550, 63, 322, "Output",ExpressionUUID->"31976e11-40f6-431e-8f99-1d2153301f9e",
+ CellID->1775070508]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17995, 492, 260, 5, 32, "ExampleSubsection",ExpressionUUID->"5d94cdd8-eb7a-4281-a0ce-c2259ac5c907",
+ CellID->110589025],
+Cell[18258, 499, 329, 5, 30, "ExampleText",ExpressionUUID->"1fcad885-84cb-4f42-a476-31abcc0a0f60",
+ CellID->1243455497],
+Cell[CellGroupData[{
+Cell[18612, 508, 1096, 25, 130, "Input",ExpressionUUID->"3e5ccb24-d2e6-4ce9-a28d-1887734e2606",
+ CellID->1593169122],
+Cell[19711, 535, 4862, 94, 1512, "Output",ExpressionUUID->"ad8cb3df-4854-4f2d-b5bc-da7966c1d8e5",
+ CellID->1086786633]
+}, Open  ]]
+}, Open  ]],
+Cell[24600, 633, 261, 5, 32, "ExampleSubsection",ExpressionUUID->"b320418e-9b02-4a51-b62e-c88236c72449",
+ CellID->1096388520],
+Cell[CellGroupData[{
+Cell[24886, 642, 262, 5, 26, "ExampleSubsection",ExpressionUUID->"74f3cb8e-07cd-4a48-a1f0-887c335e3a25",
+ CellID->1592164380],
+Cell[25151, 649, 410, 7, 30, "ExampleText",ExpressionUUID->"9fd60c54-fc67-4bd9-be44-6cf94d2cefe0",
+ CellID->1454840163],
+Cell[CellGroupData[{
+Cell[25586, 660, 834, 21, 130, "Input",ExpressionUUID->"ae6f2b44-0851-4e28-9414-d51d1ef2344d",
+ CellID->849855794],
+Cell[26423, 683, 16691, 344, 230, "Output",ExpressionUUID->"cc1a57bd-6a9b-4ae2-bc34-58cf977bfc08",
+ CellID->1443338390]
+}, Open  ]]
+}, Open  ]],
+Cell[43141, 1031, 261, 5, 32, "ExampleSubsection",ExpressionUUID->"f818dbd5-a79a-4685-97ca-1508e94288ba",
+ CellID->1860493040],
+Cell[CellGroupData[{
+Cell[43427, 1040, 260, 5, 26, "ExampleSubsection",ExpressionUUID->"8381db8c-e79b-4bad-8386-8484f232d4ff",
+ CellID->1944622960],
+Cell[43690, 1047, 394, 6, 30, "ExampleText",ExpressionUUID->"e071c8df-e007-4090-a403-ad0ab6dbe43d",
+ CellID->439534244],
+Cell[CellGroupData[{
+Cell[44109, 1057, 894, 24, 130, "Input",ExpressionUUID->"2ebaf090-7374-426c-ac2c-001e40d8b5ef",
+ CellID->504909217],
+Cell[45006, 1083, 1845, 51, 110, "Output",ExpressionUUID->"d7369e93-463c-40e7-a083-7bd5910fd1c1",
+ CellID->1927165711]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[46900, 1140, 248, 5, 32, "ExampleSubsection",ExpressionUUID->"af005017-17b0-4cca-a351-ac216ba5f355",
+ CellID->724465027],
+Cell[47151, 1147, 329, 5, 52, "ExampleText",ExpressionUUID->"ab49860a-9456-445b-8176-5c4ec90ba731",
+ CellID->122402278],
+Cell[47483, 1154, 500, 11, 106, "Input",ExpressionUUID->"975a829f-85a8-4923-a720-246052bdb770",
+ CellID->2147388547],
+Cell[47986, 1167, 598, 26, 530, "ExternalLanguage",ExpressionUUID->"d5645c3b-0f8d-48b2-a96a-8ca84ea85d2d",
+ CellID->852674647],
+Cell[48587, 1195, 211, 2, 30, "ExampleText",ExpressionUUID->"b22eb93c-5d32-4e6a-8bfc-ba5bf80a03f5",
+ CellID->744415698]
+}, Open  ]]
+}, Open  ]],
+Cell[48825, 1201, 249, 5, 43, "ExampleSection",ExpressionUUID->"f95a23f1-9864-4a0d-9f1e-3043638fad4e",
  CellID->1409201629],
-Cell[13125, 373, 259, 5, 23, "ExampleSection",ExpressionUUID->"f5eff006-7344-4526-be36-132f6e1bd60c",
+Cell[49077, 1208, 259, 5, 27, "ExampleSection",ExpressionUUID->"f5eff006-7344-4526-be36-132f6e1bd60c",
  CellID->2002119487],
-Cell[13387, 380, 251, 5, 23, "ExampleSection",ExpressionUUID->"365c9b0c-f9ba-4160-a3b5-92522328ae38",
+Cell[49339, 1215, 251, 5, 27, "ExampleSection",ExpressionUUID->"365c9b0c-f9ba-4160-a3b5-92522328ae38",
  CellID->700953166],
-Cell[13641, 387, 257, 5, 23, "ExampleSection",ExpressionUUID->"35350626-0818-498f-bb20-77d659384d16",
+Cell[49593, 1222, 257, 5, 27, "ExampleSection",ExpressionUUID->"35350626-0818-498f-bb20-77d659384d16",
  CellID->1972057167],
-Cell[13901, 394, 249, 5, 23, "ExampleSection",ExpressionUUID->"ac90aca6-ab8f-493e-8977-3d738882c63e",
+Cell[49853, 1229, 249, 5, 27, "ExampleSection",ExpressionUUID->"ac90aca6-ab8f-493e-8977-3d738882c63e",
  CellID->102197971]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[14187, 404, 111, 1, 72, "MetadataSection",ExpressionUUID->"bca19b41-051b-48f7-9ebe-4cbcd5e0446a",
+Cell[50139, 1239, 111, 1, 90, "MetadataSection",ExpressionUUID->"bca19b41-051b-48f7-9ebe-4cbcd5e0446a",
  CellID->1801864644],
-Cell[14301, 407, 476, 12, 26, "History",ExpressionUUID->"0dcd2c7b-fb2d-456e-a29d-4e7792efa3cb",
+Cell[50253, 1242, 594, 14, 33, "History",ExpressionUUID->"0dcd2c7b-fb2d-456e-a29d-4e7792efa3cb",
  CellID->124681714],
 Cell[CellGroupData[{
-Cell[14802, 423, 485, 13, 21, "CategorizationSection",ExpressionUUID->"bf165cfc-eb54-43ff-bfc2-5a669a9efde0",
+Cell[50872, 1260, 485, 13, 27, "CategorizationSection",ExpressionUUID->"bf165cfc-eb54-43ff-bfc2-5a669a9efde0",
  CellID->1729011373],
-Cell[15290, 438, 135, 2, 35, "Categorization",ExpressionUUID->"9925159c-7e73-4a8e-a28e-c93e0bef722f",
+Cell[51360, 1275, 135, 2, 43, "Categorization",ExpressionUUID->"9925159c-7e73-4a8e-a28e-c93e0bef722f",
  CellID->1892918454],
-Cell[15428, 442, 150, 2, 35, "Categorization",ExpressionUUID->"9d3c0b56-01b2-41af-94ce-fe6555faf49d",
+Cell[51498, 1279, 150, 2, 43, "Categorization",ExpressionUUID->"9d3c0b56-01b2-41af-94ce-fe6555faf49d",
  CellID->1998913946],
-Cell[15581, 446, 146, 2, 35, "Categorization",ExpressionUUID->"3b2475fc-a949-4cae-9eb4-49863c90830a",
+Cell[51651, 1283, 146, 2, 43, "Categorization",ExpressionUUID->"3b2475fc-a949-4cae-9eb4-49863c90830a",
  CellID->512516754],
-Cell[15730, 450, 168, 2, 35, "Categorization",ExpressionUUID->"e88b6582-ce91-44f1-a1e4-bd1a09f636d8",
+Cell[51800, 1287, 168, 2, 43, "Categorization",ExpressionUUID->"e88b6582-ce91-44f1-a1e4-bd1a09f636d8",
  CellID->312176361]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[15935, 457, 111, 1, 21, "KeywordsSection",ExpressionUUID->"270e1bff-c127-4eba-a6cd-085362201cea",
+Cell[52005, 1294, 111, 1, 26, "KeywordsSection",ExpressionUUID->"270e1bff-c127-4eba-a6cd-085362201cea",
  CellID->1390348926],
-Cell[16049, 460, 99, 1, 70, "Keywords",ExpressionUUID->"8c48bb20-df76-4af1-b2db-ad3b6098c476",
+Cell[52119, 1297, 99, 1, 87, "Keywords",ExpressionUUID->"8c48bb20-df76-4af1-b2db-ad3b6098c476",
  CellID->824836275]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[16185, 466, 120, 1, 21, "TemplatesSection",ExpressionUUID->"e760d1cc-d329-47d6-894e-a8f93ddb004d",
+Cell[52255, 1303, 120, 1, 26, "TemplatesSection",ExpressionUUID->"e760d1cc-d329-47d6-894e-a8f93ddb004d",
  CellID->1016332540],
-Cell[16308, 469, 148, 2, 70, "Template",ExpressionUUID->"326aaf8e-6a63-4cd0-9ca1-a9b33e9935ce",
+Cell[52378, 1306, 148, 2, 87, "Template",ExpressionUUID->"326aaf8e-6a63-4cd0-9ca1-a9b33e9935ce",
  CellID->416071542],
-Cell[16459, 473, 137, 2, 70, "Template",ExpressionUUID->"58500619-b8ff-4ec4-9e0f-3b3f32859cdf",
+Cell[52529, 1310, 137, 2, 87, "Template",ExpressionUUID->"58500619-b8ff-4ec4-9e0f-3b3f32859cdf",
  CellID->707651762],
-Cell[16599, 477, 135, 2, 70, "Template",ExpressionUUID->"6ddeeea2-af77-4a3d-847c-e49120be7d0d",
+Cell[52669, 1314, 135, 2, 87, "Template",ExpressionUUID->"6ddeeea2-af77-4a3d-847c-e49120be7d0d",
  CellID->738726848],
-Cell[16737, 481, 138, 2, 70, "Template",ExpressionUUID->"a91862e1-c7da-45a9-a807-aaa1e2219e84",
+Cell[52807, 1318, 138, 2, 87, "Template",ExpressionUUID->"a91862e1-c7da-45a9-a807-aaa1e2219e84",
  CellID->1179171029]
 }, Closed]]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
