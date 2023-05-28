@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     62938,       1535]
-NotebookOptionsPosition[     52973,       1324]
-NotebookOutlinePosition[     53798,       1351]
-CellTagsIndexPosition[     53718,       1346]
+NotebookDataLength[     62805,       1527]
+NotebookOptionsPosition[     52316,       1304]
+NotebookOutlinePosition[     53137,       1331]
+CellTagsIndexPosition[     53057,       1326]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -39,13 +39,48 @@ Cell[TextData[{
  CellChangeTimes->{{3.8941954108036957`*^9, 3.894195470057235*^9}},
  CellID->1095598657,ExpressionUUID->"2bd029ca-9cb9-4d71-9b39-cea3c5d67b46"],
 
-Cell["\<\
-PaLMInputExecuteToText is the execution function for the cell style \
-\"PaLMInputExecuteToText\".\
-\>", "Notes",
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["PaLMInputExecuteToText",
+   BaseStyle->"Link",
+   ButtonData->"paclet:AntonAntonov/PaLMMode/ref/PaLMInputExecuteToText"]], 
+  "InlineFormula",ExpressionUUID->"f60e785d-1daf-4e84-bea2-3aa20d495dc0"],
+ " is the execution function for the cell style \"PaLMInputExecuteToText\"."
+}], "Notes",
  CellChangeTimes->{{3.8941954717933702`*^9, 3.8941954791736317`*^9}, {
-  3.894197642489607*^9, 3.8941976521514683`*^9}},
+   3.894197642489607*^9, 3.8941976521514683`*^9}, 3.8942662114409637`*^9},
  CellID->1201838821,ExpressionUUID->"5c1f7f5f-3708-48d5-98f9-38cb74f421da"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["PaLMInputExecuteToText",
+   BaseStyle->"Link",
+   ButtonData->"paclet:AntonAntonov/PaLMMode/ref/PaLMInputExecuteToText"]], 
+  "InlineFormula",ExpressionUUID->"40df2317-e45b-4a31-b401-6ebfb1123fd0"],
+ " uses the function ",
+ Cell[BoxData[
+  ButtonBox["PaLMGenerateText",
+   BaseStyle->"Hyperlink",
+   ButtonData->{
+     URL["https://resources.wolframcloud.com/PacletRepository/resources/\
+AntonAntonov/PaLMLink/ref/PaLMGenerateText.html"], None},
+   ButtonNote->
+    "https://resources.wolframcloud.com/PacletRepository/resources/\
+AntonAntonov/PaLMLink/ref/PaLMGenerateText.html"]], "InlineFormula",
+  ExpressionUUID->"457ac32c-7b85-4c32-a35a-f0c7fca6514e"],
+ " of the paclet ",
+ ButtonBox["\"AntonAntonov/PaLMLink\"",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://resources.wolframcloud.com/PacletRepository/resources/\
+AntonAntonov/PaLMLink/"], None},
+  ButtonNote->
+   "https://resources.wolframcloud.com/PacletRepository/resources/\
+AntonAntonov/PaLMLink/"],
+ "."
+}], "Notes",
+ CellChangeTimes->{{3.894267259532023*^9, 3.894267332452655*^9}},
+ CellID->1144147463,ExpressionUUID->"939898a2-fd35-4dfb-a4f5-49caf6f36814"],
 
 Cell["The following options can be given: ", "Notes",
  CellID->1077295821,ExpressionUUID->"9c619030-7168-46a6-9d95-0bfa3f459ce6"],
@@ -203,10 +238,10 @@ Cell[TextData[{
     "d4d72e10-0a65-4633-8f50-cf14aac069ca"], 
    DynamicModuleBox[{$CellContext`nbobj$$ = NotebookObject[
     "06adf171-7053-482a-a7b0-cfc693eea24f", 
-     "a17db47b-c034-4e3a-8c0d-c0a06344da2d"], $CellContext`cellobj$$ = 
+     "2fd3c061-2edf-4a86-bc9b-8fc94b92e103"], $CellContext`cellobj$$ = 
     CellObject[
     "d1d0cb80-98da-4e22-b219-390938b48b38", 
-     "1ffef4a4-2242-49b6-a2ba-9f85d48b17c3"]}, 
+     "d3a611e4-cb55-48ad-a5e8-7f0a38057458"]}, 
     TemplateBox[{
       GraphicsBox[{{
          Thickness[0.06], 
@@ -232,7 +267,8 @@ Cell[TextData[{
   "d1d0cb80-98da-4e22-b219-390938b48b38"]
 }], "SeeAlso",
  CellChangeTimes->{{3.894185701406478*^9, 3.894185743535852*^9}, {
-  3.8941858369794292`*^9, 3.894185838722947*^9}},
+  3.8941858369794292`*^9, 3.894185838722947*^9}, {3.894266227164589*^9, 
+  3.894266238409371*^9}},
  CellID->54428209,ExpressionUUID->"255d8e91-0628-458b-b5b8-882bc28567f9"]
 }, Open  ]],
 
@@ -376,7 +412,8 @@ Cell[BoxData[
 Cell["\<\
 Currently only the model \"text-bison-001\" is  available via PaLM API.\
 \>", "ExampleText",
- CellChangeTimes->{{3.8941973521694098`*^9, 3.8941973886628637`*^9}},
+ CellChangeTimes->{{3.8941973521694098`*^9, 3.8941973886628637`*^9}, {
+  3.894266244148267*^9, 3.894266263982332*^9}},
  CellID->707178665,ExpressionUUID->"aa717d5b-9978-4319-aec7-cd2daf9368d7"]
 }, Open  ]],
 
@@ -678,7 +715,7 @@ Cell[BoxData[
      RowBox[{"\"\<Max output tokens\>\"", ",", "\"\<Generated text\>\""}], 
      "}"}]}]}], "]"}]], "Input",
  CellChangeTimes->{{3.89419693849441*^9, 3.894196983879156*^9}},
- CellLabel->"In[21]:=",
+ CellLabel->"In[2]:=",
  CellID->849855794,ExpressionUUID->"ae6f2b44-0851-4e28-9414-d51d1ef2344d"],
 
 Cell[BoxData[
@@ -709,305 +746,18 @@ Cell[BoxData[
       FontFamily->"Times",
       FontColor->RGBColor[0, 0, 1]]},
     {"1", 
-     "Automatic", "\<\"The distance to the sun is 93 million miles. This is \
-the average distance between the Earth and the sun, which varies slightly due \
-to the Earth's elliptical orbit.\"\>"},
-    {"2", 
-     "12", "\<\"The Sun is the star at the center of the Solar System\"\>"},
-    {"3", "120", 
-     InterpretationBox[
-      RowBox[{
-       TagBox["Failure",
-        "SummaryHead"], "[", 
-       DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = 
-        "Ready"}, 
-        TemplateBox[{
-          PaneSelectorBox[{False -> GridBox[{{
-                PaneBox[
-                 ButtonBox[
-                  DynamicBox[
-                   FEPrivate`FrontEndResource[
-                   "FEBitmaps", "SummaryBoxOpener"]], 
-                  ButtonFunction :> (Typeset`open$$ = True), Appearance -> 
-                  None, BaseStyle -> {}, Evaluator -> Automatic, Method -> 
-                  "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
-                 Dynamic[{
-                   Automatic, 
-                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
-                    Magnification])}]], 
-                FrameBox[
-                 StyleBox["\"\[WarningSign]\"", 
-                  Directive["Message", 35], StripOnInput -> False], 
-                 ContentPadding -> False, FrameStyle -> None, 
-                 FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                GridBox[{{
-                   RowBox[{
-                    TagBox[
-                    
-                    TemplateBox[{"\"MessageTemplate\"", "\": \""}, 
-                    "RowDefault"], "SummaryItemAnnotation"], 
-                    "\[InvisibleSpace]", 
-                    TagBox[
-                    TagBox[
-                    StyleBox[
-                    
-                    RowBox[{
-                    "AntonAntonov`PaLMLink`PaLMGenerateText", "::", 
-                    "openAIResponseFailureMessage"}], "MessageName"], 
-                    HoldForm], "SummaryItem"]}]}, {
-                   RowBox[{
-                    TagBox[
-                    
-                    TemplateBox[{"\"MessageParameters\"", "\": \""}, 
-                    "RowDefault"], "SummaryItemAnnotation"], 
-                    "\[InvisibleSpace]", 
-                    TagBox[
-                    TagBox[
-                    
-                    RowBox[{
-                    "{", "\"The service is currently unavailable.\"", "}"}], 
-                    HoldForm], "SummaryItem"]}]}, {
-                   RowBox[{
-                    TagBox[
-                    TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
-                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
-                    TagBox[
-                    TagBox["\"PaLMResponseFailure\"", HoldForm], 
-                    "SummaryItem"]}]}}, 
-                 GridBoxAlignment -> {
-                  "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
-                 False, GridBoxItemSize -> {
-                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
-                 GridBoxSpacings -> {
-                  "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
-                 BaseStyle -> {
-                  ShowStringCharacters -> False, NumberMarks -> False, 
-                   PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
-              GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
-              AutoDelete -> False, 
-              GridBoxItemSize -> {
-               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
-              BaselinePosition -> {1, 1}], True -> GridBox[{{
-                PaneBox[
-                 ButtonBox[
-                  DynamicBox[
-                   FEPrivate`FrontEndResource[
-                   "FEBitmaps", "SummaryBoxCloser"]], 
-                  ButtonFunction :> (Typeset`open$$ = False), Appearance -> 
-                  None, BaseStyle -> {}, Evaluator -> Automatic, Method -> 
-                  "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
-                 Dynamic[{
-                   Automatic, 
-                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
-                    Magnification])}]], 
-                FrameBox[
-                 StyleBox["\"\[WarningSign]\"", 
-                  Directive["Message", 35], StripOnInput -> False], 
-                 ContentPadding -> False, FrameStyle -> None, 
-                 FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                GridBox[{{
-                   RowBox[{
-                    TagBox[
-                    
-                    TemplateBox[{"\"MessageTemplate\"", "\": \""}, 
-                    "RowDefault"], "SummaryItemAnnotation"], 
-                    "\[InvisibleSpace]", 
-                    TagBox[
-                    TagBox[
-                    StyleBox[
-                    
-                    RowBox[{
-                    "AntonAntonov`PaLMLink`PaLMGenerateText", "::", 
-                    "openAIResponseFailureMessage"}], "MessageName"], 
-                    HoldForm], "SummaryItem"]}]}, {
-                   RowBox[{
-                    TagBox[
-                    
-                    TemplateBox[{"\"MessageParameters\"", "\": \""}, 
-                    "RowDefault"], "SummaryItemAnnotation"], 
-                    "\[InvisibleSpace]", 
-                    TagBox[
-                    TagBox[
-                    
-                    RowBox[{
-                    "{", "\"The service is currently unavailable.\"", "}"}], 
-                    HoldForm], "SummaryItem"]}]}, {
-                   RowBox[{
-                    TagBox[
-                    TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
-                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
-                    TagBox[
-                    TagBox["\"PaLMResponseFailure\"", HoldForm], 
-                    "SummaryItem"]}]}, {
-                   RowBox[{
-                    TagBox[
-                    TemplateBox[{"\"HTTPResponse\"", "\": \""}, "RowDefault"],
-                     "SummaryItemAnnotation"], "\[InvisibleSpace]", 
-                    TagBox[
-                    TagBox[
-                    InterpretationBox[
-                    RowBox[{
-                    TagBox["HTTPResponse", "SummaryHead"], "[", 
-                    
-                    DynamicModuleBox[{
-                    Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
-                    TemplateBox[{
-                    PaneSelectorBox[{False -> GridBox[{{
-                    GraphicsBox[{
-                    RGBColor[1, 0, 0], 
-                    DiskBox[{0, 0}], 
-                    InsetBox[
-                    FormBox[
-                    StyleBox["\"503\"", 
-                    Directive[10, 
-                    GrayLevel[1], Bold], StripOnInput -> False], 
-                    TraditionalForm], 
-                    Scaled[{0.53, 0.48}]]}, ImageSize -> 
-                    Dynamic[{Automatic, (3 CurrentValue["FontCapHeight"])/
-                    AbsoluteCurrentValue[Magnification]}], Background -> 
-                    None], 
-                    GridBox[{{
-                    RowBox[{
-                    TagBox["\"Status: \"", "SummaryItemAnnotation"], 
-                    "\[InvisibleSpace]", 
-                    TagBox["\"Service Unavailable\"", "SummaryItem"]}]}, {
-                    RowBox[{
-                    TagBox["\"Content type: \"", "SummaryItemAnnotation"], 
-                    "\[InvisibleSpace]", 
-                    TagBox[
-                    "\"application/json; charset=UTF-8\"", "SummaryItem"]}]}},
-                     GridBoxAlignment -> {
-                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
-                    AutoDelete -> False, 
-                    GridBoxItemSize -> {
-                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
-                    GridBoxSpacings -> {
-                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
-                    BaseStyle -> {ShowStringCharacters -> False, NumberMarks -> 
-                    False, PrintPrecision -> 3, ShowSyntaxStyles -> False}]}},
-                     GridBoxAlignment -> {
-                    "Columns" -> {{Left}}, "Rows" -> {{Top}}}, AutoDelete -> 
-                    False, GridBoxItemSize -> {
-                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
-                    BaselinePosition -> {1, 1}], True -> GridBox[{{
-                    GraphicsBox[{
-                    RGBColor[1, 0, 0], 
-                    DiskBox[{0, 0}], 
-                    InsetBox[
-                    FormBox[
-                    StyleBox["\"503\"", 
-                    Directive[10, 
-                    GrayLevel[1], Bold], StripOnInput -> False], 
-                    TraditionalForm], 
-                    Scaled[{0.53, 0.48}]]}, ImageSize -> 
-                    Dynamic[{Automatic, (3 CurrentValue["FontCapHeight"])/
-                    AbsoluteCurrentValue[Magnification]}], Background -> 
-                    None], 
-                    GridBox[{{
-                    RowBox[{
-                    TagBox["\"Status: \"", "SummaryItemAnnotation"], 
-                    "\[InvisibleSpace]", 
-                    TagBox["\"Service Unavailable\"", "SummaryItem"]}]}, {
-                    RowBox[{
-                    TagBox["\"Content type: \"", "SummaryItemAnnotation"], 
-                    "\[InvisibleSpace]", 
-                    TagBox[
-                    "\"application/json; charset=UTF-8\"", "SummaryItem"]}]}},
-                     GridBoxAlignment -> {
-                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
-                    AutoDelete -> False, 
-                    GridBoxItemSize -> {
-                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
-                    GridBoxSpacings -> {
-                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
-                    BaseStyle -> {ShowStringCharacters -> False, NumberMarks -> 
-                    False, PrintPrecision -> 3, ShowSyntaxStyles -> False}]}},
-                     GridBoxAlignment -> {
-                    "Columns" -> {{Left}}, "Rows" -> {{Top}}}, AutoDelete -> 
-                    False, GridBoxItemSize -> {
-                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
-                    BaselinePosition -> {1, 1}]}, 
-                    Dynamic[Typeset`open$$], ImageSize -> Automatic]}, 
-                    "SummaryPanel"], DynamicModuleValues :> {}], "]"}], 
-                    HTTPResponse[
-                    
-                    ByteArray[{123, 10, 32, 32, 34, 101, 114, 114, 111, 114, 
-                    34, 58, 32, 123, 10, 32, 32, 32, 32, 34, 99, 111, 100, 
-                    101, 34, 58, 32, 53, 48, 51, 44, 10, 32, 32, 32, 32, 34, 
-                    109, 101, 115, 115, 97, 103, 101, 34, 58, 32, 34, 84, 104,
-                     101, 32, 115, 101, 114, 118, 105, 99, 101, 32, 105, 115, 
-                    32, 99, 117, 114, 114, 101, 110, 116, 108, 121, 32, 117, 
-                    110, 97, 118, 97, 105, 108, 97, 98, 108, 101, 46, 34, 44, 
-                    10, 32, 32, 32, 32, 34, 115, 116, 97, 116, 117, 115, 34, 
-                    58, 32, 34, 85, 78, 65, 86, 65, 73, 76, 65, 66, 76, 69, 
-                    34, 10, 32, 32, 125, 10, 125, 10}], <|
-                    "Headers" -> {{"Vary", "Origin"}, {"Vary", "X-Origin"}, {
-                    "Vary", "Referer"}, {
-                    "Content-Type", "application/json; charset=UTF-8"}, {
-                    "Content-Encoding", "gzip"}, {
-                    "Date", "Sat, 27 May 2023 17:23:06 GMT"}, {
-                    "Server", "scaffolding on HTTPServer2"}, {
-                    "Cache-Control", "private"}, {"X-XSS-Protection", "0"}, {
-                    "X-Frame-Options", "SAMEORIGIN"}, {
-                    "X-Content-Type-Options", "nosniff"}, {
-                    "Alt-Svc", 
-                    "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"}, {
-                    "Transfer-Encoding", "chunked"}}, "StatusCode" -> 503, 
-                    "Cookies" -> {}|>, CharacterEncoding -> Automatic], 
-                    Selectable -> False, Editable -> False, 
-                    SelectWithContents -> True], HoldForm], 
-                    "SummaryItem"]}]}}, 
-                 GridBoxAlignment -> {
-                  "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
-                 False, GridBoxItemSize -> {
-                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
-                 GridBoxSpacings -> {
-                  "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
-                 BaseStyle -> {
-                  ShowStringCharacters -> False, NumberMarks -> False, 
-                   PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
-              GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
-              AutoDelete -> False, 
-              GridBoxItemSize -> {
-               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
-              BaselinePosition -> {1, 1}]}, 
-           Dynamic[Typeset`open$$], ImageSize -> Automatic]},
-         "SummaryPanel"],
-        DynamicModuleValues:>{}], "]"}],
-      Failure[
-      "PaLMResponseFailure", <|
-       "MessageTemplate" :> 
-        MessageName[
-         AntonAntonov`PaLMLink`PaLMGenerateText, 
-          "openAIResponseFailureMessage"], 
-        "MessageParameters" -> {"The service is currently unavailable."}, 
-        "HTTPResponse" -> HTTPResponse[
-          
-          ByteArray[{123, 10, 32, 32, 34, 101, 114, 114, 111, 114, 34, 58, 32,
-            123, 10, 32, 32, 32, 32, 34, 99, 111, 100, 101, 34, 58, 32, 53, 
-           48, 51, 44, 10, 32, 32, 32, 32, 34, 109, 101, 115, 115, 97, 103, 
-           101, 34, 58, 32, 34, 84, 104, 101, 32, 115, 101, 114, 118, 105, 99,
-            101, 32, 105, 115, 32, 99, 117, 114, 114, 101, 110, 116, 108, 121,
-            32, 117, 110, 97, 118, 97, 105, 108, 97, 98, 108, 101, 46, 34, 44,
-            10, 32, 32, 32, 32, 34, 115, 116, 97, 116, 117, 115, 34, 58, 32, 
-           34, 85, 78, 65, 86, 65, 73, 76, 65, 66, 76, 69, 34, 10, 32, 32, 
-           125, 10, 125, 10}], <|
-          "Headers" -> {{"Vary", "Origin"}, {"Vary", "X-Origin"}, {
-             "Vary", "Referer"}, {
-             "Content-Type", "application/json; charset=UTF-8"}, {
-             "Content-Encoding", "gzip"}, {
-             "Date", "Sat, 27 May 2023 17:23:06 GMT"}, {
-             "Server", "scaffolding on HTTPServer2"}, {
-             "Cache-Control", "private"}, {"X-XSS-Protection", "0"}, {
-             "X-Frame-Options", "SAMEORIGIN"}, {
-             "X-Content-Type-Options", "nosniff"}, {
-             "Alt-Svc", 
-              "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"}, {
-             "Transfer-Encoding", "chunked"}}, "StatusCode" -> 503, 
-           "Cookies" -> {}|>, CharacterEncoding -> Automatic]|>],
-      Editable->False,
-      SelectWithContents->True,
-      Selectable->False]}
+     "Automatic", "\<\"The distance from Earth to the Sun is about 149.6 \
+million kilometers (93 million miles). The Sun is the star at the center of \
+the Solar System and is the largest object in the Solar System. It is a hot \
+ball of glowing gases that emits light and heat. The Sun is the source of \
+energy for life on Earth.\"\>"},
+    {"2", "12", "\<\"The distance to the sun is 149.6\"\>"},
+    {"3", 
+     "120", "\<\"The distance from the Earth to the Sun is about 149.6 \
+million kilometers (92.96 million miles). This distance is called an \
+astronomical unit (AU). The AU is a unit of measurement used in astronomy to \
+measure distances between objects in the Solar System. It is defined as the \
+average distance from the Earth to the Sun.\"\>"}
    },
    AutoDelete->False,
    GridBoxAlignment->{"Columns" -> {{Left}}},
@@ -1023,9 +773,10 @@ to the Earth's elliptical orbit.\"\>"},
      "Rows" -> {True, True, {False}, True}},
    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
   "Grid"]], "Output",
- CellChangeTimes->{{3.8941969661905107`*^9, 3.894196986152478*^9}},
- CellLabel->"Out[21]=",
- CellID->1443338390,ExpressionUUID->"cc1a57bd-6a9b-4ae2-bc34-58cf977bfc08"]
+ CellChangeTimes->{{3.8941969661905107`*^9, 3.894196986152478*^9}, 
+   3.894266188785222*^9},
+ CellLabel->"Out[2]=",
+ CellID->291532060,ExpressionUUID->"d722839f-3519-4dae-bae7-86b98ca14467"]
 }, Open  ]]
 }, Open  ]],
 
@@ -1147,9 +898,11 @@ Cell[BoxData[
 
 Cell["\<\
 The option \"Epilog\" can be used to modify the output. Here is an example in \
-the which the PaLM API output a Python external evaluation cell is created:\
+which the PaLM API output is placed in a Python external evaluation cell:\
 \>", "ExampleText",
- CellChangeTimes->{{3.894197078826532*^9, 3.8941971460935097`*^9}},
+ CellChangeTimes->{{3.894197078826532*^9, 3.8941971460935097`*^9}, {
+  3.894266085447187*^9, 3.894266098922307*^9}, {3.8942661451726*^9, 
+  3.894266146183847*^9}},
  CellID->122402278,ExpressionUUID->"ab49860a-9456-445b-8176-5c4ec90ba731"],
 
 Cell[BoxData[
@@ -1193,8 +946,10 @@ for index, (key, value) in enumerate(dictionary.items()):
  CellEvaluationLanguage->"Python",
  CellID->852674647,ExpressionUUID->"d5645c3b-0f8d-48b2-a96a-8ca84ea85d2d"],
 
-Cell["Note that the answer is given as Markdown text.", "ExampleText",
- CellChangeTimes->{{3.894197300374812*^9, 3.894197336918108*^9}},
+Cell["Note that the answer is given by PaLM  API as Markdown text.", \
+"ExampleText",
+ CellChangeTimes->{{3.894197300374812*^9, 3.894197336918108*^9}, {
+  3.894266114406269*^9, 3.894266133349532*^9}},
  CellID->744415698,ExpressionUUID->"b22eb93c-5d32-4e6a-8bfc-ba5bf80a03f5"]
 }, Open  ]]
 }, Open  ]],
@@ -1206,12 +961,237 @@ Cell[BoxData[
   $Line = 0; Null]], "ExampleSection",
  CellID->1409201629,ExpressionUUID->"f95a23f1-9864-4a0d-9f1e-3043638fad4e"],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[
  InterpretationBox[Cell[
   "Properties & Relations", "ExampleSection",ExpressionUUID->
    "47792652-700d-4ead-8156-13d10b83cb2f"],
   $Line = 0; Null]], "ExampleSection",
  CellID->2002119487,ExpressionUUID->"f5eff006-7344-4526-be36-132f6e1bd60c"],
+
+Cell[TextData[{
+ "The available PaLM API models can be retrieved with the function ",
+ Cell[BoxData[
+  ButtonBox["PaLMModels",
+   BaseStyle->"Hyperlink",
+   ButtonData->{
+     URL["https://resources.wolframcloud.com/PacletRepository/resources/\
+AntonAntonov/PaLMLink/ref/PaLMModels.html"], None},
+   ButtonNote->
+    "https://resources.wolframcloud.com/PacletRepository/resources/\
+AntonAntonov/PaLMLink/ref/PaLMModels.html"]], "InlineFormula",ExpressionUUID->
+  "fc13bb66-82f8-4a29-9fcc-d054717b3dbb"],
+ " of ",
+ ButtonBox["\"AntonAntonov/PaLMLink\"",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://resources.wolframcloud.com/PacletRepository/resources/\
+AntonAntonov/PaLMLink/"], None},
+  ButtonNote->
+   "https://resources.wolframcloud.com/PacletRepository/resources/\
+AntonAntonov/PaLMLink/"],
+ ": "
+}], "ExampleText",
+ CellChangeTimes->{{3.894266271134492*^9, 3.89426637231052*^9}},
+ CellID->1953840542,ExpressionUUID->"f7859bb5-0dd1-485f-af43-3ad0d5d5cca4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  InterpretationBox[
+   FrameBox[
+    TagBox[
+     TooltipBox[
+      PaneBox[GridBox[{
+         {
+          ItemBox[
+           GraphicsBox[
+            {Thickness[0.0025], 
+             {FaceForm[{RGBColor[
+              0.9607843137254902, 0.5058823529411764, 0.19607843137254902`], 
+              Opacity[1.]}], 
+              FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0,
+                 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}}, {{0, 2, 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1,
+                 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {
+                1, 3, 3}, {0, 1, 0}, {1, 3, 3}}}, {{{205., 
+                22.863691329956055`}, {205., 212.31669425964355`}, {
+                246.01799774169922`, 235.99870109558105`}, {369.0710144042969,
+                 307.0436840057373}, {369.0710144042969, 
+                117.59068870544434`}, {205., 22.863691329956055`}}, {{
+                30.928985595703125`, 307.0436840057373}, {153.98200225830078`,
+                 235.99870109558105`}, {195., 212.31669425964355`}, {195., 
+                22.863691329956055`}, {30.928985595703125`, 
+                117.59068870544434`}, {30.928985595703125`, 
+                307.0436840057373}}, {{200., 410.42970085144043`}, {
+                364.0710144042969, 315.7036876678467}, {241.01799774169922`, 
+                244.65868949890137`}, {200., 220.97669792175293`}, {
+                158.98200225830078`, 244.65868949890137`}, {
+                35.928985595703125`, 315.7036876678467}, {200., 
+                410.42970085144043`}}, CompressedData["
+1:eJxTTMoPSmViYGCQAWIQDQQPlDrLHYA0XxdDiQNYJCATwveoAtG/6uTA/HWX
+w8B8tsaHGch8BoYNGcjqGS7lmqOYd/qhKYj2c/hUDJF/awKiz129jsL3c9qN
+wo/gXBuDzK/YbRWDbF6F4MVoZPtmvJoejeyehpD9yiA6e88JMD+h/JYS2J6k
+J2C+gleGEkQ9QyYyf9NcaWR+w1Rn80xk/bDwgZkPCz+Y/QGPF5Yju++B0sZy
+ZPfD+DD/wfgw/8P4sPCBmQcLP5T4AgBuZHHc
+                "]}]}, 
+             {FaceForm[{RGBColor[
+              0.5529411764705883, 0.6745098039215687, 0.8117647058823529], 
+              Opacity[1.]}], 
+              FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+               0}}}, {{{44.92900085449219, 282.59088134765625`}, {
+               181.00001525878906`, 204.0298843383789}, {181.00001525878906`, 
+               46.90887451171875}, {44.92900085449219, 125.46986389160156`}, {
+               44.92900085449219, 282.59088134765625`}}}]}, 
+             {FaceForm[{RGBColor[
+              0.6627450980392157, 0.803921568627451, 0.5686274509803921], 
+              Opacity[1.]}], 
+              FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+               0}}}, {{{355.0710144042969, 282.59088134765625`}, {
+               355.0710144042969, 125.46986389160156`}, {219., 
+               46.90887451171875}, {219., 204.0298843383789}, {
+               355.0710144042969, 282.59088134765625`}}}]}, 
+             {FaceForm[{RGBColor[
+              0.6901960784313725, 0.5882352941176471, 0.8117647058823529], 
+              Opacity[1.]}], 
+              FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+               0}}}, {{{200., 394.0606994628906}, {336.0710144042969, 
+               315.4997024536133}, {200., 236.93968200683594`}, {
+               63.928985595703125`, 315.4997024536133}, {200., 
+               394.0606994628906}}}]}},
+            BoxID -> 
+            "{\"data\":\"{\\\"jsonData\\\":\\\"{\\\\\\\"type\\\\\\\": \
+\\\\\\\"Graphics\\\\\\\",\\\\n\\\\\\\"version\\\\\\\": \\\\\\\"1.0\\\\\\\",\\\
+\\n\\\\\\\"height\\\\\\\": 11.433641,\\\\n\\\\\\\"width\\\\\\\": 10.000000,\\\
+\\n\\\\\\\"offset\\\\\\\": [-66.000000, \
+-5.000000],\\\\n\\\\\\\"UserCoords\\\\\\\": [13.467693, 428.589520, \
+386.532307, 2.040850],\\\\n\\\\\\\"AxesOrigin\\\\\\\": [50.000000, \
+100.000000],\\\\n\\\\\\\"primitives\\\\\\\": [\\\\n{\\\\\\\"type\\\\\\\": \
+\\\\\\\"Clip\\\\\\\", \\\\\\\"transform\\\\\\\": [1.000000, 0.000000, \
+0.000000, 1.000000, 0.000000, 0.000000], \\\\\\\"path\\\\\\\": [[66,5], \
+[66,17], [76,17], [76,5]]},\\\\n{\\\\\\\"type\\\\\\\": \
+\\\\\\\"Polygon\\\\\\\", \\\\\\\"antialiased\\\\\\\" : true, \\\\\\\"edgeForm\
+\\\\\\\": {\\\\\\\"color\\\\\\\": [245, 129, 50], \\\\\\\"opacity\\\\\\\": 1, \
+\\\\\\\"thickness\\\\\\\": {}, \\\\\\\"capForm\\\\\\\": \
+\\\\\\\"Square\\\\\\\", \\\\\\\"joinForm\\\\\\\": {\\\\\\\"type\\\\\\\": \\\\\
+\\\"Miter\\\\\\\", \\\\\\\"d\\\\\\\": 3.23931}, \\\\\\\"dashing\\\\\\\": [], \
+\\\\\\\"dashingOffset\\\\\\\": 0}, \\\\\\\"faceForm\\\\\\\": {\\\\\\\"color\\\
+\\\\\": [245, 129, 50], \\\\\\\"opacity\\\\\\\": 1}, \\\\\\\"fillrule\\\\\\\" \
+: \\\\\\\"EvenOdd\\\\\\\" , \\\\\\\"points\\\\\\\": [[71.134,15.8755], \
+[71.134,10.7972], [72.2335,10.1624], [75.5319,8.25804], [75.5319,13.3363], \
+[71.134,15.8755], [71.134,15.8755], [66.4681,8.25804], [69.7665,10.1624], \
+[70.866,10.7972], [70.866,15.8755], [66.4681,13.3363], [66.4681,8.25804], \
+[66.4681,8.25804], [71,5.48677], [75.3979,8.02591], [72.0995,9.93027], \
+[71,10.5651], [69.9005,9.93027], [66.6021,8.02591], [71,5.48677], \
+[71,5.48677], [75.733,7.90984], [71.067,5.21594], [71.0411,5.20445], \
+[71.0139,5.1987], [70.9861,5.1987], [70.9589,5.20445], [70.933,5.21594], \
+[66.267,7.90984], [66.2441,7.92651], [66.2255,7.94725], [66.2116,7.97126], \
+[66.203,7.99775], [66.2,8.02591], [66.2,13.4137], [66.203,13.4419], \
+[66.2116,13.4684], [66.2255,13.4924], [66.2441,13.5131], [66.267,13.5298], \
+[70.933,16.2237], [70.9457,16.2301], [70.9589,16.2352], [70.9724,16.2388], \
+[70.9861,16.2409], [71,16.2416], [71.0139,16.2409], [71.0276,16.2388], \
+[71.0411,16.2352], [71.0543,16.2301], [71.067,16.2237], [75.733,13.5298], \
+[75.7559,13.5131], [75.7745,13.4924], [75.7884,13.4684], [75.797,13.4419], \
+[75.8,13.4137], [75.8,8.02591], [75.797,7.99775], [75.7884,7.97126], \
+[75.7745,7.94725], [75.7559,7.92651], [75.733,7.90984], [75.733,7.90984], \
+[75.733,7.90984], [71,5.48677], [66.4681,8.25804]]}, \\\\n{\\\\\\\"type\\\\\\\
+\": \\\\\\\"Polygon\\\\\\\", \\\\\\\"antialiased\\\\\\\" : true, \
+\\\\\\\"edgeForm\\\\\\\": {\\\\\\\"color\\\\\\\": [141, 172, 207], \
+\\\\\\\"opacity\\\\\\\": 1, \\\\\\\"thickness\\\\\\\": {}, \
+\\\\\\\"capForm\\\\\\\": \\\\\\\"Square\\\\\\\", \\\\\\\"joinForm\\\\\\\": \
+{\\\\\\\"type\\\\\\\": \\\\\\\"Miter\\\\\\\", \\\\\\\"d\\\\\\\": 3.23931}, \\\
+\\\\\"dashing\\\\\\\": [], \\\\\\\"dashingOffset\\\\\\\": 0}, \
+\\\\\\\"faceForm\\\\\\\": {\\\\\\\"color\\\\\\\": [141, 172, 207], \
+\\\\\\\"opacity\\\\\\\": 1}, \\\\\\\"fillrule\\\\\\\" : \\\\\\\"EvenOdd\\\\\\\
+\" , \\\\\\\"points\\\\\\\": [[66.8433,8.91349], [70.4907,11.0193], \
+[70.4907,15.231], [66.8433,13.1251], [66.8433,8.91349], [66.8433,8.91349]]}, \
+\\\\n{\\\\\\\"type\\\\\\\": \\\\\\\"Polygon\\\\\\\", \
+\\\\\\\"antialiased\\\\\\\" : true, \\\\\\\"edgeForm\\\\\\\": \
+{\\\\\\\"color\\\\\\\": [169, 205, 145], \\\\\\\"opacity\\\\\\\": 1, \
+\\\\\\\"thickness\\\\\\\": {}, \\\\\\\"capForm\\\\\\\": \
+\\\\\\\"Square\\\\\\\", \\\\\\\"joinForm\\\\\\\": {\\\\\\\"type\\\\\\\": \\\\\
+\\\"Miter\\\\\\\", \\\\\\\"d\\\\\\\": 3.23931}, \\\\\\\"dashing\\\\\\\": [], \
+\\\\\\\"dashingOffset\\\\\\\": 0}, \\\\\\\"faceForm\\\\\\\": {\\\\\\\"color\\\
+\\\\\": [169, 205, 145], \\\\\\\"opacity\\\\\\\": 1}, \
+\\\\\\\"fillrule\\\\\\\" : \\\\\\\"EvenOdd\\\\\\\" , \\\\\\\"points\\\\\\\": \
+[[75.1567,8.91349], [75.1567,13.1251], [71.5093,15.231], [71.5093,11.0193], \
+[75.1567,8.91349], [75.1567,8.91349]]}, \\\\n{\\\\\\\"type\\\\\\\": \
+\\\\\\\"Polygon\\\\\\\", \\\\\\\"antialiased\\\\\\\" : true, \\\\\\\"edgeForm\
+\\\\\\\": {\\\\\\\"color\\\\\\\": [176, 150, 207], \\\\\\\"opacity\\\\\\\": \
+1, \\\\\\\"thickness\\\\\\\": {}, \\\\\\\"capForm\\\\\\\": \\\\\\\"Square\\\\\
+\\\", \\\\\\\"joinForm\\\\\\\": {\\\\\\\"type\\\\\\\": \\\\\\\"Miter\\\\\\\", \
+\\\\\\\"d\\\\\\\": 3.23931}, \\\\\\\"dashing\\\\\\\": [], \
+\\\\\\\"dashingOffset\\\\\\\": 0}, \\\\\\\"faceForm\\\\\\\": {\\\\\\\"color\\\
+\\\\\": [176, 150, 207], \\\\\\\"opacity\\\\\\\": 1}, \
+\\\\\\\"fillrule\\\\\\\" : \\\\\\\"EvenOdd\\\\\\\" , \\\\\\\"points\\\\\\\": \
+[[71,5.92555], [74.6474,8.03137], [71,10.1372], [67.3526,8.03137], \
+[71,5.92555], [71,5.92555]]}, \\\\n{\\\\\\\"type\\\\\\\": \\\\\\\"Group\\\\\\\
+\", \\\\\\\"name\\\\\\\": \
+\\\\\\\"Frame\\\\\\\",\\\\n\\\\\\\"metadata\\\\\\\": {\\\\\\\"left\\\\\\\": \
+13.4677, \\\\\\\"top\\\\\\\": 428.59, \\\\\\\"right\\\\\\\": 386.532, \
+\\\\\\\"bottom\\\\\\\": 2.04085},\\\\n\\\\\\\"primitives\\\\\\\":[]}, \
+\\\\n{\\\\\\\"type\\\\\\\": \\\\\\\"Group\\\\\\\", \\\\\\\"name\\\\\\\": \\\\\
+\\\"Axes\\\\\\\",\\\\n\\\\\\\"metadata\\\\\\\": \\\\\\\"TBD\\\\\\\",\\\\n\\\\\
+\\\"primitives\\\\\\\":[]}],\\\\n\\\\\\\"PlotRange\\\\\\\": {\\\\\\\"left\\\\\
+\\\": -0.000000, \\\\\\\"top\\\\\\\": -9.433641, \\\\\\\"right\\\\\\\": \
+10.000000, \\\\\\\"bottom\\\\\\\": \
+2.000000}\\\\n}\\\\n\\\",\\\"requestedImageSize\\\":10}\"}",
+            BaselinePosition->Scaled[0.15],
+            ImageSize->10]], 
+          ItemBox[
+           StyleBox[
+            RowBox[{"PaLMModels", " "}],
+            ShowAutoStyles->False,
+            ShowStringCharacters->False,
+            FontSize->0.9 Inherited,
+            FontColor->GrayLevel[0.1]]]}
+        },
+        GridBoxSpacings->{"Columns" -> {{0.25}}}],
+       Alignment->{Left, Baseline},
+       BaseStyle->{LineSpacing -> {0, 0}, LineBreakWithin -> False},
+       BaselinePosition->Baseline,
+       FrameMargins->{{3, 0}, {0, 0}}],
+      RowBox[{"PacletSymbol", "[", 
+        RowBox[{
+         "\"AntonAntonov/PaLMLink\"", ",", 
+          "\"AntonAntonov`PaLMLink`PaLMModels\""}], "]"}],
+      TooltipStyle->{ShowAutoStyles -> True, ShowStringCharacters -> True}],
+     Annotation[#, 
+      Style[
+       Defer[
+        PacletSymbol[
+        "AntonAntonov/PaLMLink", "AntonAntonov`PaLMLink`PaLMModels"]], 
+       ShowStringCharacters -> True], "Tooltip"]& ],
+    Background->RGBColor[0.968, 0.976, 0.984],
+    BaselinePosition->Baseline,
+    DefaultBaseStyle->{},
+    FrameMargins->{{0, 0}, {1, 1}},
+    FrameStyle->RGBColor[0.831, 0.847, 0.85],
+    RoundingRadius->4],
+   PacletSymbol["AntonAntonov/PaLMLink", "AntonAntonov`PaLMLink`PaLMModels"],
+   TaggingRules -> {
+    "Paclet" -> "AntonAntonov/PaLMLink", "Symbol" -> 
+     "AntonAntonov`PaLMLink`PaLMModels"},
+   BoxID -> "PacletSymbolBox",
+   SelectWithContents->True,
+   Selectable->False], "[", "]"}]], "Input",
+ CellChangeTimes->{{3.894266385009347*^9, 3.8942663850115643`*^9}},
+ CellLabel->"In[3]:=",
+ CellID->2086349843,ExpressionUUID->"9eb7cd33-12db-4840-9e74-bf768f23877b"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"models/chat-bison-001\"\>", 
+   ",", "\<\"models/text-bison-001\"\>", 
+   ",", "\<\"models/embedding-gecko-001\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.894266386426738*^9},
+ CellLabel->"Out[3]=",
+ CellID->712045424,ExpressionUUID->"b8942303-8383-46d4-bdfa-cc99e68b5287"]
+}, Open  ]]
+}, Open  ]],
 
 Cell[BoxData[
  InterpretationBox[Cell[
@@ -1323,7 +1303,7 @@ Cell[BoxData[""], "Template",
 }, Open  ]]
 },
 WindowSize->{1387, 1218},
-WindowMargins->{{Automatic, 1015}, {Automatic, -1381}},
+WindowMargins->{{Automatic, 939}, {68, Automatic}},
 TaggingRules-><|"Paclet" -> "AntonAntonov/PaLMMode"|>,
 CellContext->"Global`",
 Magnification:>1.25 Inherited,
@@ -1338,14 +1318,14 @@ ExpressionUUID->"06adf171-7053-482a-a7b0-cfc693eea24f"
 (*CellTagsOutline
 CellTagsIndex->{
  "ExtendedExamples"->{
-  Cell[11523, 314, 488, 13, 72, "ExtendedExamplesSection",ExpressionUUID->"b3fda43f-8916-47f7-a3ae-4216bb801fc1",
+  Cell[12989, 350, 488, 13, 72, "ExtendedExamplesSection",ExpressionUUID->"b3fda43f-8916-47f7-a3ae-4216bb801fc1",
    CellTags->"ExtendedExamples",
    CellID->1854443015]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"ExtendedExamples", 53523, 1339}
+ {"ExtendedExamples", 52862, 1319}
  }
 *)
 (*NotebookFileOutline
@@ -1355,185 +1335,197 @@ Cell[580, 22, 119, 1, 92, "ObjectName",ExpressionUUID->"950d7f38-a4ba-443f-9950-
  CellID->675474157],
 Cell[702, 25, 615, 14, 99, "Usage",ExpressionUUID->"2bd029ca-9cb9-4d71-9b39-cea3c5d67b46",
  CellID->1095598657],
-Cell[1320, 41, 319, 6, 33, "Notes",ExpressionUUID->"5c1f7f5f-3708-48d5-98f9-38cb74f421da",
+Cell[1320, 41, 554, 10, 34, "Notes",ExpressionUUID->"5c1f7f5f-3708-48d5-98f9-38cb74f421da",
  CellID->1201838821],
-Cell[1642, 49, 129, 1, 33, "Notes",ExpressionUUID->"9c619030-7168-46a6-9d95-0bfa3f459ce6",
+Cell[1877, 53, 1179, 29, 57, "Notes",ExpressionUUID->"939898a2-fd35-4dfb-a4f5-49caf6f36814",
+ CellID->1144147463],
+Cell[3059, 84, 129, 1, 33, "Notes",ExpressionUUID->"9c619030-7168-46a6-9d95-0bfa3f459ce6",
  CellID->1077295821],
-Cell[1774, 52, 3376, 70, 347, "3ColumnTableMod",ExpressionUUID->"6cbbe836-adf0-4c33-8891-11c71587338a",
+Cell[3191, 87, 3376, 70, 347, "3ColumnTableMod",ExpressionUUID->"6cbbe836-adf0-4c33-8891-11c71587338a",
  CellID->73880865]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5187, 127, 435, 12, 51, "TechNotesSection",ExpressionUUID->"fd33ae70-1554-47ee-82db-d8a07ead4ea4",
+Cell[6604, 162, 435, 12, 51, "TechNotesSection",ExpressionUUID->"fd33ae70-1554-47ee-82db-d8a07ead4ea4",
  CellID->470150089],
-Cell[5625, 141, 101, 1, 24, "Tutorials",ExpressionUUID->"3811fa3a-c744-45a7-8e74-ab9a2a771d87",
+Cell[7042, 176, 101, 1, 24, "Tutorials",ExpressionUUID->"3811fa3a-c744-45a7-8e74-ab9a2a771d87",
  CellID->1220208510]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5763, 147, 473, 13, 50, "RelatedLinksSection",ExpressionUUID->"dd6bbf21-ba93-400e-a968-df875e4f56f6",
+Cell[7180, 182, 473, 13, 50, "RelatedLinksSection",ExpressionUUID->"dd6bbf21-ba93-400e-a968-df875e4f56f6",
  CellID->1723082367],
-Cell[6239, 162, 104, 1, 24, "RelatedLinks",ExpressionUUID->"71ed22fc-6d62-4734-8252-9f6d2e31d97a",
+Cell[7656, 197, 104, 1, 24, "RelatedLinks",ExpressionUUID->"71ed22fc-6d62-4734-8252-9f6d2e31d97a",
  CellID->1028362374]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6380, 168, 458, 13, 50, "SeeAlsoSection",ExpressionUUID->"ad85f7a9-90b5-4256-b398-27dfc585d184",
+Cell[7797, 203, 458, 13, 50, "SeeAlsoSection",ExpressionUUID->"ad85f7a9-90b5-4256-b398-27dfc585d184",
  CellID->738028762],
-Cell[6841, 183, 2152, 52, 30, "SeeAlso",ExpressionUUID->"255d8e91-0628-458b-b5b8-882bc28567f9",
+Cell[8258, 218, 2201, 53, 30, "SeeAlso",ExpressionUUID->"255d8e91-0628-458b-b5b8-882bc28567f9",
  CellID->54428209]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[9030, 240, 184, 2, 50, "MoreAboutSection",ExpressionUUID->"2d3cf8f8-a6da-4b42-b51a-d53464d900e0",
+Cell[10496, 276, 184, 2, 50, "MoreAboutSection",ExpressionUUID->"2d3cf8f8-a6da-4b42-b51a-d53464d900e0",
  CellID->2017602248],
-Cell[9217, 244, 272, 4, 24, "MoreAbout",ExpressionUUID->"694c24cf-d963-4420-a61f-26272d2f68de",
+Cell[10683, 280, 272, 4, 24, "MoreAbout",ExpressionUUID->"694c24cf-d963-4420-a61f-26272d2f68de",
  CellID->482011239]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[9526, 253, 530, 14, 87, "ExamplesInitializationSection",ExpressionUUID->"eea8a1d6-0eec-4ba2-b3e2-43f670b1bf66",
+Cell[10992, 289, 530, 14, 87, "ExamplesInitializationSection",ExpressionUUID->"eea8a1d6-0eec-4ba2-b3e2-43f670b1bf66",
  CellID->117252513],
-Cell[10059, 269, 182, 3, 57, "ExampleInitialization",ExpressionUUID->"676e2c35-afe7-4a35-8d8d-39a52168ca5c",
+Cell[11525, 305, 182, 3, 57, "ExampleInitialization",ExpressionUUID->"676e2c35-afe7-4a35-8d8d-39a52168ca5c",
  CellID->1420481692]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10278, 277, 442, 12, 90, "PrimaryExamplesSection",ExpressionUUID->"e997d328-6e22-4294-91e5-a34456f095f3",
+Cell[11744, 313, 442, 12, 90, "PrimaryExamplesSection",ExpressionUUID->"e997d328-6e22-4294-91e5-a34456f095f3",
  CellID->460093745],
-Cell[10723, 291, 192, 2, 30, "ExampleText",ExpressionUUID->"276b8228-fe22-4f9a-9cd0-2ade554edf51",
+Cell[12189, 327, 192, 2, 30, "ExampleText",ExpressionUUID->"276b8228-fe22-4f9a-9cd0-2ade554edf51",
  CellID->937365785],
 Cell[CellGroupData[{
-Cell[10940, 297, 282, 5, 33, "Input",ExpressionUUID->"c391f3fa-7c89-43d3-8712-16355d38a8dd",
+Cell[12406, 333, 282, 5, 33, "Input",ExpressionUUID->"c391f3fa-7c89-43d3-8712-16355d38a8dd",
  CellID->2100407355],
-Cell[11225, 304, 249, 4, 32, "Output",ExpressionUUID->"fbd288e7-3192-4a6c-9a27-3ab0ca7c0bde",
+Cell[12691, 340, 249, 4, 32, "Output",ExpressionUUID->"fbd288e7-3192-4a6c-9a27-3ab0ca7c0bde",
  CellID->1700824952]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11523, 314, 488, 13, 72, "ExtendedExamplesSection",ExpressionUUID->"b3fda43f-8916-47f7-a3ae-4216bb801fc1",
+Cell[12989, 350, 488, 13, 72, "ExtendedExamplesSection",ExpressionUUID->"b3fda43f-8916-47f7-a3ae-4216bb801fc1",
  CellTags->"ExtendedExamples",
  CellID->1854443015],
-Cell[12014, 329, 242, 5, 43, "ExampleSection",ExpressionUUID->"0d946312-af11-4ff2-9b4d-be204d81502d",
+Cell[13480, 365, 242, 5, 43, "ExampleSection",ExpressionUUID->"0d946312-af11-4ff2-9b4d-be204d81502d",
  CellID->1193584194],
-Cell[12259, 336, 264, 5, 27, "ExampleSection",ExpressionUUID->"b6dd0b7b-a059-478e-9ea8-55572cbcad75",
+Cell[13725, 372, 264, 5, 27, "ExampleSection",ExpressionUUID->"b6dd0b7b-a059-478e-9ea8-55572cbcad75",
  CellID->924801931],
 Cell[CellGroupData[{
-Cell[12548, 345, 244, 5, 27, "ExampleSection",ExpressionUUID->"1d9d418c-ba30-45cb-b1ff-03e4b0d1bc84",
+Cell[14014, 381, 244, 5, 27, "ExampleSection",ExpressionUUID->"1d9d418c-ba30-45cb-b1ff-03e4b0d1bc84",
  CellID->1348389887],
-Cell[12795, 352, 253, 5, 32, "ExampleSubsection",ExpressionUUID->"29b70529-ade9-4c7c-ae4a-ec159677a7f6",
+Cell[14261, 388, 253, 5, 32, "ExampleSubsection",ExpressionUUID->"29b70529-ade9-4c7c-ae4a-ec159677a7f6",
  CellID->2141387665],
-Cell[13051, 359, 250, 5, 26, "ExampleSubsection",ExpressionUUID->"aa787877-9af5-47c8-866f-0078eaf85859",
+Cell[14517, 395, 250, 5, 26, "ExampleSubsection",ExpressionUUID->"aa787877-9af5-47c8-866f-0078eaf85859",
  CellID->624045582],
 Cell[CellGroupData[{
-Cell[13326, 368, 250, 5, 26, "ExampleSubsection",ExpressionUUID->"ad2b96ee-0b3a-4daf-a873-c5fb4268e0d8",
+Cell[14792, 404, 250, 5, 26, "ExampleSubsection",ExpressionUUID->"ad2b96ee-0b3a-4daf-a873-c5fb4268e0d8",
  CellID->23964726],
-Cell[13579, 375, 247, 4, 30, "ExampleText",ExpressionUUID->"aa717d5b-9978-4319-aec7-cd2daf9368d7",
+Cell[15045, 411, 296, 5, 30, "ExampleText",ExpressionUUID->"aa717d5b-9978-4319-aec7-cd2daf9368d7",
  CellID->707178665]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[13863, 384, 258, 5, 32, "ExampleSubsection",ExpressionUUID->"67eb2b14-a1e1-43f7-9408-ab968b396680",
+Cell[15378, 421, 258, 5, 32, "ExampleSubsection",ExpressionUUID->"67eb2b14-a1e1-43f7-9408-ab968b396680",
  CellID->1195707893],
-Cell[14124, 391, 270, 3, 30, "ExampleText",ExpressionUUID->"30a2c9df-47f2-44da-a548-477ad1b8b88f",
+Cell[15639, 428, 270, 3, 30, "ExampleText",ExpressionUUID->"30a2c9df-47f2-44da-a548-477ad1b8b88f",
  CellID->325523476],
 Cell[CellGroupData[{
-Cell[14419, 398, 974, 23, 130, "Input",ExpressionUUID->"c1c62ba3-869c-4913-9796-cc0f8c646c34",
+Cell[15934, 435, 974, 23, 130, "Input",ExpressionUUID->"c1c62ba3-869c-4913-9796-cc0f8c646c34",
  CellID->1832473401],
-Cell[15396, 423, 2550, 63, 322, "Output",ExpressionUUID->"31976e11-40f6-431e-8f99-1d2153301f9e",
+Cell[16911, 460, 2550, 63, 322, "Output",ExpressionUUID->"31976e11-40f6-431e-8f99-1d2153301f9e",
  CellID->1775070508]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[17995, 492, 260, 5, 32, "ExampleSubsection",ExpressionUUID->"5d94cdd8-eb7a-4281-a0ce-c2259ac5c907",
+Cell[19510, 529, 260, 5, 32, "ExampleSubsection",ExpressionUUID->"5d94cdd8-eb7a-4281-a0ce-c2259ac5c907",
  CellID->110589025],
-Cell[18258, 499, 329, 5, 30, "ExampleText",ExpressionUUID->"1fcad885-84cb-4f42-a476-31abcc0a0f60",
+Cell[19773, 536, 329, 5, 30, "ExampleText",ExpressionUUID->"1fcad885-84cb-4f42-a476-31abcc0a0f60",
  CellID->1243455497],
 Cell[CellGroupData[{
-Cell[18612, 508, 1096, 25, 130, "Input",ExpressionUUID->"3e5ccb24-d2e6-4ce9-a28d-1887734e2606",
+Cell[20127, 545, 1096, 25, 130, "Input",ExpressionUUID->"3e5ccb24-d2e6-4ce9-a28d-1887734e2606",
  CellID->1593169122],
-Cell[19711, 535, 4862, 94, 1512, "Output",ExpressionUUID->"ad8cb3df-4854-4f2d-b5bc-da7966c1d8e5",
+Cell[21226, 572, 4862, 94, 1512, "Output",ExpressionUUID->"ad8cb3df-4854-4f2d-b5bc-da7966c1d8e5",
  CellID->1086786633]
 }, Open  ]]
 }, Open  ]],
-Cell[24600, 633, 261, 5, 32, "ExampleSubsection",ExpressionUUID->"b320418e-9b02-4a51-b62e-c88236c72449",
+Cell[26115, 670, 261, 5, 32, "ExampleSubsection",ExpressionUUID->"b320418e-9b02-4a51-b62e-c88236c72449",
  CellID->1096388520],
 Cell[CellGroupData[{
-Cell[24886, 642, 262, 5, 26, "ExampleSubsection",ExpressionUUID->"74f3cb8e-07cd-4a48-a1f0-887c335e3a25",
+Cell[26401, 679, 262, 5, 26, "ExampleSubsection",ExpressionUUID->"74f3cb8e-07cd-4a48-a1f0-887c335e3a25",
  CellID->1592164380],
-Cell[25151, 649, 410, 7, 30, "ExampleText",ExpressionUUID->"9fd60c54-fc67-4bd9-be44-6cf94d2cefe0",
+Cell[26666, 686, 410, 7, 30, "ExampleText",ExpressionUUID->"9fd60c54-fc67-4bd9-be44-6cf94d2cefe0",
  CellID->1454840163],
 Cell[CellGroupData[{
-Cell[25586, 660, 834, 21, 130, "Input",ExpressionUUID->"ae6f2b44-0851-4e28-9414-d51d1ef2344d",
+Cell[27101, 697, 833, 21, 130, "Input",ExpressionUUID->"ae6f2b44-0851-4e28-9414-d51d1ef2344d",
  CellID->849855794],
-Cell[26423, 683, 16691, 344, 230, "Output",ExpressionUUID->"cc1a57bd-6a9b-4ae2-bc34-58cf977bfc08",
- CellID->1443338390]
+Cell[27937, 720, 2398, 58, 376, "Output",ExpressionUUID->"d722839f-3519-4dae-bae7-86b98ca14467",
+ CellID->291532060]
 }, Open  ]]
 }, Open  ]],
-Cell[43141, 1031, 261, 5, 32, "ExampleSubsection",ExpressionUUID->"f818dbd5-a79a-4685-97ca-1508e94288ba",
+Cell[30362, 782, 261, 5, 32, "ExampleSubsection",ExpressionUUID->"f818dbd5-a79a-4685-97ca-1508e94288ba",
  CellID->1860493040],
 Cell[CellGroupData[{
-Cell[43427, 1040, 260, 5, 26, "ExampleSubsection",ExpressionUUID->"8381db8c-e79b-4bad-8386-8484f232d4ff",
+Cell[30648, 791, 260, 5, 26, "ExampleSubsection",ExpressionUUID->"8381db8c-e79b-4bad-8386-8484f232d4ff",
  CellID->1944622960],
-Cell[43690, 1047, 394, 6, 30, "ExampleText",ExpressionUUID->"e071c8df-e007-4090-a403-ad0ab6dbe43d",
+Cell[30911, 798, 394, 6, 30, "ExampleText",ExpressionUUID->"e071c8df-e007-4090-a403-ad0ab6dbe43d",
  CellID->439534244],
 Cell[CellGroupData[{
-Cell[44109, 1057, 894, 24, 130, "Input",ExpressionUUID->"2ebaf090-7374-426c-ac2c-001e40d8b5ef",
+Cell[31330, 808, 894, 24, 130, "Input",ExpressionUUID->"2ebaf090-7374-426c-ac2c-001e40d8b5ef",
  CellID->504909217],
-Cell[45006, 1083, 1845, 51, 110, "Output",ExpressionUUID->"d7369e93-463c-40e7-a083-7bd5910fd1c1",
+Cell[32227, 834, 1845, 51, 110, "Output",ExpressionUUID->"d7369e93-463c-40e7-a083-7bd5910fd1c1",
  CellID->1927165711]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[46900, 1140, 248, 5, 32, "ExampleSubsection",ExpressionUUID->"af005017-17b0-4cca-a351-ac216ba5f355",
+Cell[34121, 891, 248, 5, 32, "ExampleSubsection",ExpressionUUID->"af005017-17b0-4cca-a351-ac216ba5f355",
  CellID->724465027],
-Cell[47151, 1147, 329, 5, 52, "ExampleText",ExpressionUUID->"ab49860a-9456-445b-8176-5c4ec90ba731",
+Cell[34372, 898, 423, 7, 52, "ExampleText",ExpressionUUID->"ab49860a-9456-445b-8176-5c4ec90ba731",
  CellID->122402278],
-Cell[47483, 1154, 500, 11, 106, "Input",ExpressionUUID->"975a829f-85a8-4923-a720-246052bdb770",
+Cell[34798, 907, 500, 11, 106, "Input",ExpressionUUID->"975a829f-85a8-4923-a720-246052bdb770",
  CellID->2147388547],
-Cell[47986, 1167, 598, 26, 530, "ExternalLanguage",ExpressionUUID->"d5645c3b-0f8d-48b2-a96a-8ca84ea85d2d",
+Cell[35301, 920, 598, 26, 530, "ExternalLanguage",ExpressionUUID->"d5645c3b-0f8d-48b2-a96a-8ca84ea85d2d",
  CellID->852674647],
-Cell[48587, 1195, 211, 2, 30, "ExampleText",ExpressionUUID->"b22eb93c-5d32-4e6a-8bfc-ba5bf80a03f5",
+Cell[35902, 948, 275, 4, 30, "ExampleText",ExpressionUUID->"b22eb93c-5d32-4e6a-8bfc-ba5bf80a03f5",
  CellID->744415698]
 }, Open  ]]
 }, Open  ]],
-Cell[48825, 1201, 249, 5, 43, "ExampleSection",ExpressionUUID->"f95a23f1-9864-4a0d-9f1e-3043638fad4e",
+Cell[36204, 956, 249, 5, 43, "ExampleSection",ExpressionUUID->"f95a23f1-9864-4a0d-9f1e-3043638fad4e",
  CellID->1409201629],
-Cell[49077, 1208, 259, 5, 27, "ExampleSection",ExpressionUUID->"f5eff006-7344-4526-be36-132f6e1bd60c",
+Cell[CellGroupData[{
+Cell[36478, 965, 259, 5, 27, "ExampleSection",ExpressionUUID->"f5eff006-7344-4526-be36-132f6e1bd60c",
  CellID->2002119487],
-Cell[49339, 1215, 251, 5, 27, "ExampleSection",ExpressionUUID->"365c9b0c-f9ba-4160-a3b5-92522328ae38",
+Cell[36740, 972, 975, 24, 54, "ExampleText",ExpressionUUID->"f7859bb5-0dd1-485f-af43-3ad0d5d5cca4",
+ CellID->1953840542],
+Cell[CellGroupData[{
+Cell[37740, 1000, 10592, 182, 40, "Input",ExpressionUUID->"9eb7cd33-12db-4840-9e74-bf768f23877b",
+ CellID->2086349843],
+Cell[48335, 1184, 320, 7, 32, "Output",ExpressionUUID->"b8942303-8383-46d4-bdfa-cc99e68b5287",
+ CellID->712045424]
+}, Open  ]]
+}, Open  ]],
+Cell[48682, 1195, 251, 5, 43, "ExampleSection",ExpressionUUID->"365c9b0c-f9ba-4160-a3b5-92522328ae38",
  CellID->700953166],
-Cell[49593, 1222, 257, 5, 27, "ExampleSection",ExpressionUUID->"35350626-0818-498f-bb20-77d659384d16",
+Cell[48936, 1202, 257, 5, 27, "ExampleSection",ExpressionUUID->"35350626-0818-498f-bb20-77d659384d16",
  CellID->1972057167],
-Cell[49853, 1229, 249, 5, 27, "ExampleSection",ExpressionUUID->"ac90aca6-ab8f-493e-8977-3d738882c63e",
+Cell[49196, 1209, 249, 5, 27, "ExampleSection",ExpressionUUID->"ac90aca6-ab8f-493e-8977-3d738882c63e",
  CellID->102197971]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[50139, 1239, 111, 1, 90, "MetadataSection",ExpressionUUID->"bca19b41-051b-48f7-9ebe-4cbcd5e0446a",
+Cell[49482, 1219, 111, 1, 90, "MetadataSection",ExpressionUUID->"bca19b41-051b-48f7-9ebe-4cbcd5e0446a",
  CellID->1801864644],
-Cell[50253, 1242, 594, 14, 33, "History",ExpressionUUID->"0dcd2c7b-fb2d-456e-a29d-4e7792efa3cb",
+Cell[49596, 1222, 594, 14, 33, "History",ExpressionUUID->"0dcd2c7b-fb2d-456e-a29d-4e7792efa3cb",
  CellID->124681714],
 Cell[CellGroupData[{
-Cell[50872, 1260, 485, 13, 27, "CategorizationSection",ExpressionUUID->"bf165cfc-eb54-43ff-bfc2-5a669a9efde0",
+Cell[50215, 1240, 485, 13, 27, "CategorizationSection",ExpressionUUID->"bf165cfc-eb54-43ff-bfc2-5a669a9efde0",
  CellID->1729011373],
-Cell[51360, 1275, 135, 2, 43, "Categorization",ExpressionUUID->"9925159c-7e73-4a8e-a28e-c93e0bef722f",
+Cell[50703, 1255, 135, 2, 43, "Categorization",ExpressionUUID->"9925159c-7e73-4a8e-a28e-c93e0bef722f",
  CellID->1892918454],
-Cell[51498, 1279, 150, 2, 43, "Categorization",ExpressionUUID->"9d3c0b56-01b2-41af-94ce-fe6555faf49d",
+Cell[50841, 1259, 150, 2, 43, "Categorization",ExpressionUUID->"9d3c0b56-01b2-41af-94ce-fe6555faf49d",
  CellID->1998913946],
-Cell[51651, 1283, 146, 2, 43, "Categorization",ExpressionUUID->"3b2475fc-a949-4cae-9eb4-49863c90830a",
+Cell[50994, 1263, 146, 2, 43, "Categorization",ExpressionUUID->"3b2475fc-a949-4cae-9eb4-49863c90830a",
  CellID->512516754],
-Cell[51800, 1287, 168, 2, 43, "Categorization",ExpressionUUID->"e88b6582-ce91-44f1-a1e4-bd1a09f636d8",
+Cell[51143, 1267, 168, 2, 43, "Categorization",ExpressionUUID->"e88b6582-ce91-44f1-a1e4-bd1a09f636d8",
  CellID->312176361]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[52005, 1294, 111, 1, 26, "KeywordsSection",ExpressionUUID->"270e1bff-c127-4eba-a6cd-085362201cea",
+Cell[51348, 1274, 111, 1, 26, "KeywordsSection",ExpressionUUID->"270e1bff-c127-4eba-a6cd-085362201cea",
  CellID->1390348926],
-Cell[52119, 1297, 99, 1, 87, "Keywords",ExpressionUUID->"8c48bb20-df76-4af1-b2db-ad3b6098c476",
+Cell[51462, 1277, 99, 1, 87, "Keywords",ExpressionUUID->"8c48bb20-df76-4af1-b2db-ad3b6098c476",
  CellID->824836275]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[52255, 1303, 120, 1, 26, "TemplatesSection",ExpressionUUID->"e760d1cc-d329-47d6-894e-a8f93ddb004d",
+Cell[51598, 1283, 120, 1, 26, "TemplatesSection",ExpressionUUID->"e760d1cc-d329-47d6-894e-a8f93ddb004d",
  CellID->1016332540],
-Cell[52378, 1306, 148, 2, 87, "Template",ExpressionUUID->"326aaf8e-6a63-4cd0-9ca1-a9b33e9935ce",
+Cell[51721, 1286, 148, 2, 87, "Template",ExpressionUUID->"326aaf8e-6a63-4cd0-9ca1-a9b33e9935ce",
  CellID->416071542],
-Cell[52529, 1310, 137, 2, 87, "Template",ExpressionUUID->"58500619-b8ff-4ec4-9e0f-3b3f32859cdf",
+Cell[51872, 1290, 137, 2, 87, "Template",ExpressionUUID->"58500619-b8ff-4ec4-9e0f-3b3f32859cdf",
  CellID->707651762],
-Cell[52669, 1314, 135, 2, 87, "Template",ExpressionUUID->"6ddeeea2-af77-4a3d-847c-e49120be7d0d",
+Cell[52012, 1294, 135, 2, 87, "Template",ExpressionUUID->"6ddeeea2-af77-4a3d-847c-e49120be7d0d",
  CellID->738726848],
-Cell[52807, 1318, 138, 2, 87, "Template",ExpressionUUID->"a91862e1-c7da-45a9-a807-aaa1e2219e84",
+Cell[52150, 1298, 138, 2, 87, "Template",ExpressionUUID->"a91862e1-c7da-45a9-a807-aaa1e2219e84",
  CellID->1179171029]
 }, Closed]]
 }, Open  ]]

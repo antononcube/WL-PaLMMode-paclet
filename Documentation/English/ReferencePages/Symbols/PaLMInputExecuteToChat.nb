@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     26779,        689]
-NotebookOptionsPosition[     19436,        534]
-NotebookOutlinePosition[     20255,        561]
-CellTagsIndexPosition[     20176,        556]
+NotebookDataLength[     64025,       1424]
+NotebookOptionsPosition[     54755,       1227]
+NotebookOutlinePosition[     55575,       1254]
+CellTagsIndexPosition[     55495,       1249]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -49,6 +49,37 @@ Cell[TextData[{
  CellChangeTimes->{{3.8941975928549843`*^9, 3.894197619659587*^9}, {
   3.8941976602276907`*^9, 3.894197660823554*^9}},
  CellID->647892463,ExpressionUUID->"272f1c87-11a3-4ff0-a94c-9a1d1b9ad917"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["PaLMInputExecuteToChat",
+   BaseStyle->"Link",
+   ButtonData->"paclet:AntonAntonov/PaLMMode/ref/PaLMInputExecuteToChat"]], 
+  "InlineFormula",ExpressionUUID->"3182fe7d-7fcb-43b3-a3c9-767d9494bf44"],
+ " uses the function ",
+ Cell[BoxData[
+  ButtonBox["PaLMGenerateMessage",
+   BaseStyle->"Hyperlink",
+   ButtonData->{
+     URL["https://resources.wolframcloud.com/PacletRepository/resources/\
+AntonAntonov/PaLMLink/ref/PaLMGenerateMessage.html"], None},
+   ButtonNote->
+    "https://resources.wolframcloud.com/PacletRepository/resources/\
+AntonAntonov/PaLMLink/ref/PaLMGenerateMessage.html"]], "InlineFormula",
+  ExpressionUUID->"0b20b5a9-cedb-4265-bd5b-5640731bad1c"],
+ " of the paclet ",
+ ButtonBox["\"AntonAntonov/PaLMLink\"",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://resources.wolframcloud.com/PacletRepository/resources/\
+AntonAntonov/PaLMLink/"], None},
+  ButtonNote->
+   "https://resources.wolframcloud.com/PacletRepository/resources/\
+AntonAntonov/PaLMLink/"],
+ "."
+}], "Notes",
+ CellChangeTimes->{{3.8942671597217207`*^9, 3.8942672422530413`*^9}},
+ CellID->53507905,ExpressionUUID->"9b30cbc8-2086-4bae-a25d-513cabf60b19"],
 
 Cell["The following options can be given: ", "Notes",
  CellID->1723586354,ExpressionUUID->"be5f5211-6595-4ebc-9843-edf03a0a444b"],
@@ -190,10 +221,10 @@ Cell[TextData[{
     "6669db9c-1bf5-46bb-bba2-2d3340b4e640"], 
    DynamicModuleBox[{$CellContext`nbobj$$ = NotebookObject[
     "31b527b4-855a-4d25-9c22-de5a55ea4c3a", 
-     "e440de33-5396-4399-ac7a-85d32f57a0b8"], $CellContext`cellobj$$ = 
+     "2ae5f32e-8ea2-4b5c-a203-7ba4dcbfe8e8"], $CellContext`cellobj$$ = 
     CellObject[
     "9da88fb7-1d3e-4fe4-9683-3a62dbff91a5", 
-     "10ade187-2bd3-4065-96f7-1c995aa04c14"]}, 
+     "accc535f-7899-4a4f-ab9a-16db41701bf1"]}, 
     TemplateBox[{
       GraphicsBox[{{
          Thickness[0.06], 
@@ -380,12 +411,161 @@ Currently only the model \"chat-bison-001\" is  available via PaLM API.\
  CellID->707178665,ExpressionUUID->"8f9e9951-af98-4653-86f7-23d646874282"]
 }, Open  ]],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[
  InterpretationBox[Cell[
   "\"Temperature\"", "ExampleSubsection",ExpressionUUID->
    "f9e23149-fc93-441f-855f-9398d53d93a6"],
   $Line = 0; Null]], "ExampleSubsection",
  CellID->939433433,ExpressionUUID->"2edbb74b-823b-4ee3-bc78-e070094e6f08"],
+
+Cell["Here are message generations for different temperatures:", "ExampleText",
+ CellChangeTimes->{{3.8941956995255613`*^9, 3.894195731602709*^9}, {
+  3.8941965398289747`*^9, 3.894196550793755*^9}, {3.894267079711063*^9, 
+  3.89426708103798*^9}},
+ CellID->325523476,ExpressionUUID->"0cb2fa6b-26d0-486b-b9db-7e7c2b1a4348"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ResourceFunction", "[", "\"\<GridTableForm\>\"", "]"}], "[", 
+  RowBox[{
+   RowBox[{"Map", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#", ",", 
+        RowBox[{"PaLMInputExecuteToChat", "[", 
+         RowBox[{"\"\<What is the distance to the sun?\>\"", ",", 
+          RowBox[{"\"\<Temperature\>\"", "->", "#"}]}], "]"}]}], "}"}], "&"}],
+      ",", 
+     RowBox[{"Range", "[", 
+      RowBox[{"0", ",", "1", ",", "0.25"}], "]"}]}], "]"}], ",", 
+   RowBox[{"TableHeadings", "->", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Temperature\>\"", ",", "\"\<Generated text\>\""}], 
+     "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.894195375187314*^9, 3.894195394234383*^9}, {
+  3.894195659613186*^9, 3.894195795965849*^9}, {3.8941964816868877`*^9, 
+  3.894196513614976*^9}, {3.8941966922120132`*^9, 3.894196721436598*^9}, {
+  3.894267084235321*^9, 3.894267088375024*^9}},
+ CellLabel->"In[12]:=",
+ CellID->1832473401,ExpressionUUID->"47748519-a5c4-44aa-8d88-4b39b5994b45"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     StyleBox["\<\"#\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Times",
+      FontColor->RGBColor[0, 0, 1]], 
+     StyleBox["\<\"Temperature\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Times",
+      FontColor->RGBColor[0, 0, 1]], 
+     StyleBox["\<\"Generated text\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Times",
+      FontColor->RGBColor[0, 0, 1]]},
+    {"1", 
+     "0.`", "\<\"The average distance between the Earth and the Sun is 93 \
+million miles (150 million kilometers). This distance is called an \
+astronomical unit (AU). It is used to measure the distances to other planets \
+in our solar system.\\r\\n\\r\\nThe Earth's orbit around the Sun is not a \
+perfect circle. It is actually an ellipse, which means that the Earth's \
+distance from the Sun varies throughout the year. The Earth's closest \
+approach to the Sun is called perihelion, which occurs in January. The \
+Earth's farthest distance from the Sun is called aphelion, which occurs in \
+July.\\r\\n\\r\\nThe Earth's distance from the Sun has a small but \
+significant effect on our planet's climate. When the Earth is closer to the \
+Sun, it receives more solar radiation. This can lead to warmer temperatures. \
+When the Earth is farther from the Sun, it receives less solar radiation. \
+This can lead to cooler temperatures.\\r\\n\\r\\nThe Earth's distance from \
+the Sun is also important for life on Earth. The Sun's energy is essential \
+for photosynthesis, which is the process by which plants convert sunlight \
+into food. Without photosynthesis, there would be no plants, and without \
+plants, there would be no animals.\\r\\n\\r\\nThe Earth's distance from the \
+Sun is one of the factors that makes our planet habitable. It is a reminder \
+of how delicate the balance of life on Earth is.\"\>"},
+    {"2", 
+     "0.25`", "\<\"The average distance between the Earth and the Sun is 93 \
+million miles (150 million kilometers). This distance is called an \
+astronomical unit (AU). The Sun is so large that it appears to be the same \
+size in the sky as the Moon, even though the Sun is actually much larger than \
+the Moon. The Sun is about 400 times wider than the Earth and 333,000 times \
+more massive. It is made up of hydrogen and helium, and it generates energy \
+through nuclear fusion. The Sun is the center of our solar system, and all of \
+the planets orbit around it.\"\>"},
+    {"3", 
+     "0.5`", "\<\"The average distance from the Earth to the Sun is 93 \
+million miles (150 million kilometers). This distance is called an \
+astronomical unit (AU). The Sun is so large that it holds 99.86% of the mass \
+of the Solar System. The Earth is the third planet from the Sun and the only \
+planet in the Solar System known to support life.\"\>"},
+    {"4", 
+     "0.75`", "\<\"The average distance between the Earth and the Sun is \
+149.60 million kilometers (92.96 million miles). This distance is called an \
+astronomical unit (AU). The Earth's orbit around the Sun is not a perfect \
+circle, but is slightly elliptical. This means that the Earth's distance from \
+the Sun varies throughout the year. The closest point in Earth's orbit to the \
+Sun is called perihelion, and occurs in early January. The farthest point in \
+Earth's orbit from the Sun is called aphelion, and occurs in early July. The \
+difference between the Earth's distance from the Sun at perihelion and \
+aphelion is about 3 million kilometers (1.86 million miles).\\r\\n\\r\\nThe \
+Earth's distance from the Sun is important because it affects the Earth's \
+climate. The Sun's energy is what drives the Earth's climate system. The \
+amount of energy that the Earth receives from the Sun varies depending on the \
+Earth's distance from the Sun. When the Earth is closer to the Sun, it \
+receives more energy, and when the Earth is farther from the Sun, it receives \
+less energy. This variation in energy is one of the factors that causes the \
+Earth's climate to change over time.\"\>"},
+    {"5", 
+     "1.`", "\<\"The mean distance of the Earth from the Sun is about 93 \
+million miles or 150 million kilometers. \\r\\n\\r\\nThe distance between \
+Earth and the Sun varies throughout the year because Earth's orbit is \
+elliptical. When Earth is closest to the Sun, it is said to be at perihelion, \
+which occurs in January. When Earth is farthest from the Sun, it is said to \
+be at aphelion, which occurs in July. The difference between perihelion and \
+aphelion is only about 3%, so the Sun's apparent size in the sky does not \
+change much throughout the year.\"\>"}
+   },
+   AutoDelete->False,
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {
+       GrayLevel[1], 
+       GrayLevel[0.96], 
+       GrayLevel[1], 
+       GrayLevel[0.96], 
+       GrayLevel[1], 
+       GrayLevel[0.96]}},
+   GridBoxDividers->{
+    "ColumnsIndexed" -> {
+      1 -> GrayLevel[0], 2 -> GrayLevel[0], 3 -> GrayLevel[0.8], 4 -> 
+       GrayLevel[0.8], 4 -> GrayLevel[0]}, 
+     "Rows" -> {True, True, {False}, True}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{3.8942671340082493`*^9},
+ CellLabel->"Out[12]=",
+ CellID->2097542689,ExpressionUUID->"62d27822-b6c8-4bb7-bbdc-20d4fc9463db"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
  InterpretationBox[Cell[
@@ -394,6 +574,211 @@ Cell[BoxData[
   $Line = 0; Null]], "ExampleSubsection",
  CellID->757935687,ExpressionUUID->"9d988bd7-2a37-462f-9a69-b5dce56e18df"],
 
+Cell["\<\
+Here are message generations for different top probabilities:\
+\>", "ExampleText",
+ CellChangeTimes->{{3.8941956995255613`*^9, 3.894195731602709*^9}, {
+  3.8941965398289747`*^9, 3.894196550793755*^9}, {3.894196595198085*^9, 
+  3.8941966194457893`*^9}, {3.894266997111829*^9, 3.89426700541579*^9}},
+ CellID->1243455497,ExpressionUUID->"2dc3713c-fde3-44bd-9bf1-3426f77f4fef"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ResourceFunction", "[", "\"\<GridTableForm\>\"", "]"}], "[", 
+  RowBox[{
+   RowBox[{"Map", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#", ",", 
+        RowBox[{"PaLMInputExecuteToChat", "[", 
+         RowBox[{"\"\<What cats think about?\>\"", ",", 
+          RowBox[{"\"\<TopProbability\>\"", "->", "#"}]}], "]"}]}], "}"}], 
+      "&"}], ",", 
+     RowBox[{"Range", "[", 
+      RowBox[{"0", ",", "1", ",", "0.3"}], "]"}]}], "]"}], ",", 
+   RowBox[{"TableHeadings", "->", 
+    RowBox[{"{", 
+     RowBox[{"\"\<TopProbability\>\"", ",", "\"\<Generated text\>\""}], 
+     "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.894195375187314*^9, 3.894195394234383*^9}, {
+   3.894195659613186*^9, 3.894195795965849*^9}, {3.8941964816868877`*^9, 
+   3.894196513614976*^9}, {3.894196571812008*^9, 3.894196584120142*^9}, {
+   3.894196622777309*^9, 3.8941966697103233`*^9}, 3.894196738687751*^9, {
+   3.8941968255351543`*^9, 3.894196825984125*^9}, {3.894267002997225*^9, 
+   3.894267003840019*^9}},
+ CellLabel->"In[11]:=",
+ CellID->1593169122,ExpressionUUID->"67e598d7-edb8-4cd1-9054-8a1aaf6cdd7a"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     StyleBox["\<\"#\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Times",
+      FontColor->RGBColor[0, 0, 1]], 
+     StyleBox["\<\"TopProbability\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Times",
+      FontColor->RGBColor[0, 0, 1]], 
+     StyleBox["\<\"Generated text\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Times",
+      FontColor->RGBColor[0, 0, 1]]},
+    {"1", 
+     "0.`", "\<\"Cats are curious and intelligent creatures, and they spend a \
+lot of time thinking about their surroundings. They are also very good at \
+problem-solving, and they often use their intelligence to get what they want.\
+\\n\\nOne of the things that cats think about most is food. They are always \
+on the lookout for a good meal, and they will often go to great lengths to \
+get it. Cats are also very territorial, and they spend a lot of time thinking \
+about protecting their territory from other cats.\\n\\nIn addition to food \
+and territory, cats also think about their relationships with other cats and \
+humans. They are social creatures, and they enjoy spending time with their \
+loved ones. Cats also like to play, and they often spend hours chasing toys \
+or each other.\\n\\nOverall, cats are very intelligent creatures that spend a \
+lot of time thinking about their surroundings. They are curious, playful, and \
+territorial, and they enjoy spending time with their loved ones.\\n\\nHere \
+are some additional things that cats may think about:\\n\\n* Their owners: \
+Cats form strong bonds with their owners, and they often think about them \
+when they are not around. They may miss their owners when they are gone, and \
+they may be excited to see them when they return.\\n* Other cats: Cats are \
+social creatures, and they often think about other cats in their environment. \
+They may be curious about other cats, or they may be territorial and want to \
+keep other cats away from their territory.\\n* Food: Cats are always thinking \
+about food! They are predators, and they are constantly on the lookout for a \
+good meal. They may think about where to find food, or they may think about \
+how to get food that is out of reach.\\n* Play: Cats love to play! They may \
+think about their favorite toys, or they may think about ways to get their \
+owners to play with them.\\n* Sleep: Cats sleep a lot! They may think about \
+where to sleep, or they may think about how to get comfortable.\\n* Cleaning: \
+Cats are very clean animals, and they spend a lot of time grooming \
+themselves. They may think about how to get clean, or they may think about \
+how to get rid of a bad smell.\\n* Hunting: Cats are natural hunters, and \
+they may think about hunting prey. They may think about where to find prey, \
+or they may think about how to catch prey.\\n* Exploring: Cats are curious \
+creatures, and they love to explore their surroundings. They may think about \
+new places to explore, or they may think about new things to see.\\n* \
+Dreaming: Cats dream just like humans do, and they may dream about all sorts \
+of things. They may dream about food, play, hunting, or anything else that \
+they think about during the day.\"\>"},
+    {"2", 
+     "0.3`", "\<\"Cats are curious and intelligent creatures, and they spend \
+a lot of time thinking about their surroundings. They are also very good at \
+problem-solving, and they often use their intelligence to get what they want.\
+\\n\\nOne of the things that cats think about most is food. They are always \
+on the lookout for a good meal, and they will often go to great lengths to \
+get it. Cats are also very territorial, and they spend a lot of time thinking \
+about protecting their territory from other cats.\\n\\nIn addition to food \
+and territory, cats also think about their relationships with other cats and \
+humans. They are social creatures, and they enjoy spending time with their \
+loved ones. Cats also like to play, and they often spend hours chasing toys \
+or each other around the house.\\n\\nOverall, cats are very intelligent and \
+curious creatures. They spend a lot of time thinking about their \
+surroundings, their relationships, and how to get what they want.\\n\\nHere \
+are some additional things that cats may think about:\\n\\n* Their owners: \
+Cats form strong bonds with their owners, and they often think about them \
+when they are not around. They may miss their owners when they are gone, and \
+they may be excited to see them when they return.\\n* Other cats: Cats are \
+social creatures, and they often think about other cats in their environment. \
+They may be curious about other cats, or they may be territorial and want to \
+keep other cats away from their territory.\\n* Food: Cats are always thinking \
+about food! They are predators, and they are constantly on the lookout for a \
+good meal. They may think about where to find food, or they may think about \
+how to get food that is out of reach.\\n* Play: Cats love to play! They may \
+think about their favorite toys, or they may think about ways to get their \
+owners to play with them.\\n* Hunting: Cats are natural hunters, and they \
+often think about hunting prey. They may think about where to find prey, or \
+they may think about how to catch prey.\\n* Sleeping: Cats sleep a lot! They \
+may think about where to sleep, or they may think about how to get \
+comfortable.\\n* Cleaning themselves: Cats are very clean animals, and they \
+spend a lot of time grooming themselves. They may think about how to clean \
+themselves, or they may think about how to get rid of dirt or parasites.\\n* \
+Dreaming: Cats dream just like humans do, and they may dream about all sorts \
+of things. They may dream about food, play, hunting, or even their \
+owners.\"\>"},
+    {"3", 
+     "0.6`", "\<\"Cats are curious and intelligent creatures, and they spend \
+a lot of time thinking about their surroundings. They are also very good at \
+problem-solving, and they often use their intelligence to get what they want.\
+\\n\\nOne of the things that cats think about most is food. They are always \
+on the lookout for a good meal, and they will often go to great lengths to \
+get it. They are also very good at hiding food, and they will often bury \
+their leftovers or take them to a safe place to eat later.\\n\\nCats also \
+think about their owners. They are very social creatures, and they enjoy \
+spending time with their humans. They are also very good at reading human \
+emotions, and they often know when their owners are happy, sad, or \
+angry.\\n\\nIn addition to food and their owners, cats also think about a \
+variety of other things. They are curious about the world around them, and \
+they are always exploring their surroundings. They are also very good at \
+playing, and they often spend hours chasing toys or playing with other \
+cats.\\n\\nOverall, cats are very intelligent creatures that think about a \
+variety of things. They are curious about the world around them, and they \
+enjoy spending time with their humans. They are also very good at \
+problem-solving, and they often use their intelligence to get what they want.\
+\"\>"},
+    {"4", 
+     "0.8999999999999999`", "\<\"Cats are curious and intelligent creatures, \
+and they spend a lot of time thinking about their surroundings. They are also \
+very good at reading human emotions, and they often seem to know what we are \
+thinking before we even say anything.\\n\\nSo, what do cats think about? Here \
+are a few things that may be on their minds:\\n\\n* Food: Cats are always \
+thinking about food, and they are always on the lookout for a tasty snack. \
+They may be dreaming about their next meal, or they may be plotting how to \
+get into the cupboard where the treats are kept.\\n* Play: Cats love to play, \
+and they are always looking for new ways to entertain themselves. They may be \
+chasing a ball of yarn, or they may be stalking a bug.\\n* Naps: Cats also \
+love to sleep, and they can spend up to 16 hours a day napping. They may be \
+dreaming about their next adventure, or they may just be enjoying a \
+well-deserved rest.\\n* Humans: Cats are very social creatures, and they \
+enjoy spending time with their humans. They may be watching us from the \
+window, or they may be following us around the house.\\n* Other animals: Cats \
+are curious about the world around them, and they may be interested in other \
+animals. They may be watching birds outside the window, or they may be \
+playing with a dog.\\n* The environment: Cats are very aware of their \
+surroundings, and they may be paying attention to the sounds, smells, and \
+sights around them. They may be listening to the birds singing, or they may \
+be smelling the flowers in the garden.\\n\\nOf course, these are just a few \
+of the things that cats may be thinking about. They are complex creatures \
+with their own unique thoughts and feelings, and we may never truly know what \
+goes on in their heads. But that's part of what makes them so \
+fascinating.\"\>"}
+   },
+   AutoDelete->False,
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {
+       GrayLevel[1], 
+       GrayLevel[0.96], 
+       GrayLevel[1], 
+       GrayLevel[0.96], 
+       GrayLevel[1]}},
+   GridBoxDividers->{
+    "ColumnsIndexed" -> {
+      1 -> GrayLevel[0], 2 -> GrayLevel[0], 3 -> GrayLevel[0.8], 4 -> 
+       GrayLevel[0.8], 4 -> GrayLevel[0]}, 
+     "Rows" -> {True, True, {False}, True}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{3.8942670644780073`*^9},
+ CellLabel->"Out[11]=",
+ CellID->1100757953,ExpressionUUID->"a0b4beb0-f548-45d8-b9e9-264cfe82a6af"]
+}, Open  ]]
+}, Open  ]],
+
 Cell[BoxData[
  InterpretationBox[Cell[
   "\"TopTokensCount\"", "ExampleSubsection",ExpressionUUID->
@@ -401,12 +786,95 @@ Cell[BoxData[
   $Line = 0; Null]], "ExampleSubsection",
  CellID->1899581052,ExpressionUUID->"751edf1d-3c36-4be6-b22f-2922467811a9"],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[
  InterpretationBox[Cell[
   "Epilog", "ExampleSubsection",ExpressionUUID->
    "3503aa9b-e54c-489b-a911-10c4a7bc236b"],
   $Line = 0; Null]], "ExampleSubsection",
- CellID->1766844662,ExpressionUUID->"f6987fc0-f03e-48df-910d-9dcd07321dea"]
+ CellID->1766844662,ExpressionUUID->"f6987fc0-f03e-48df-910d-9dcd07321dea"],
+
+Cell["\<\
+The option \"Epilog\" can be used to modify the output. Here is an example in \
+which the PaLM API output is placed in a Python external evaluation cell:\
+\>", "ExampleText",
+ CellChangeTimes->{{3.894197078826532*^9, 3.8941971460935097`*^9}, {
+  3.894266085447187*^9, 3.894266098922307*^9}, {3.8942661451726*^9, 
+  3.894266146183847*^9}},
+ CellID->122402278,ExpressionUUID->"a4bbf887-4086-46c2-b662-1999cc505e72"],
+
+Cell[BoxData[
+ RowBox[{"PaLMInputExecuteToChat", "[", 
+  RowBox[{
+  "\"\<Generate Python code for iteration over a dictionary.\>\"", ",", 
+   RowBox[{"Epilog", "->", 
+    RowBox[{"PacletSymbol", "[", 
+     RowBox[{
+     "\"\<AntonAntonov/NotebookModifiers\>\"", ",", 
+      "\"\<CellPrintPython\>\""}], "]"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.894266895109537*^9, 3.894266895874281*^9}},
+ CellID->790991403,ExpressionUUID->"da15f85c-7d76-472b-94bb-13a8f5560945"],
+
+Cell["\<\
+There are a few ways to iterate over a dictionary in Python. One way is to \
+use a for loop. To do this, you would first need to initialize a variable to \
+the dictionary. Then, you would use the for loop to iterate over the keys of \
+the dictionary. Inside the for loop, you would be able to access the value \
+associated with each key.
+
+Here is an example of how to iterate over a dictionary using a for loop:
+
+```python
+my_dictionary = {\"key1\": \"value1\", \"key2\": \"value2\"}
+
+for key in my_dictionary:
+    print(key, my_dictionary[key])
+```
+
+Another way to iterate over a dictionary is to use a while loop. To do this, \
+you would first need to initialize a variable to the first key of the \
+dictionary. Then, you would use the while loop to iterate over the keys of \
+the dictionary. Inside the while loop, you would be able to access the value \
+associated with each key.
+
+Here is an example of how to iterate over a dictionary using a while loop:
+
+```python
+my_dictionary = {\"key1\": \"value1\", \"key2\": \"value2\"}
+
+current_key = my_dictionary.keys()[0]
+
+while current_key is not None:
+    print(current_key, my_dictionary[current_key])
+    current_key = my_dictionary.keys()[current_key + 1]
+```
+
+Finally, you can also iterate over a dictionary using a list comprehension. \
+To do this, you would first need to initialize a list to an empty list. Then, \
+you would use a for loop to iterate over the keys of the dictionary. Inside \
+the for loop, you would append the key and value to the list.
+
+Here is an example of how to iterate over a dictionary using a list \
+comprehension:
+
+```python
+my_dictionary = {\"key1\": \"value1\", \"key2\": \"value2\"}
+
+my_list = [key + \"=\" + value for key, value in my_dictionary.items()]
+
+print(my_list)
+```\
+\>", "ExternalLanguage",
+ CellEvaluationLanguage->"Python",
+ CellID->250427873,ExpressionUUID->"e1469362-507b-475e-b1a4-b9831830ced0"],
+
+Cell["Note that the answer is given by PaLM  API as Markdown text.", \
+"ExampleText",
+ CellChangeTimes->{{3.894197300374812*^9, 3.894197336918108*^9}, {
+  3.894266114406269*^9, 3.894266133349532*^9}},
+ CellID->744415698,ExpressionUUID->"20f53ec7-8cf1-4ff9-8a59-91c4e75136c5"]
+}, Open  ]]
 }, Open  ]],
 
 Cell[BoxData[
@@ -416,12 +884,237 @@ Cell[BoxData[
   $Line = 0; Null]], "ExampleSection",
  CellID->1183621359,ExpressionUUID->"3b264f0b-12e6-449f-96ff-897532a0e60e"],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[
  InterpretationBox[Cell[
   "Properties & Relations", "ExampleSection",ExpressionUUID->
    "230b3c9c-6d9d-447b-9f83-388b320a910b"],
   $Line = 0; Null]], "ExampleSection",
  CellID->983158552,ExpressionUUID->"6f33d230-ede6-404e-b74d-f4110955820b"],
+
+Cell[TextData[{
+ "The available PaLM API models can be retrieved with the function ",
+ Cell[BoxData[
+  ButtonBox["PaLMModels",
+   BaseStyle->"Hyperlink",
+   ButtonData->{
+     URL["https://resources.wolframcloud.com/PacletRepository/resources/\
+AntonAntonov/PaLMLink/ref/PaLMModels.html"], None},
+   ButtonNote->
+    "https://resources.wolframcloud.com/PacletRepository/resources/\
+AntonAntonov/PaLMLink/ref/PaLMModels.html"]], "InlineFormula",ExpressionUUID->
+  "b154352b-cfdb-438f-9611-6533121851f1"],
+ " of ",
+ ButtonBox["\"AntonAntonov/PaLMLink\"",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://resources.wolframcloud.com/PacletRepository/resources/\
+AntonAntonov/PaLMLink/"], None},
+  ButtonNote->
+   "https://resources.wolframcloud.com/PacletRepository/resources/\
+AntonAntonov/PaLMLink/"],
+ ": "
+}], "ExampleText",
+ CellChangeTimes->{{3.894266271134492*^9, 3.89426637231052*^9}},
+ CellID->1953840542,ExpressionUUID->"20a896d3-7f7a-4b71-baaa-a06294fd5cbe"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  InterpretationBox[
+   FrameBox[
+    TagBox[
+     TooltipBox[
+      PaneBox[GridBox[{
+         {
+          ItemBox[
+           GraphicsBox[
+            {Thickness[0.0025], 
+             {FaceForm[{RGBColor[
+              0.9607843137254902, 0.5058823529411764, 0.19607843137254902`], 
+              Opacity[1.]}], 
+              FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0,
+                 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}}, {{0, 2, 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1,
+                 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {
+                1, 3, 3}, {0, 1, 0}, {1, 3, 3}}}, {{{205., 
+                22.863691329956055`}, {205., 212.31669425964355`}, {
+                246.01799774169922`, 235.99870109558105`}, {369.0710144042969,
+                 307.0436840057373}, {369.0710144042969, 
+                117.59068870544434`}, {205., 22.863691329956055`}}, {{
+                30.928985595703125`, 307.0436840057373}, {153.98200225830078`,
+                 235.99870109558105`}, {195., 212.31669425964355`}, {195., 
+                22.863691329956055`}, {30.928985595703125`, 
+                117.59068870544434`}, {30.928985595703125`, 
+                307.0436840057373}}, {{200., 410.42970085144043`}, {
+                364.0710144042969, 315.7036876678467}, {241.01799774169922`, 
+                244.65868949890137`}, {200., 220.97669792175293`}, {
+                158.98200225830078`, 244.65868949890137`}, {
+                35.928985595703125`, 315.7036876678467}, {200., 
+                410.42970085144043`}}, CompressedData["
+1:eJxTTMoPSmViYGCQAWIQDQQPlDrLHYA0XxdDiQNYJCATwveoAtG/6uTA/HWX
+w8B8tsaHGch8BoYNGcjqGS7lmqOYd/qhKYj2c/hUDJF/awKiz129jsL3c9qN
+wo/gXBuDzK/YbRWDbF6F4MVoZPtmvJoejeyehpD9yiA6e88JMD+h/JYS2J6k
+J2C+gleGEkQ9QyYyf9NcaWR+w1Rn80xk/bDwgZkPCz+Y/QGPF5Yju++B0sZy
+ZPfD+DD/wfgw/8P4sPCBmQcLP5T4AgBuZHHc
+                "]}]}, 
+             {FaceForm[{RGBColor[
+              0.5529411764705883, 0.6745098039215687, 0.8117647058823529], 
+              Opacity[1.]}], 
+              FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+               0}}}, {{{44.92900085449219, 282.59088134765625`}, {
+               181.00001525878906`, 204.0298843383789}, {181.00001525878906`, 
+               46.90887451171875}, {44.92900085449219, 125.46986389160156`}, {
+               44.92900085449219, 282.59088134765625`}}}]}, 
+             {FaceForm[{RGBColor[
+              0.6627450980392157, 0.803921568627451, 0.5686274509803921], 
+              Opacity[1.]}], 
+              FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+               0}}}, {{{355.0710144042969, 282.59088134765625`}, {
+               355.0710144042969, 125.46986389160156`}, {219., 
+               46.90887451171875}, {219., 204.0298843383789}, {
+               355.0710144042969, 282.59088134765625`}}}]}, 
+             {FaceForm[{RGBColor[
+              0.6901960784313725, 0.5882352941176471, 0.8117647058823529], 
+              Opacity[1.]}], 
+              FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+               0}}}, {{{200., 394.0606994628906}, {336.0710144042969, 
+               315.4997024536133}, {200., 236.93968200683594`}, {
+               63.928985595703125`, 315.4997024536133}, {200., 
+               394.0606994628906}}}]}},
+            BoxID -> 
+            "{\"data\":\"{\\\"jsonData\\\":\\\"{\\\\\\\"type\\\\\\\": \
+\\\\\\\"Graphics\\\\\\\",\\\\n\\\\\\\"version\\\\\\\": \\\\\\\"1.0\\\\\\\",\\\
+\\n\\\\\\\"height\\\\\\\": 11.433641,\\\\n\\\\\\\"width\\\\\\\": 10.000000,\\\
+\\n\\\\\\\"offset\\\\\\\": [-66.000000, \
+-5.000000],\\\\n\\\\\\\"UserCoords\\\\\\\": [13.467693, 428.589520, \
+386.532307, 2.040850],\\\\n\\\\\\\"AxesOrigin\\\\\\\": [50.000000, \
+100.000000],\\\\n\\\\\\\"primitives\\\\\\\": [\\\\n{\\\\\\\"type\\\\\\\": \
+\\\\\\\"Clip\\\\\\\", \\\\\\\"transform\\\\\\\": [1.000000, 0.000000, \
+0.000000, 1.000000, 0.000000, 0.000000], \\\\\\\"path\\\\\\\": [[66,5], \
+[66,17], [76,17], [76,5]]},\\\\n{\\\\\\\"type\\\\\\\": \
+\\\\\\\"Polygon\\\\\\\", \\\\\\\"antialiased\\\\\\\" : true, \\\\\\\"edgeForm\
+\\\\\\\": {\\\\\\\"color\\\\\\\": [245, 129, 50], \\\\\\\"opacity\\\\\\\": 1, \
+\\\\\\\"thickness\\\\\\\": {}, \\\\\\\"capForm\\\\\\\": \
+\\\\\\\"Square\\\\\\\", \\\\\\\"joinForm\\\\\\\": {\\\\\\\"type\\\\\\\": \\\\\
+\\\"Miter\\\\\\\", \\\\\\\"d\\\\\\\": 3.23931}, \\\\\\\"dashing\\\\\\\": [], \
+\\\\\\\"dashingOffset\\\\\\\": 0}, \\\\\\\"faceForm\\\\\\\": {\\\\\\\"color\\\
+\\\\\": [245, 129, 50], \\\\\\\"opacity\\\\\\\": 1}, \\\\\\\"fillrule\\\\\\\" \
+: \\\\\\\"EvenOdd\\\\\\\" , \\\\\\\"points\\\\\\\": [[71.134,15.8755], \
+[71.134,10.7972], [72.2335,10.1624], [75.5319,8.25804], [75.5319,13.3363], \
+[71.134,15.8755], [71.134,15.8755], [66.4681,8.25804], [69.7665,10.1624], \
+[70.866,10.7972], [70.866,15.8755], [66.4681,13.3363], [66.4681,8.25804], \
+[66.4681,8.25804], [71,5.48677], [75.3979,8.02591], [72.0995,9.93027], \
+[71,10.5651], [69.9005,9.93027], [66.6021,8.02591], [71,5.48677], \
+[71,5.48677], [75.733,7.90984], [71.067,5.21594], [71.0411,5.20445], \
+[71.0139,5.1987], [70.9861,5.1987], [70.9589,5.20445], [70.933,5.21594], \
+[66.267,7.90984], [66.2441,7.92651], [66.2255,7.94725], [66.2116,7.97126], \
+[66.203,7.99775], [66.2,8.02591], [66.2,13.4137], [66.203,13.4419], \
+[66.2116,13.4684], [66.2255,13.4924], [66.2441,13.5131], [66.267,13.5298], \
+[70.933,16.2237], [70.9457,16.2301], [70.9589,16.2352], [70.9724,16.2388], \
+[70.9861,16.2409], [71,16.2416], [71.0139,16.2409], [71.0276,16.2388], \
+[71.0411,16.2352], [71.0543,16.2301], [71.067,16.2237], [75.733,13.5298], \
+[75.7559,13.5131], [75.7745,13.4924], [75.7884,13.4684], [75.797,13.4419], \
+[75.8,13.4137], [75.8,8.02591], [75.797,7.99775], [75.7884,7.97126], \
+[75.7745,7.94725], [75.7559,7.92651], [75.733,7.90984], [75.733,7.90984], \
+[75.733,7.90984], [71,5.48677], [66.4681,8.25804]]}, \\\\n{\\\\\\\"type\\\\\\\
+\": \\\\\\\"Polygon\\\\\\\", \\\\\\\"antialiased\\\\\\\" : true, \
+\\\\\\\"edgeForm\\\\\\\": {\\\\\\\"color\\\\\\\": [141, 172, 207], \
+\\\\\\\"opacity\\\\\\\": 1, \\\\\\\"thickness\\\\\\\": {}, \
+\\\\\\\"capForm\\\\\\\": \\\\\\\"Square\\\\\\\", \\\\\\\"joinForm\\\\\\\": \
+{\\\\\\\"type\\\\\\\": \\\\\\\"Miter\\\\\\\", \\\\\\\"d\\\\\\\": 3.23931}, \\\
+\\\\\"dashing\\\\\\\": [], \\\\\\\"dashingOffset\\\\\\\": 0}, \
+\\\\\\\"faceForm\\\\\\\": {\\\\\\\"color\\\\\\\": [141, 172, 207], \
+\\\\\\\"opacity\\\\\\\": 1}, \\\\\\\"fillrule\\\\\\\" : \\\\\\\"EvenOdd\\\\\\\
+\" , \\\\\\\"points\\\\\\\": [[66.8433,8.91349], [70.4907,11.0193], \
+[70.4907,15.231], [66.8433,13.1251], [66.8433,8.91349], [66.8433,8.91349]]}, \
+\\\\n{\\\\\\\"type\\\\\\\": \\\\\\\"Polygon\\\\\\\", \
+\\\\\\\"antialiased\\\\\\\" : true, \\\\\\\"edgeForm\\\\\\\": \
+{\\\\\\\"color\\\\\\\": [169, 205, 145], \\\\\\\"opacity\\\\\\\": 1, \
+\\\\\\\"thickness\\\\\\\": {}, \\\\\\\"capForm\\\\\\\": \
+\\\\\\\"Square\\\\\\\", \\\\\\\"joinForm\\\\\\\": {\\\\\\\"type\\\\\\\": \\\\\
+\\\"Miter\\\\\\\", \\\\\\\"d\\\\\\\": 3.23931}, \\\\\\\"dashing\\\\\\\": [], \
+\\\\\\\"dashingOffset\\\\\\\": 0}, \\\\\\\"faceForm\\\\\\\": {\\\\\\\"color\\\
+\\\\\": [169, 205, 145], \\\\\\\"opacity\\\\\\\": 1}, \
+\\\\\\\"fillrule\\\\\\\" : \\\\\\\"EvenOdd\\\\\\\" , \\\\\\\"points\\\\\\\": \
+[[75.1567,8.91349], [75.1567,13.1251], [71.5093,15.231], [71.5093,11.0193], \
+[75.1567,8.91349], [75.1567,8.91349]]}, \\\\n{\\\\\\\"type\\\\\\\": \
+\\\\\\\"Polygon\\\\\\\", \\\\\\\"antialiased\\\\\\\" : true, \\\\\\\"edgeForm\
+\\\\\\\": {\\\\\\\"color\\\\\\\": [176, 150, 207], \\\\\\\"opacity\\\\\\\": \
+1, \\\\\\\"thickness\\\\\\\": {}, \\\\\\\"capForm\\\\\\\": \\\\\\\"Square\\\\\
+\\\", \\\\\\\"joinForm\\\\\\\": {\\\\\\\"type\\\\\\\": \\\\\\\"Miter\\\\\\\", \
+\\\\\\\"d\\\\\\\": 3.23931}, \\\\\\\"dashing\\\\\\\": [], \
+\\\\\\\"dashingOffset\\\\\\\": 0}, \\\\\\\"faceForm\\\\\\\": {\\\\\\\"color\\\
+\\\\\": [176, 150, 207], \\\\\\\"opacity\\\\\\\": 1}, \
+\\\\\\\"fillrule\\\\\\\" : \\\\\\\"EvenOdd\\\\\\\" , \\\\\\\"points\\\\\\\": \
+[[71,5.92555], [74.6474,8.03137], [71,10.1372], [67.3526,8.03137], \
+[71,5.92555], [71,5.92555]]}, \\\\n{\\\\\\\"type\\\\\\\": \\\\\\\"Group\\\\\\\
+\", \\\\\\\"name\\\\\\\": \
+\\\\\\\"Frame\\\\\\\",\\\\n\\\\\\\"metadata\\\\\\\": {\\\\\\\"left\\\\\\\": \
+13.4677, \\\\\\\"top\\\\\\\": 428.59, \\\\\\\"right\\\\\\\": 386.532, \
+\\\\\\\"bottom\\\\\\\": 2.04085},\\\\n\\\\\\\"primitives\\\\\\\":[]}, \
+\\\\n{\\\\\\\"type\\\\\\\": \\\\\\\"Group\\\\\\\", \\\\\\\"name\\\\\\\": \\\\\
+\\\"Axes\\\\\\\",\\\\n\\\\\\\"metadata\\\\\\\": \\\\\\\"TBD\\\\\\\",\\\\n\\\\\
+\\\"primitives\\\\\\\":[]}],\\\\n\\\\\\\"PlotRange\\\\\\\": {\\\\\\\"left\\\\\
+\\\": -0.000000, \\\\\\\"top\\\\\\\": -9.433641, \\\\\\\"right\\\\\\\": \
+10.000000, \\\\\\\"bottom\\\\\\\": \
+2.000000}\\\\n}\\\\n\\\",\\\"requestedImageSize\\\":10}\"}",
+            BaselinePosition->Scaled[0.15],
+            ImageSize->10]], 
+          ItemBox[
+           StyleBox[
+            RowBox[{"PaLMModels", " "}],
+            ShowAutoStyles->False,
+            ShowStringCharacters->False,
+            FontSize->0.9 Inherited,
+            FontColor->GrayLevel[0.1]]]}
+        },
+        GridBoxSpacings->{"Columns" -> {{0.25}}}],
+       Alignment->{Left, Baseline},
+       BaseStyle->{LineSpacing -> {0, 0}, LineBreakWithin -> False},
+       BaselinePosition->Baseline,
+       FrameMargins->{{3, 0}, {0, 0}}],
+      RowBox[{"PacletSymbol", "[", 
+        RowBox[{
+         "\"AntonAntonov/PaLMLink\"", ",", 
+          "\"AntonAntonov`PaLMLink`PaLMModels\""}], "]"}],
+      TooltipStyle->{ShowAutoStyles -> True, ShowStringCharacters -> True}],
+     Annotation[#, 
+      Style[
+       Defer[
+        PacletSymbol[
+        "AntonAntonov/PaLMLink", "AntonAntonov`PaLMLink`PaLMModels"]], 
+       ShowStringCharacters -> True], "Tooltip"]& ],
+    Background->RGBColor[0.968, 0.976, 0.984],
+    BaselinePosition->Baseline,
+    DefaultBaseStyle->{},
+    FrameMargins->{{0, 0}, {1, 1}},
+    FrameStyle->RGBColor[0.831, 0.847, 0.85],
+    RoundingRadius->4],
+   PacletSymbol["AntonAntonov/PaLMLink", "AntonAntonov`PaLMLink`PaLMModels"],
+   TaggingRules -> {
+    "Paclet" -> "AntonAntonov/PaLMLink", "Symbol" -> 
+     "AntonAntonov`PaLMLink`PaLMModels"},
+   BoxID -> "PacletSymbolBox",
+   SelectWithContents->True,
+   Selectable->False], "[", "]"}]], "Input",
+ CellChangeTimes->{{3.894266385009347*^9, 3.8942663850115643`*^9}},
+ CellLabel->"In[6]:=",
+ CellID->2086349843,ExpressionUUID->"79cd6236-1df8-494e-b3c6-d48a4bb459ee"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"models/chat-bison-001\"\>", 
+   ",", "\<\"models/text-bison-001\"\>", 
+   ",", "\<\"models/embedding-gecko-001\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.894266386426738*^9, 3.894266809015942*^9},
+ CellLabel->"Out[6]=",
+ CellID->756698108,ExpressionUUID->"a27c3d8a-0213-4bad-843b-601b8af713ae"]
+}, Open  ]]
+}, Open  ]],
 
 Cell[BoxData[
  InterpretationBox[Cell[
@@ -548,14 +1241,14 @@ ExpressionUUID->"31b527b4-855a-4d25-9c22-de5a55ea4c3a"
 (*CellTagsOutline
 CellTagsIndex->{
  "ExtendedExamples"->{
-  Cell[11869, 313, 487, 13, 72, "ExtendedExamplesSection",ExpressionUUID->"6bfb70b6-60b1-4a69-a8d3-f3a04a388c97",
+  Cell[13062, 344, 487, 13, 72, "ExtendedExamplesSection",ExpressionUUID->"6bfb70b6-60b1-4a69-a8d3-f3a04a388c97",
    CellTags->"ExtendedExamples",
    CellID->442725611]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"ExtendedExamples", 19982, 549}
+ {"ExtendedExamples", 55301, 1242}
  }
 *)
 (*NotebookFileOutline
@@ -567,127 +1260,169 @@ Cell[703, 25, 611, 13, 99, "Usage",ExpressionUUID->"cf04419d-f670-4461-96a5-4f09
  CellID->840850002],
 Cell[1317, 40, 526, 10, 34, "Notes",ExpressionUUID->"272f1c87-11a3-4ff0-a94c-9a1d1b9ad917",
  CellID->647892463],
-Cell[1846, 52, 129, 1, 33, "Notes",ExpressionUUID->"be5f5211-6595-4ebc-9843-edf03a0a444b",
+Cell[1846, 52, 1190, 29, 57, "Notes",ExpressionUUID->"9b30cbc8-2086-4bae-a25d-513cabf60b19",
+ CellID->53507905],
+Cell[3039, 83, 129, 1, 33, "Notes",ExpressionUUID->"be5f5211-6595-4ebc-9843-edf03a0a444b",
  CellID->1723586354],
-Cell[1978, 55, 2532, 52, 269, "3ColumnTableMod",ExpressionUUID->"035b6f63-8446-4bf9-8e22-facb941298c0",
+Cell[3171, 86, 2532, 52, 269, "3ColumnTableMod",ExpressionUUID->"035b6f63-8446-4bf9-8e22-facb941298c0",
  CellID->908937295]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4547, 112, 436, 12, 51, "TechNotesSection",ExpressionUUID->"11b9774f-02d7-40aa-a649-26b058e6b693",
+Cell[5740, 143, 436, 12, 51, "TechNotesSection",ExpressionUUID->"11b9774f-02d7-40aa-a649-26b058e6b693",
  CellID->1457935954],
-Cell[4986, 126, 100, 1, 24, "Tutorials",ExpressionUUID->"3e6cf67b-6685-4ff3-a286-da455e9e3e54",
+Cell[6179, 157, 100, 1, 24, "Tutorials",ExpressionUUID->"3e6cf67b-6685-4ff3-a286-da455e9e3e54",
  CellID->741166608]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5123, 132, 473, 13, 50, "RelatedLinksSection",ExpressionUUID->"9bc06095-5af2-4c44-b105-b0e49d3db8be",
+Cell[6316, 163, 473, 13, 50, "RelatedLinksSection",ExpressionUUID->"9bc06095-5af2-4c44-b105-b0e49d3db8be",
  CellID->1382028056],
-Cell[5599, 147, 103, 1, 24, "RelatedLinks",ExpressionUUID->"c3353aa5-501e-4060-9a28-80368b26727d",
+Cell[6792, 178, 103, 1, 24, "RelatedLinks",ExpressionUUID->"c3353aa5-501e-4060-9a28-80368b26727d",
  CellID->562411240]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5739, 153, 459, 13, 50, "SeeAlsoSection",ExpressionUUID->"e34c0b20-1d09-4ef7-a44d-c71d67b98ca5",
+Cell[6932, 184, 459, 13, 50, "SeeAlsoSection",ExpressionUUID->"e34c0b20-1d09-4ef7-a44d-c71d67b98ca5",
  CellID->1370180233],
-Cell[6201, 168, 2160, 53, 30, "SeeAlso",ExpressionUUID->"5943b1c3-4cb4-4693-9f98-1cbe702007e3",
+Cell[7394, 199, 2160, 53, 30, "SeeAlso",ExpressionUUID->"5943b1c3-4cb4-4693-9f98-1cbe702007e3",
  CellID->1152029250]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8398, 226, 183, 2, 50, "MoreAboutSection",ExpressionUUID->"a703c1d6-1d29-4b43-b979-743590618085",
+Cell[9591, 257, 183, 2, 50, "MoreAboutSection",ExpressionUUID->"a703c1d6-1d29-4b43-b979-743590618085",
  CellID->443043398],
-Cell[8584, 230, 272, 4, 24, "MoreAbout",ExpressionUUID->"fbfded17-eda4-4094-a076-54932129ac2c",
+Cell[9777, 261, 272, 4, 24, "MoreAbout",ExpressionUUID->"fbfded17-eda4-4094-a076-54932129ac2c",
  CellID->482011239]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8893, 239, 531, 14, 87, "ExamplesInitializationSection",ExpressionUUID->"09c0dd90-25a9-43e6-8767-ab62107b8dbe",
+Cell[10086, 270, 531, 14, 87, "ExamplesInitializationSection",ExpressionUUID->"09c0dd90-25a9-43e6-8767-ab62107b8dbe",
  CellID->1340786746],
-Cell[9427, 255, 182, 3, 57, "ExampleInitialization",ExpressionUUID->"ac581a89-35d6-4b56-8251-ceb5e068313f",
+Cell[10620, 286, 182, 3, 57, "ExampleInitialization",ExpressionUUID->"ac581a89-35d6-4b56-8251-ceb5e068313f",
  CellID->1056932051]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[9646, 263, 443, 12, 90, "PrimaryExamplesSection",ExpressionUUID->"e556e0e6-3111-4239-bb89-a304c26c183b",
+Cell[10839, 294, 443, 12, 90, "PrimaryExamplesSection",ExpressionUUID->"e556e0e6-3111-4239-bb89-a304c26c183b",
  CellID->2019736820],
-Cell[10092, 277, 244, 3, 30, "ExampleText",ExpressionUUID->"5add7031-92a0-4964-9e4b-02d1ad01f75e",
+Cell[11285, 308, 244, 3, 30, "ExampleText",ExpressionUUID->"5add7031-92a0-4964-9e4b-02d1ad01f75e",
  CellID->937365785],
 Cell[CellGroupData[{
-Cell[10361, 284, 334, 6, 33, "Input",ExpressionUUID->"4f089169-611e-4247-a336-bc2b90b43da1",
+Cell[11554, 315, 334, 6, 33, "Input",ExpressionUUID->"4f089169-611e-4247-a336-bc2b90b43da1",
  CellID->2100407355],
-Cell[10698, 292, 1122, 15, 561, "Output",ExpressionUUID->"fe7ea943-1e6f-4b93-a149-3f3aba122e87",
+Cell[11891, 323, 1122, 15, 561, "Output",ExpressionUUID->"fe7ea943-1e6f-4b93-a149-3f3aba122e87",
  CellID->894796133]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11869, 313, 487, 13, 72, "ExtendedExamplesSection",ExpressionUUID->"6bfb70b6-60b1-4a69-a8d3-f3a04a388c97",
+Cell[13062, 344, 487, 13, 72, "ExtendedExamplesSection",ExpressionUUID->"6bfb70b6-60b1-4a69-a8d3-f3a04a388c97",
  CellTags->"ExtendedExamples",
  CellID->442725611],
-Cell[12359, 328, 242, 5, 43, "ExampleSection",ExpressionUUID->"2a8f42d7-f188-44a0-ad93-c6425cfdb586",
+Cell[13552, 359, 242, 5, 43, "ExampleSection",ExpressionUUID->"2a8f42d7-f188-44a0-ad93-c6425cfdb586",
  CellID->2005990869],
-Cell[12604, 335, 265, 5, 27, "ExampleSection",ExpressionUUID->"252e4109-9900-420e-9e89-0c0eda46eae4",
+Cell[13797, 366, 265, 5, 27, "ExampleSection",ExpressionUUID->"252e4109-9900-420e-9e89-0c0eda46eae4",
  CellID->1342761030],
 Cell[CellGroupData[{
-Cell[12894, 344, 244, 5, 27, "ExampleSection",ExpressionUUID->"490f7c25-3aa3-4ad5-9a59-1bb278443904",
+Cell[14087, 375, 244, 5, 27, "ExampleSection",ExpressionUUID->"490f7c25-3aa3-4ad5-9a59-1bb278443904",
  CellID->1306481969],
-Cell[13141, 351, 251, 5, 32, "ExampleSubsection",ExpressionUUID->"45397ceb-e750-45bc-9dbc-a217131bc043",
+Cell[14334, 382, 251, 5, 32, "ExampleSubsection",ExpressionUUID->"45397ceb-e750-45bc-9dbc-a217131bc043",
  CellID->22162408],
-Cell[13395, 358, 250, 5, 26, "ExampleSubsection",ExpressionUUID->"2027caf1-42f2-40be-b77b-f1250745bd08",
+Cell[14588, 389, 250, 5, 26, "ExampleSubsection",ExpressionUUID->"2027caf1-42f2-40be-b77b-f1250745bd08",
  CellID->968920325],
 Cell[CellGroupData[{
-Cell[13670, 367, 251, 5, 26, "ExampleSubsection",ExpressionUUID->"19330785-ef82-47ce-b7fb-1d5c383d69d8",
+Cell[14863, 398, 251, 5, 26, "ExampleSubsection",ExpressionUUID->"19330785-ef82-47ce-b7fb-1d5c383d69d8",
  CellID->275407074],
-Cell[13924, 374, 298, 5, 30, "ExampleText",ExpressionUUID->"8f9e9951-af98-4653-86f7-23d646874282",
+Cell[15117, 405, 298, 5, 30, "ExampleText",ExpressionUUID->"8f9e9951-af98-4653-86f7-23d646874282",
  CellID->707178665]
 }, Open  ]],
-Cell[14237, 382, 257, 5, 32, "ExampleSubsection",ExpressionUUID->"2edbb74b-823b-4ee3-bc78-e070094e6f08",
+Cell[CellGroupData[{
+Cell[15452, 415, 257, 5, 32, "ExampleSubsection",ExpressionUUID->"2edbb74b-823b-4ee3-bc78-e070094e6f08",
  CellID->939433433],
-Cell[14497, 389, 260, 5, 26, "ExampleSubsection",ExpressionUUID->"9d988bd7-2a37-462f-9a69-b5dce56e18df",
- CellID->757935687],
-Cell[14760, 396, 261, 5, 26, "ExampleSubsection",ExpressionUUID->"751edf1d-3c36-4be6-b22f-2922467811a9",
- CellID->1899581052],
-Cell[15024, 403, 249, 5, 26, "ExampleSubsection",ExpressionUUID->"f6987fc0-f03e-48df-910d-9dcd07321dea",
- CellID->1766844662]
+Cell[15712, 422, 321, 4, 30, "ExampleText",ExpressionUUID->"0cb2fa6b-26d0-486b-b9db-7e7c2b1a4348",
+ CellID->325523476],
+Cell[CellGroupData[{
+Cell[16058, 430, 1023, 24, 130, "Input",ExpressionUUID->"47748519-a5c4-44aa-8d88-4b39b5994b45",
+ CellID->1832473401],
+Cell[17084, 456, 5798, 107, 2210, "Output",ExpressionUUID->"62d27822-b6c8-4bb7-bbdc-20d4fc9463db",
+ CellID->2097542689]
+}, Open  ]]
 }, Open  ]],
-Cell[15288, 411, 249, 5, 43, "ExampleSection",ExpressionUUID->"3b264f0b-12e6-449f-96ff-897532a0e60e",
+Cell[CellGroupData[{
+Cell[22931, 569, 260, 5, 32, "ExampleSubsection",ExpressionUUID->"9d988bd7-2a37-462f-9a69-b5dce56e18df",
+ CellID->757935687],
+Cell[23194, 576, 383, 6, 30, "ExampleText",ExpressionUUID->"2dc3713c-fde3-44bd-9bf1-3426f77f4fef",
+ CellID->1243455497],
+Cell[CellGroupData[{
+Cell[23602, 586, 1146, 26, 130, "Input",ExpressionUUID->"67e598d7-edb8-4cd1-9054-8a1aaf6cdd7a",
+ CellID->1593169122],
+Cell[24751, 614, 10191, 163, 4320, "Output",ExpressionUUID->"a0b4beb0-f548-45d8-b9e9-264cfe82a6af",
+ CellID->1100757953]
+}, Open  ]]
+}, Open  ]],
+Cell[34969, 781, 261, 5, 32, "ExampleSubsection",ExpressionUUID->"751edf1d-3c36-4be6-b22f-2922467811a9",
+ CellID->1899581052],
+Cell[CellGroupData[{
+Cell[35255, 790, 249, 5, 26, "ExampleSubsection",ExpressionUUID->"f6987fc0-f03e-48df-910d-9dcd07321dea",
+ CellID->1766844662],
+Cell[35507, 797, 423, 7, 52, "ExampleText",ExpressionUUID->"a4bbf887-4086-46c2-b662-1999cc505e72",
+ CellID->122402278],
+Cell[35933, 806, 471, 10, 106, "Input",ExpressionUUID->"da15f85c-7d76-472b-94bb-13a8f5560945",
+ CellID->790991403],
+Cell[36407, 818, 1909, 51, 1104, "ExternalLanguage",ExpressionUUID->"e1469362-507b-475e-b1a4-b9831830ced0",
+ CellID->250427873],
+Cell[38319, 871, 275, 4, 30, "ExampleText",ExpressionUUID->"20f53ec7-8cf1-4ff9-8a59-91c4e75136c5",
+ CellID->744415698]
+}, Open  ]]
+}, Open  ]],
+Cell[38621, 879, 249, 5, 43, "ExampleSection",ExpressionUUID->"3b264f0b-12e6-449f-96ff-897532a0e60e",
  CellID->1183621359],
-Cell[15540, 418, 258, 5, 27, "ExampleSection",ExpressionUUID->"6f33d230-ede6-404e-b74d-f4110955820b",
+Cell[CellGroupData[{
+Cell[38895, 888, 258, 5, 27, "ExampleSection",ExpressionUUID->"6f33d230-ede6-404e-b74d-f4110955820b",
  CellID->983158552],
-Cell[15801, 425, 252, 5, 27, "ExampleSection",ExpressionUUID->"7b6233f7-5c9f-425d-aca8-9d423d5808ec",
+Cell[39156, 895, 975, 24, 54, "ExampleText",ExpressionUUID->"20a896d3-7f7a-4b71-baaa-a06294fd5cbe",
+ CellID->1953840542],
+Cell[CellGroupData[{
+Cell[40156, 923, 10592, 182, 40, "Input",ExpressionUUID->"79cd6236-1df8-494e-b3c6-d48a4bb459ee",
+ CellID->2086349843],
+Cell[50751, 1107, 342, 7, 32, "Output",ExpressionUUID->"a27c3d8a-0213-4bad-843b-601b8af713ae",
+ CellID->756698108]
+}, Open  ]]
+}, Open  ]],
+Cell[51120, 1118, 252, 5, 43, "ExampleSection",ExpressionUUID->"7b6233f7-5c9f-425d-aca8-9d423d5808ec",
  CellID->1206603446],
-Cell[16056, 432, 256, 5, 27, "ExampleSection",ExpressionUUID->"e9652028-5d3a-4f15-9dc2-43e081846a2f",
+Cell[51375, 1125, 256, 5, 27, "ExampleSection",ExpressionUUID->"e9652028-5d3a-4f15-9dc2-43e081846a2f",
  CellID->696038301],
-Cell[16315, 439, 249, 5, 27, "ExampleSection",ExpressionUUID->"d341d08c-54c1-4f25-8599-20a115eedbec",
+Cell[51634, 1132, 249, 5, 27, "ExampleSection",ExpressionUUID->"d341d08c-54c1-4f25-8599-20a115eedbec",
  CellID->972299698]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[16601, 449, 111, 1, 90, "MetadataSection",ExpressionUUID->"fe6b8bb6-2699-493f-86cd-9c543dbd9232",
+Cell[51920, 1142, 111, 1, 90, "MetadataSection",ExpressionUUID->"fe6b8bb6-2699-493f-86cd-9c543dbd9232",
  CellID->1237954263],
-Cell[16715, 452, 595, 14, 33, "History",ExpressionUUID->"9fcedb6f-d844-458e-a776-30dfe4fb8d3a",
+Cell[52034, 1145, 595, 14, 33, "History",ExpressionUUID->"9fcedb6f-d844-458e-a776-30dfe4fb8d3a",
  CellID->1475726105],
 Cell[CellGroupData[{
-Cell[17335, 470, 485, 13, 27, "CategorizationSection",ExpressionUUID->"013a0bde-c74a-4e11-9bcb-b2907adb2234",
+Cell[52654, 1163, 485, 13, 27, "CategorizationSection",ExpressionUUID->"013a0bde-c74a-4e11-9bcb-b2907adb2234",
  CellID->1240007532],
-Cell[17823, 485, 135, 2, 43, "Categorization",ExpressionUUID->"8cae63a7-33e6-4bb6-bc0e-257d557d78b7",
+Cell[53142, 1178, 135, 2, 43, "Categorization",ExpressionUUID->"8cae63a7-33e6-4bb6-bc0e-257d557d78b7",
  CellID->1625279836],
-Cell[17961, 489, 150, 2, 43, "Categorization",ExpressionUUID->"6eaf3e7f-4f9e-48f6-b9aa-af1e332e24e5",
+Cell[53280, 1182, 150, 2, 43, "Categorization",ExpressionUUID->"6eaf3e7f-4f9e-48f6-b9aa-af1e332e24e5",
  CellID->2101847165],
-Cell[18114, 493, 147, 2, 43, "Categorization",ExpressionUUID->"5039aa84-501c-41e4-b6f8-ea0374f3680b",
+Cell[53433, 1186, 147, 2, 43, "Categorization",ExpressionUUID->"5039aa84-501c-41e4-b6f8-ea0374f3680b",
  CellID->1786792652],
-Cell[18264, 497, 168, 2, 43, "Categorization",ExpressionUUID->"8b4afab6-214b-45af-98c0-bb43bdffa929",
+Cell[53583, 1190, 168, 2, 43, "Categorization",ExpressionUUID->"8b4afab6-214b-45af-98c0-bb43bdffa929",
  CellID->212782516]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[18469, 504, 110, 1, 26, "KeywordsSection",ExpressionUUID->"2a7f549f-f6c3-4672-a634-69cebeb98b41",
+Cell[53788, 1197, 110, 1, 26, "KeywordsSection",ExpressionUUID->"2a7f549f-f6c3-4672-a634-69cebeb98b41",
  CellID->416444371],
-Cell[18582, 507, 99, 1, 87, "Keywords",ExpressionUUID->"25685cf8-936b-4a55-a62f-477f68fa8f7c",
+Cell[53901, 1200, 99, 1, 87, "Keywords",ExpressionUUID->"25685cf8-936b-4a55-a62f-477f68fa8f7c",
  CellID->531337824]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[18718, 513, 119, 1, 26, "TemplatesSection",ExpressionUUID->"628063aa-e410-4e99-9875-1ba2e00683c0",
+Cell[54037, 1206, 119, 1, 26, "TemplatesSection",ExpressionUUID->"628063aa-e410-4e99-9875-1ba2e00683c0",
  CellID->957803742],
-Cell[18840, 516, 148, 2, 87, "Template",ExpressionUUID->"47433859-e1f9-4741-ab01-39abfb1d0bc8",
+Cell[54159, 1209, 148, 2, 87, "Template",ExpressionUUID->"47433859-e1f9-4741-ab01-39abfb1d0bc8",
  CellID->270073882],
-Cell[18991, 520, 138, 2, 87, "Template",ExpressionUUID->"41382f95-16c8-43c0-ab58-42e0825a5dc6",
+Cell[54310, 1213, 138, 2, 87, "Template",ExpressionUUID->"41382f95-16c8-43c0-ab58-42e0825a5dc6",
  CellID->1498788663],
-Cell[19132, 524, 135, 2, 87, "Template",ExpressionUUID->"37172045-d523-4fba-a620-8c32cfe25016",
+Cell[54451, 1217, 135, 2, 87, "Template",ExpressionUUID->"37172045-d523-4fba-a620-8c32cfe25016",
  CellID->157879731],
-Cell[19270, 528, 138, 2, 87, "Template",ExpressionUUID->"4fd36930-8e40-4834-86cd-ed67e169cfbc",
+Cell[54589, 1221, 138, 2, 87, "Template",ExpressionUUID->"4fd36930-8e40-4834-86cd-ed67e169cfbc",
  CellID->1342334872]
 }, Closed]]
 }, Open  ]]
