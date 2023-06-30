@@ -9,6 +9,7 @@ PacletObject[
     "PublisherID" -> "AntonAntonov",
     "Version" -> "1.0.7",
     "WolframVersion" -> "12.2+",
+    "PrimaryContext" -> "AntonAntonov`PaLMMode`",
     "Extensions" -> {
       {
         "Kernel",
