@@ -38,13 +38,14 @@ Needs["AntonAntonov`PaLMLink`"];
 
 nbPaLMStyle =
     Notebook[{
-      Cell[StyleData[StyleDefinitions -> "Default.nb"]],
+      Cell[StyleData[StyleDefinitions -> If[ $VersionNumber >= 13.3, "Chatbook.nb", "Default.nb"]]],
 
       Cell[StyleData["Input"],
         StyleKeyMapping -> {
           "|" -> "PaLMInputExecuteToText",
           "!" -> "PaLMInputExecuteToText",
           "=" -> "WolframAlphaShort",
+          "'" -> "ChatInput",
           ">" -> "ExternalLanguage",
           "Tab" -> "PaLMInputExecuteToText"}],
 
@@ -193,9 +194,9 @@ PaLMMode[nb_NotebookObject, opts : OptionsPattern[]] :=
       SetOptions[nb, StyleDefinitions -> BinaryDeserialize[BinarySerialize[nbPaLMStyle]]]
     ];
 
-PaLMMode[False] := SetOptions[EvaluationNotebook[], StyleDefinitions -> "Default.nb"];
+PaLMMode[False] := SetOptions[EvaluationNotebook[], StyleDefinitions -> If[ $VersionNumber >= 13.3, "Chatbook.nb", "Default.nb"]];
 
-PaLMMode[nb_NotebookObject, False] := SetOptions[nb, StyleDefinitions -> "Default.nb"];
+PaLMMode[nb_NotebookObject, False] := SetOptions[nb, StyleDefinitions -> If[ $VersionNumber >= 13.3, "Chatbook.nb", "Default.nb"]];
 
 
 (***********************************************************)
