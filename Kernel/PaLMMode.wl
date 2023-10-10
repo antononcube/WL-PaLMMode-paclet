@@ -31,14 +31,18 @@ PacletInstall["AntonAntonov/NotebookModifiers", AllowVersionUpdate -> False];
 Begin["`Private`"];
 
 Needs["AntonAntonov`PaLMLink`"];
+Needs["AntonAntonov`NotebookModifiers`"];
 
 (***********************************************************)
 (* Input execution                                         *)
 (***********************************************************)
 
+(* This does not work reliably *)
+(* Cell[StyleData[StyleDefinitions -> If[ $VersionNumber >= 13.3, "Chatbook.nb", "Default.nb"]]], *)
+
 nbPaLMStyle =
     Notebook[{
-      Cell[StyleData[StyleDefinitions -> If[ $VersionNumber >= 13.3, "Chatbook.nb", "Default.nb"]]],
+      Cell[StyleData[StyleDefinitions -> "Default.nb"]],
 
       Cell[StyleData["Input"],
         StyleKeyMapping -> {
@@ -169,8 +173,10 @@ PaLMInputExecuteToChat[boxData_String, opts : OptionsPattern[]] :=
 (* PaLMMode function                                     *)
 (***********************************************************)
 
+originalNotebookStyle = "Default.nb";
+
 Clear[PaLMMode] ;
-Options[PaLMMode] := {"TokenLimit" -> Automatic, ImageSize -> Small};
+Options[PaLMMode] := {"TokenLimit" -> Automatic, ImageSize -> Small, "BaseNotebookStyle" -> Automatic};
 
 PaLMMode[True] := PaLMMode[];
 PaLMMode[True, opts : OptionsPattern[]] := PaLMMode[opts];
@@ -181,7 +187,7 @@ PaLMMode[opts : OptionsPattern[]] := PaLMMode[EvaluationNotebook[], opts];
 PaLMMode[nb_NotebookObject, True, opts : OptionsPattern[]] := PaLMMode[nb, opts];
 
 PaLMMode[nb_NotebookObject, opts : OptionsPattern[]] :=
-    Block[{tokenLimit, imgSize},
+    Block[{tokenLimit, imgSize, bNbStyle, nbPaLMStyleLocal},
       tokenLimit = OptionValue[PaLMMode, "TokenLimit"];
       If[IntegerQ[tokenLimit] && tokenLimit > 0 || TrueQ[tokenLimit === Automatic],
         SetOptions[PaLMInputExecuteToText, "MaxOutputTokens" -> tokenLimit]
@@ -191,12 +197,31 @@ PaLMMode[nb_NotebookObject, opts : OptionsPattern[]] :=
       imgSize = OptionValue[PaLMMode, ImageSize];
       SetOptions[PaLMInputExecuteToImage, ImageSize -> imgSize];
       *)
-      SetOptions[nb, StyleDefinitions -> BinaryDeserialize[BinarySerialize[nbPaLMStyle]]]
+      nbPaLMStyleLocal = nbPaLMStyle;
+      bNbStyle = OptionValue[PaLMMode, "BaseNotebookStyle"];
+      Which[
+        TrueQ[bNbStyle === Automatic],
+        bNbStyle = AntonAntonov`NotebookModifiers`FindStyleSheet[];
+        originalNotebookStyle = bNbStyle;
+        nbPaLMStyleLocal = nbPaLMStyleLocal /. {"Default.nb" -> bNbStyle },
+
+        StringQ[bNbStyle],
+        bNbStyle = AntonAntonov`NotebookModifiers`FindStyleSheet[bNbStyle];
+        If[ ! TrueQ[bNbStyle === $Failed],
+          originalNotebookStyle = bNbStyle;
+          nbPaLMStyleLocal = nbPaLMStyleLocal /. {"Default.nb" -> bNbStyle }
+        ],
+
+        True,
+        originalNotebookStyle = "Default.nb"
+      ];
+
+      SetOptions[nb, StyleDefinitions -> BinaryDeserialize[BinarySerialize[nbPaLMStyleLocal]]]
     ];
 
-PaLMMode[False] := SetOptions[EvaluationNotebook[], StyleDefinitions -> If[ $VersionNumber >= 13.3, "Chatbook.nb", "Default.nb"]];
+PaLMMode[False] := SetOptions[EvaluationNotebook[], StyleDefinitions -> originalNotebookStyle];
 
-PaLMMode[nb_NotebookObject, False] := SetOptions[nb, StyleDefinitions -> If[ $VersionNumber >= 13.3, "Chatbook.nb", "Default.nb"]];
+PaLMMode[nb_NotebookObject, False] := SetOptions[nb, StyleDefinitions -> originalNotebookStyle];
 
 
 (***********************************************************)
