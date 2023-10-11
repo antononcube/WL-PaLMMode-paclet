@@ -147,7 +147,7 @@ Options[PaLMInputExecute] = {
   "SafetySettings" -> Automatic
 };
 
-PaLMInputExecute[boxData : (_String | _PaLMChatMessageObject), opts : OptionsPattern[]] :=
+PaLMInputExecute[boxData : (_String | _PaLMGeneratedMessageObject), opts : OptionsPattern[]] :=
     Block[{epilogFunc = OptionValue[PaLMInputExecute, Epilog],
       func = FullFunctionName @ OptionValue[PaLMInputExecute, Function]},
       epilogFunc @ func[boxData, FilterRules[{opts}, Options[func]]]
